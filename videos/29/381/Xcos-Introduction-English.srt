@@ -1,0 +1,314 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:06
+Welcome to the spoken tutorial on<b> Xcos: Scilab Connected Object Simulator.</b>
+
+2
+00:00:07 --> 00:00:16
+<b>Xcos</b> is a <b>Scilab package</b> for modeling and simulation of dynamical systems. It includes both <b>continuous</b> and <b>discrete</b> systems.
+
+3
+00:00:17 --> 00:00:25
+In this tutorial you will learn What is <b>XCOS</b>.  What is <b>palette</b>, Build block diagrams in <b>Xcos</b>
+
+4
+00:00:26 --> 00:00:34
+Setup the parameters of blocks, Setup the simulation parameters, Simulate the constructed block diagram.
+
+5
+00:00:35 --> 00:00:39
+To practice this tutorial, Scilab should be installed on your system.
+
+6
+00:00:40 --> 00:00:47
+I am using Ubuntu Linux 12.04 and Scilab version 5.3.3 for demonstration.
+
+7
+00:00:48 --> 00:00:51
+Open the <b>Scilab console</b> window on your computer.
+
+8
+00:00:52 --> 00:01:01
+Go to applications and select <b>Xcos</b>OR Type <b>xcos</b> in your <b>Scilab console</b> window and press <b>Enter</b>
+
+9
+00:01:02 --> 00:01:13
+By doing this, two windows will open. The two windows are<b>Palette browser</b> and <b>Untitled-Xcos</b> window
+
+10
+00:01:14 --> 00:01:19
+In <b>Palette browser</b>, you will find different types of blocks <b>Commonly Used Blocks</b>
+
+11
+00:01:20 --> 00:01:25
+<b>Continuous time system blocks</b> , <b>Discrete time systems blocks </b>and many more.
+
+12
+00:01:26 --> 00:01:30
+The other window, <b>Untitled-Xcos</b> is blank, with grids.
+
+13
+00:01:31 --> 00:01:35
+We will now simulate a <b>first order system</b> with a<b> step input</b>.
+
+14
+00:01:36 --> 00:01:42
+To begin, I will select a <b>transfer function block</b> from the <b>Continuous time systems palette</b>.
+
+15
+00:01:43 --> 00:01:47
+Drag this block to the <b>Untitled-Xcos</b> window.
+
+16
+00:01:48 --> 00:01:55
+Select the required source in the <b>Sources palette</b>. I will scroll down and use the <b>STEP FUNCTION block</b>.
+
+17
+00:01:56 --> 00:02:00
+I will drag and place it before the <b>transfer function block.</b>
+
+18
+00:02:01 --> 00:02:07
+Similarly, the output is displayed using the <b>CSCOPE block</b>, which is available in <b>Sinks palette.</b>
+
+19
+00:02:08 --> 00:02:12
+The <b>CSCOPE block</b> is placed after the <b>transfer function block.</b>
+
+20
+00:02:13 --> 00:02:18
+The red input port in <b>CSCOPE</b> denotes that this block is an <b>“event driven” block.</b>
+
+21
+00:02:19 --> 00:02:21
+It needs an <b>event</b> input for execution.
+
+22
+00:02:22 --> 00:02:28
+An <b>event generator block</b> is available in the <b>Event handling palette.</b>
+
+23
+00:02:29 --> 00:02:33
+The name of this block is <b>Clock underscore c</b>.
+
+24
+00:02:34 --> 00:02:38
+Drag and place this block above the CSCOPE block.
+
+25
+00:02:39 --> 00:02:43
+We have collected all the required blocks to do the simulation.
+
+26
+00:02:44 --> 00:02:46
+Let us now connect the blocks together.
+
+27
+00:02:47 --> 00:02:54
+Select the <b>output port</b> of <b>step function block</b> and connect it to the <b>input port</b> of the <b>transfer function block.</b>
+
+28
+00:02:55 --> 00:02:59
+Notice that the selected <b>input port</b> gets highlighted in green colour.
+
+29
+00:03:00 --> 00:03:04
+Similarly, connect the remaining blocks as shown.
+
+30
+00:03:05 --> 00:03:09
+Now we will set the parameters of each block.
+
+31
+00:03:10 --> 00:03:13
+First, go to the <b>step block</b> and double-click on it.
+
+32
+00:03:14 --> 00:03:22
+A pop up window appears, asking for the value of <b>Step Time, Initial Value</b> and <b>Final Value</b>.
+
+33
+00:03:23 --> 00:03:31
+<b>Step Time</b> is the time at which the <b>step change</b> will occur.We will keep it as 1, which is the default value.
+
+34
+00:03:32 --> 00:03:36
+<b>Initial Value</b> is the initial output value of the <b>step function</b>.
+
+35
+00:03:37 --> 00:03:40
+We will keep it as 0, which is the default value.
+
+36
+00:03:41 --> 00:03:49
+<b>Final Value</b> is the output of the <b>step function</b>, after the <b>Step Time</b> is lapsed.We will change it to 2.
+
+37
+00:03:50 --> 00:03:51
+Click on <b>OK</b>.
+
+38
+00:03:52 --> 00:03:55
+Follow the similar procedure to configure any other block.
+
+39
+00:03:56 --> 00:04:04
+For <b>transfer function block,</b> the following configuration is required. <b>Numerator</b> value in<b> laplace domain</b> has to be entered.
+
+40
+00:04:05 --> 00:04:08
+We will keep it as 1, which is the default value.
+
+41
+00:04:09 --> 00:04:19
+<b>Denominator</b> value in <b>laplace domain</b> has to entered. We will change it to <b>2 asterisk s plus 1</b>.Click on <b>OK</b>.
+
+42
+00:04:20 --> 00:04:24
+Double click on <b>CSCOPE block,</b> to configure the following parameters.
+
+43
+00:04:25 --> 00:04:33
+The value of<b> Ymin</b> and <b>Ymax</b> should be set, depending on the range of the value, of the variable to be plotted.
+
+44
+00:04:34 --> 00:04:37
+Set the value of <b>Ymin</b> to 0.
+
+45
+00:04:38 --> 00:04:45
+Since I have given <b>step input</b> as 2, to display the output on graph, I should change the <b>Ymax</b> to any higher value.
+
+46
+00:04:46 --> 00:04:49
+We will change it to 3.
+
+47
+00:04:50 --> 00:04:56
+Make a mental note of the default value of the <b>refresh period</b>.The default value is 30.
+
+48
+00:04:57 --> 00:05:01
+We will keep the other parameters unchanged.Click on <b>OK</b>.
+
+49
+00:05:02 --> 00:05:07
+Now go to the <b>Simulation</b> in menu bar and click on <b>Setup</b>.
+
+50
+00:05:08 --> 00:05:10
+A pop up window appears.
+
+51
+00:05:11 --> 00:05:19
+We will change the value of <b>Final integration time</b>.<b>Final integration time</b> decides how long the simulation will run.
+
+52
+00:05:20 --> 00:05:23
+Recall the value of <b>refresh period</b> of the<b> CSCOPE block.</b>
+
+53
+00:05:24 --> 00:05:29
+I will keep the value of <b>Final integration time</b> equal to the value of <b>refresh period</b> of <b>CSCOPE block</b>
+
+54
+00:05:30 --> 00:05:33
+So, I will change it to 30.
+
+55
+00:05:34 --> 00:05:38
+Keep the other parameters unchanged. Click on <b>OK</b>.
+
+56
+00:05:39 --> 00:05:49
+Now press <b>Control S</b> to save the file, with a suitable file name.I will save it as <b>firstorder.xcos</b>
+
+57
+00:05:50 --> 00:05:57
+To start the simulation, click on the <b>Start</b> button, available on the menu bar of <b>Xcos</b> window.
+
+58
+00:05:58 --> 00:06:03
+A Graphic window will open, showing the <b>step response</b> of the first order <b>transfer function.</b>
+
+59
+00:06:04 --> 00:06:05
+We can save this plot as an image file.
+
+60
+00:06:06 --> 00:06:11
+To save the graph, go to the <b>File</b> menu and click on <b>Export to</b> option.
+
+61
+00:06:12 --> 00:06:19
+I will name it as firstorder.png and click on <b>OK</b>
+
+62
+00:06:20 --> 00:06:25
+There are certain parameters which we chose to keep as the default value. These can be changed.
+
+63
+00:06:26 --> 00:06:35
+For example In the<b> Clock underscore c block</b>, the <b>period</b>, which means the <b>sampling period</b> and <b>initial time</b> can be set.
+
+64
+00:06:36 --> 00:06:39
+In the <b>CSCOPE block,</b> the <b>output window number</b>,
+
+65
+00:06:40 --> 00:06:45
+<b>position, size, buffer size, graph color</b> etc. can also be set.
+
+66
+00:06:46 --> 00:06:51
+Pause the video here and solve the exercise given with the video.
+
+67
+00:06:52 --> 00:07:00
+Simulate a <b>second order transfer function</b> with <b>damping ratio</b> of 0.5 and <b>angular frequency</b> equal to 1.
+
+68
+00:07:01 --> 00:07:03
+Try changing the color of output graph.
+
+69
+00:07:04 --> 00:07:10
+Using the first exercise, plot the <b>Step input</b> and the <b>output</b> in a single plot window.
+
+70
+00:07:11 --> 00:07:17
+Now let us summarize.In this tutorial we have learnt to: Create <b>Xcos simulation</b> diagrams using the <b>palette browser</b>
+
+71
+00:07:18 --> 00:07:21
+Configure each block as per the simulation requirements
+
+72
+00:07:22 --> 00:07:25
+Setup the simulation parameters. Save the output plot.
+
+73
+00:07:26 --> 00:07:36
+Watch the video available at the following link  It summarizes the Spoken Tutorial project. If you do not have good bandwidth, you can download and watch it
+
+74
+00:07:37 --> 00:07:45
+The Spoken Tutorial Project Team Conducts workshops using spoken tutorials Gives certificates for those who pass an online test
+
+75
+00:07:46 --> 00:07:51
+For more details, please write to contact at spoken hyphen tutorial dot org
+
+76
+00:07:52 --> 00:08:01
+Spoken Tutorial Project is a part of the Talk to a Teacher project. It is supported by the National Mission on Education through ICT, MHRD, Government of India
+
+77
+00:08:02 --> 00:08:11
+More information on this Mission is available at spoken hyphen tutorial dot org slash NMEICT hyphen Intro
+
+78
+00:08:12 --> 00:08:17
+Hope you found this tutorial useful. This is Rupak Rokade from IIT Bombay signing off. Thank You.
+

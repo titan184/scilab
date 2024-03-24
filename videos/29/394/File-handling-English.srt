@@ -1,0 +1,314 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:05
+Welcome to this spoken tutorial on <b>File Handling</b> using <b>Scilab</b>.
+
+2
+00:00:06 --> 00:00:07
+In this tutorial, we will learn
+
+3
+00:00:08 --> 00:00:10
+file handling with the following functions:
+
+4
+00:00:11 --> 00:00:13
+<b>write()</b> function ,<b>read()</b> function
+
+5
+00:00:14 --> 00:00:15
+<b>mopen()</b> , <b>mclose()</b>.
+
+6
+00:00:16 --> 00:00:25
+For demonstration, I am using <b>Ubuntu Linux 12.04</b> operating system with <b>Scilab</b> version 5.3.3 installed.
+
+7
+00:00:26 --> 00:00:28
+You should have basic knowledge of <b>Scilab</b>.
+
+8
+00:00:29 --> 00:00:35
+If not, for relevant spoken tutorials please visit <b>spoken hyphen tutorial dot org</b>.
+
+9
+00:00:36 --> 00:00:40
+Now we will see some <b>functions</b> in <b>Scilab</b> which are useful for file handling.
+
+10
+00:00:41 --> 00:00:43
+File handling involves-
+
+11
+00:00:44 --> 00:00:46
+writing to a file using <b>write()</b> function,
+
+12
+00:00:47 --> 00:00:50
+reading from a file using <b>read()</b> function,
+
+13
+00:00:51 --> 00:00:54
+opening an existing file using <b>mopen()</b> function and
+
+14
+00:00:55 --> 00:00:59
+closing an already opened file using <b>mclose()</b> function.
+
+15
+00:01:00 --> 00:01:02
+Let us start with writing data to a file.
+
+16
+00:01:03 --> 00:01:06
+For this purpose the <b>write()</b> command is used.
+
+17
+00:01:07 --> 00:01:09
+Switch to the Scilab console window.
+
+18
+00:01:10 --> 00:01:14
+To begin with let us create a matrix of random numbers.
+
+19
+00:01:15 --> 00:01:28
+Type: <b> random underscore matrix is equal to rand into bracket 20 comma 1 close the bracket semicolon</b> and press <b>Enter</b>.
+
+20
+00:01:29 --> 00:01:31
+Now check the present working directory.
+
+21
+00:01:32 --> 00:01:33
+Type  <b>pwd </b>.
+
+22
+00:01:34 --> 00:01:38
+In my case, the present working directory is <b>slash home slash fossee </b>.
+
+23
+00:01:39 --> 00:01:46
+Make sure that you are in a directory where you have <b>read</b> & <b>write</b> permission, before you execute these commands.
+
+24
+00:01:47 --> 00:01:54
+Now we will write the content of variable <b>random underscore matrix</b> into a text file using the <b>write</b> command.
+
+25
+00:01:55 --> 00:02:17
+Type:--> <b>write into bracket into quotes random dash numbers dot txt close the quotes comma random underscore matrix close the bracket</b> and press <b>Enter</b>.
+
+26
+00:02:18 --> 00:02:20
+Let us see whether this file has been created.
+
+27
+00:02:21 --> 00:02:22
+I will minimize the <b>Scilab</b> console window.
+
+28
+00:02:23 --> 00:02:32
+And open the file which will be created and saved in the <b>fossee</b> directory of my computer.
+
+29
+00:02:33 --> 00:02:41
+You can see the data from variable <b>random underscore matrix</b> is written in a text file <b>random dash numbers dot txt</b>.
+
+30
+00:02:42 --> 00:02:44
+I will close this file.
+
+31
+00:02:45 --> 00:02:46
+Coming back to the <b>Scilab</b> console.
+
+32
+00:02:47 --> 00:02:49
+Now we will see how to read the data from a file.
+
+33
+00:02:50 --> 00:02:54
+For this we will use the command <b>read</b> as follows:
+
+34
+00:02:55 --> 00:03:17
+Type: <b>new underscore vector is equal to read into bracket into quote random dash numbers dot txt close the quotes comma 20 comma 1 close the bracket</b> and press <b>Enter</b>.
+
+35
+00:03:18 --> 00:03:22
+The <b>read</b> command reads all the data from the file mentioned in the argument,
+
+36
+00:03:23 --> 00:03:26
+in this case <b>random dash numbers dot txt</b>,
+
+37
+00:03:27 --> 00:03:30
+and stores in the variable <b>new underscore vector</b>.
+
+38
+00:03:31 --> 00:03:34
+Press <b>Enter</b> to continue the display.
+
+39
+00:03:35 --> 00:03:38
+If we modify the above command as:
+
+40
+00:03:39 --> 00:03:48
+<b>new underscore vector is equal to read into bracket into quotes random dash numbers dot txt comma 19 comma 1</b>
+
+41
+00:03:49 --> 00:03:55
+The <b>read</b> command reads only 19 data values from the file mentioned in this argument,
+
+42
+00:03:56 --> 00:03:58
+in this case <b>random dash numbers dot txt</b>,
+
+43
+00:03:59 --> 00:04:02
+and stores in the variable <b>new underscore vector</b>.
+
+44
+00:04:03 --> 00:04:07
+Issue this command on the <b>Scilab</b> console and verify the output.
+
+45
+00:04:08 --> 00:04:11
+Now let us see about the <b>mopen()</b> function:
+
+46
+00:04:12 --> 00:04:16
+<b>fd = mopen into bracket file-name comma mode</b>
+
+47
+00:04:17 --> 00:04:24
+<b>mopen</b> command is used to open an existing file in a way compatible to C <b>fopen</b> procedure.
+
+48
+00:04:25 --> 00:04:29
+<b>mode</b> is a character string that controls whether the file is opened for:
+
+49
+00:04:30 --> 00:04:33
+<b>r</b> = opens the file for reading.
+
+50
+00:04:34 --> 00:04:38
+<b>rb</b> = opens a binary file for reading.
+
+51
+00:04:39 --> 00:04:42
+<b>rt</b> = opens a text file for reading.
+
+52
+00:04:43 --> 00:04:49
+<b>w</b> = creates a new file for writing or opens and truncates a file to zero length.
+
+53
+00:04:50 --> 00:04:57
+<b>wb</b> = creates a new binary file for writing or opens and truncates a file to zero length.
+
+54
+00:04:58 --> 00:05:05
+<b>wt</b> = creates a text binary file for writing or opens and truncates a file to zero length.
+
+55
+00:05:06 --> 00:05:13
+<b>a or ab</b> = appends (opens a file for writing at the end of the file or creates a file for writing).
+
+56
+00:05:14 --> 00:05:19
+<b>r+ or r+b</b> = opens a file for update (reading and writing).
+
+57
+00:05:20 --> 00:05:29
+For eg. <b>fd underscore r is equal to mopen('random-numbers,'rt')</b>
+
+58
+00:05:30 --> 00:05:36
+The above command opens the 'random-numbers' as a 'text and read-only' mode.
+
+59
+00:05:37 --> 00:05:39
+<b>mclose</b>  into bracket <b>fd</b>:
+
+60
+00:05:40 --> 00:05:42
+closes the opened file by using <b>mopen</b>
+
+61
+00:05:43 --> 00:05:47
+where <b>fd</b> is the <b>file descriptor</b> of the opened file.
+
+62
+00:05:48 --> 00:05:52
+If <b>fd</b> is omitted, <b>mclose()</b> closes the last opened file.
+
+63
+00:05:53 --> 00:05:54
+That's all we have in this tutorial.
+
+64
+00:05:55 --> 00:05:58
+We have learnt -  File handling with the following functions:
+
+65
+00:05:59 --> 00:06:01
+<b>write()</b> function , <b>read()</b> function
+
+66
+00:06:02 --> 00:06:04
+<b>mopen()</b> , <b>mclose()</b>.
+
+67
+00:06:05 --> 00:06:07
+Watch the video available at the following link.
+
+68
+00:06:08 --> 00:06:10
+It summarizes the Spoken Tutorial project.
+
+69
+00:06:11 --> 00:06:13
+If you do not have good bandwidth, you can download and watch it.
+
+70
+00:06:14 --> 00:06:16
+The spoken tutorial Team:
+
+71
+00:06:17 --> 00:06:19
+Conducts workshops using spoken tutorials
+
+72
+00:06:20 --> 00:06:22
+Gives certificates to those who pass an online test.
+
+73
+00:06:23 --> 00:06:29
+For more details, please write to conatct@spoken-tutorial.org.
+
+74
+00:06:30 --> 00:06:33
+Spoken Tutorial Project is a part of the Talk to a Teacher project.
+
+75
+00:06:34 --> 00:06:40
+It is supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+76
+00:06:41 --> 00:06:49
+More information on this mission is available at  <a class="external free" href="http://spoken-tutorial.org/NMEICT-Intro" rel="nofollow">http://spoken-tutorial.org/NMEICT-Intro</a>.
+
+77
+00:06:50 --> 00:06:53
+This is Anuradha Amrutkar from IIT Bombay, signing off.
+
+78
+00:06:54 --> 00:06:59
+Thank you for joining.
+

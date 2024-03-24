@@ -1,0 +1,258 @@
+<b> Narration</b>
+
+1
+00:00:01 --> 00:00:06
+Welcome to the spoken tutorial on <b>Vector Operations</b>.
+
+2
+00:00:07 --> 00:00:10
+At the end of this spoken tutorial you will be able to:
+
+3
+00:00:11 --> 00:00:12
+* Define a vector.
+
+4
+00:00:13 --> 00:00:14
+* Calculate length of a vector.
+
+5
+00:00:15 --> 00:00:22
+* Perform mathematical operations on Vectors such as addition,subtraction and multiplication.
+
+6
+00:00:23 --> 00:00:24
+* Define a matrix.
+
+7
+00:00:25 --> 00:00:27
+* Calculate size of a matrix.
+
+8
+00:00:28 --> 00:00:35
+* Perform mathematical operations on Matrices such as addition, subtraction and multiplication.
+
+9
+00:00:36 --> 00:00:40
+The Pre-requisites are: Scilab should be installed on your system.
+
+10
+00:00:41 --> 00:00:45
+You should have listened to the Spoken Tutorial on Getting started with Scilab.
+
+11
+00:00:46 --> 00:00:49
+You should have Basic knowledge about Vectors and Matrices.
+
+12
+00:00:50 --> 00:00:57
+I am using <b>Windows 7</b> operating system and <b>Scilab 5.2.2</b> for demonstration.
+
+13
+00:00:58 --> 00:01:02
+Click on Scilab shortcut icon on your Desktop to launch Scilab.
+
+14
+00:01:03 --> 00:01:05
+This will open the Scilab console window.
+
+15
+00:01:06 --> 00:01:09
+Notice that the cursor is on the command prompt.
+
+16
+00:01:10 --> 00:01:18
+I suggest that you practice this tutorial in Scilab simultaneously while pausing the video at regular intervals of time.
+
+17
+00:01:19 --> 00:01:21
+Let us start by defining a vector.
+
+18
+00:01:22 --> 00:01:23
+This can be done in two ways:
+
+19
+00:01:24 --> 00:01:36
+By using spaces as: p is equal to open square bracket one space 2 space 3 close the square bracket and press Enter
+
+20
+00:01:37 --> 00:01:52
+or using commas as: q is equal to open square bracket two comma three comma four close the square bracket and press Enter.
+
+21
+00:01:53 --> 00:02:02
+We can find the length of a vector p by the command length of p and press Enter.
+
+22
+00:02:03 --> 00:02:07
+We can perform various mathematical operations on vectors such as:
+
+23
+00:02:08 --> 00:02:10
+* Addition of two vectors
+
+24
+00:02:11 --> 00:02:13
+* Substraction of two vectors and so on.
+
+25
+00:02:14 --> 00:02:20
+Transpose of a vector can be found by using apostrophe (also known as single-quote).
+
+26
+00:02:21 --> 00:02:26
+p transpose is as shown.
+
+27
+00:02:27 --> 00:02:33
+We can calculate p-transpose times q.
+
+28
+00:02:34 --> 00:02:42
+The command p times q-transpose gives a scalar.
+
+29
+00:02:43 --> 00:02:49
+Please pause the tutorial now and attempt exercise number one given in the video.
+
+30
+00:02:50 --> 00:02:55
+Now we will see how to define a matrix.
+
+31
+00:02:56 --> 00:03:03
+Elements of a row of a matrix can be defined using spaces or commas similar to that shown for a vector.
+
+32
+00:03:04 --> 00:03:19
+For example, let us define a 2 by 3 matrix P by typing capital P is equal to open square bracket 1 space 2 space 3 semicolon
+
+33
+00:03:20 --> 00:03:26
+4 space five space 6 close the square bracket and press Enter.
+
+34
+00:03:27 --> 00:03:31
+Note that semicolon is used for defining the next row of the matrix.
+
+35
+00:03:32 --> 00:03:33
+Recall that Scilab is case sensitive.
+
+36
+00:03:34 --> 00:03:39
+Here variable P used to define matrix is in upper case
+
+37
+00:03:40 --> 00:03:43
+which is different from small p that was a vector.
+
+38
+00:03:44 --> 00:03:47
+Would you want to check what small p is at this point?
+
+39
+00:03:48 --> 00:03:52
+We will now see how to find the size of a matrix using the <b>size</b> command.
+
+40
+00:03:53 --> 00:04:09
+For this, type open square bracket row comma column close the sqaure bracket is equal to size of capital P, which is the matrix, and press Enter.
+
+41
+00:04:10 --> 00:04:16
+You get the following output.
+
+42
+00:04:17 --> 00:04:26
+Note that the length command will give the total number of elements in the matrix as you see.
+
+43
+00:04:27 --> 00:04:33
+The <b>transpose</b> command works for the matrices as well, as shown here :
+
+44
+00:04:34 --> 00:04:40
+<b>P transpose</b> gives the transpose of matrix P.
+
+45
+00:04:41 --> 00:04:44
+Let us now define a 2 by 3 matrix Q:
+
+46
+00:04:45 --> 00:04:55
+Capital Q is equal to open square bracket one space five space three semicolon, to enter into the next row
+
+47
+00:04:56 --> 00:05:02
+two space four space eight, close the square bracket and press Enter.
+
+48
+00:05:03 --> 00:05:07
+Let us also recall P once more.
+
+49
+00:05:08 --> 00:05:13
+We can carry out calculations involving P and Q, just as we do in mathematics.
+
+50
+00:05:14 --> 00:05:28
+For example, let us calculate E is equal to 2 times P plus 3 times Q and press enter:
+
+51
+00:05:29 --> 00:05:32
+You may want to verify whether these calculations are correct.
+
+52
+00:05:33 --> 00:05:43
+Please pause the tutorial now and attempt exercise number two given with the video
+
+53
+00:05:44 --> 00:05:46
+In this tutorial, we have learnt to:
+
+54
+00:05:47 --> 00:05:49
+* Define a vector using spaces or commas.
+
+55
+00:05:50 --> 00:05:53
+* Calculate length of a vector using the <b>length()</b> function.
+
+56
+00:05:54 --> 00:05:58
+* Find the transpose of a vector or a matrix using <b>apostrophe</b>.
+
+57
+00:05:59 --> 00:06:06
+* Define a matrix by using space or comma to separate the columns and semicolon to separate the rows.
+
+58
+00:06:07 --> 00:06:10
+Find size of a matrix using <b>size()</b> function.
+
+59
+00:06:11 --> 00:06:17
+This spoken tutorial: has been created by the Free and Open Source Software in Science and Engineering Education (FOSSEE),
+
+60
+00:06:18 --> 00:06:27
+More information on the FOSSEE project could be obtained from <b>fossee.in</b> or <b>scilab.in</b>.
+
+61
+00:06:28 --> 00:06:32
+Supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+62
+00:06:33 --> 00:06:42
+For more information, visit: spoken hyphen tutorial dot org slash NMEICT hyphen intro.
+
+63
+00:06:43 --> 00:06:45
+This is Anuradha Amrutkar, signing off.
+
+64
+00:06:46 --> 00:06:51
+Thank you for joining us. Good bye.
+

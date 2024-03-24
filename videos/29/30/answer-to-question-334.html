@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>
+	 
+      Spoken Tutorial Forums
+      
+</title>
+        <link rel="stylesheet" href="../../../includes/css/bootstrap_forum.min.css" type="text/css" media="screen" charset="utf-8" />
+         <link rel="stylesheet" href="../../../includes/css/slick.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="../../../includes/css/main_forum.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="../../../includes/css/nice-bar.css" type="text/css" media="screen" charset="utf-8" />
+      <link rel="stylesheet" href="../../../includes/css/theme.blue.css" type="text/css" media="screen" charset="utf-8" />
+</head>
+<body>
+	 <div id="page-wrapper">
+        <div id="header-wrapper">
+            <div id="header-inner">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+                            <div class="navbar-brand">
+                                <img id="logo" src="../../../includes/images/logo.png">
+                                Spoken Tutorial Forums
+                                </div>
+                        </div>
+                        </div> <!-- /.container -->
+                </nav>
+            </div> <!-- /#header-inner -->
+        </div>
+        <div id="content-wrapper">
+            <div id="content-inner" class="container">
+                <div id="content" class="col-lg-12 col-md-12 col-sm-12">
+                    
+                    <div class="row">
+    <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="question ">
+        <div class="title ">
+           entering fraction
+        </div>
+        
+        <div id="questionNicPanel"></div>
+        <div class="body">
+            sir, while doing the second exercise, I encountered a problem in \r\nprinting the fractions. while entering the elements of the matrix I \r\nentered the fractions but got the results as decimals.<br>I want to get the fractions as output. please guide me in the same.
+        </div>
+        <br>
+        
+        <span class="category">
+            <small>
+                <a>
+                    Scilab
+                </a>   
+            </small>
+        </span>
+        
+        <span class="tutorial">
+            <small>
+            <a>
+                    Vector-Operations
+             </a>       
+            </small>
+        </span>
+        
+        <span class="minute_range ">
+            <small>
+            <a>
+                    05-06 min
+             </a>       
+            </small>
+        </span>
+        
+        <span class="second_range ">
+            <small>
+                    <a>
+                    40-50 sec
+                    </a>
+            </small>
+        </span>
+       
+        
+        <span class="meta">
+            <small>
+                <i>
+                    30-04-16, 11:41 a.m.
+                </i>
+            </small>
+            
+            <span class="user">
+                AMBIKAPRASAD
+            </span>
+        </span>
+    </div> <!-- /.question -->
+    </div>
+</div> 
+
+<h4><u>Answers:</u></h4>
+<div id="answerPanelWrapper" style="display:none;">
+    <div id="answerNicPanel" style="display:none;"></div>
+</div>
+
+<div id="commentPanelWrapper" style="display:none;">
+    <div id="commentNicPanel" style="display:none;"></div>
+</div>
+
+<div class="row">
+    <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="answer " id="answer520">
+            
+            <div class="body" id="body520">
+                You will have to use the rat function. Examples are given below<br>n- numerator, d- denominator<br><br>[n,d]=rat(2/3) <br>d&nbsp; =<br>&nbsp;<br>&nbsp;&nbsp;&nbsp; 3.&nbsp; <br>&nbsp;n&nbsp; =<br>&nbsp;<br>&nbsp;&nbsp;&nbsp; 2.&nbsp; <br>--&gt;a=[1/2;4/5;6/7]<br>&nbsp;a&nbsp; =<br>&nbsp;<br>&nbsp;&nbsp;&nbsp; 0.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; 0.8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; 0.8571429&nbsp; <br>&nbsp;<br>--&gt;[n,d]=rat(a)<br>&nbsp;d&nbsp; =<br>&nbsp;<br>&nbsp;&nbsp;&nbsp; 2.&nbsp; <br>&nbsp;&nbsp;&nbsp; 5.&nbsp; <br>&nbsp;&nbsp;&nbsp; 7.&nbsp; <br>&nbsp;n&nbsp; =<br>&nbsp;<br>&nbsp;&nbsp;&nbsp; 1.&nbsp; <br>&nbsp;&nbsp;&nbsp; 4.&nbsp; <br>&nbsp;&nbsp;&nbsp; 6.&nbsp; <br>-&gt;[n,d]=rat(0.1/5)<br>&nbsp;d&nbsp; =m<br>&nbsp;<br>&nbsp;&nbsp;&nbsp; 50.&nbsp; <br>&nbsp;n&nbsp; =<br>&nbsp;<br>&nbsp;&nbsp;&nbsp; 1.&nbsp; <br><br>If you want to display the output strictly in the form numerator/denominator (with the division symbol), then you would have to install the Symbolic toolbox.<br><br><br>
+            </div>
+            
+            <span class="meta">
+                <small>
+                    <i>
+                        30-04-16, 1:09 p.m.
+                    </i>
+                </small>
+                
+                <span class="user">
+                    smohanan
+                </span>
+            </span>
+        </div> <!-- /.answer -->
+        
+        <div class="row">
+            <div class="comments pull-right col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                <!-- displaying comments -->
+                
+                <div class="comment" id="comment696">
+                    <div class="body" id="cbody696">
+                        <div>Sir following error I got for Exercise 2</div><div><br></div><div>-&gt; A*C-C*A</div><div><br></div><div>Inconsistent row/column dimensions.</div><div><br></div><div>--&gt; 2*C-6*A</div><div><br></div><div>Inconsistent row/column dimensions.</div><div><br></div><div>--&gt; (2*C-^*A')*B'</div><div>(2*C-^*A')*B'</div><div>&nbsp; &nbsp; &nbsp;^^</div><div>Error: syntax error, unexpected ** or ^</div><div><br></div><div>--&gt; (2*C-6*A')*B'</div><div><br></div><div>Inconsistent row/column dimensions.</div><div><br></div><div>--&gt; A'</div><div>&nbsp;ans&nbsp; =</div><div><br></div><div>&nbsp; &nbsp;1.&nbsp; &nbsp; 0.3333333&nbsp; &nbsp;0.2&nbsp; &nbsp; &nbsp;&nbsp;</div><div>&nbsp; &nbsp;0.5&nbsp; &nbsp;0.25&nbsp; &nbsp; &nbsp; &nbsp; 0.1666667</div><div><br></div><div>--&gt; B'</div><div>&nbsp;ans&nbsp; =</div><div><br></div><div>&nbsp; &nbsp;5.</div><div>&nbsp; &nbsp;2.</div><div><br></div><div>--&gt; (2*C-6*A')*B'</div><div><br></div><div>Inconsistent row/column dimensions.</div><div><br></div><div>--&gt; A</div><div>&nbsp;A&nbsp; =&nbsp;</div><div><br></div><div>&nbsp; &nbsp;1.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0.5&nbsp; &nbsp; &nbsp;&nbsp;</div><div>&nbsp; &nbsp;0.3333333&nbsp; &nbsp;0.25&nbsp; &nbsp; &nbsp;</div><div>&nbsp; &nbsp;0.2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.1666667</div><div><br></div><div>--&gt; (2*C-6*A')*B'</div><div><br></div><div>Inconsistent row/column dimensions.</div><div><br></div><div>--&gt; (2*C-6*A')*C</div><div><br></div><div>Inconsistent row/column dimensions.</div>
+                    </div>
+                    
+                    <span class="meta">
+                        <small>
+                            <i>
+                                20-04-20, 2:27 p.m.
+                            </i>
+                        </small>
+                        
+                        <span class="user">
+                            sujata_magdum
+                        </span>
+                    </span>
+                </div> <!-- /.comment -->
+                
+                
+                
+                <!-- form to add comment -->
+      
+            </div> <!-- comments -->
+        </div> <!-- /.row -->
+        <br> <hr>
+    </div> <!-- /.answer-wrapper -->
+</div> <!-- /.row -->
+
+
+            <a href="http://forums.spoken-tutorial.org/question/334/entering fraction.replace(' ','-')/ " target="_blank">Click here to reply/comment online</a>
+                    
+                </div> <!-- /#content -->
+            </div> <!-- /#content-inner -->
+        </div>
+        <div id="footer-wrapper" class="container">
+            <div id="footer-inner" class="col-lg-12 col-md-12 col-sm-12">
+                <div class="cc">
+                    <a class="cc-logo" rel="license">
+                        <img src="../../../includes/images/cc-logo-88x31.png" alt="CC logo"> 
+                    </a> Spoken Tutorial Forum by <a href="http://www.iitb.ac.in" target="_blank">IIT Bombay</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+                </div> 
+            </div> <!-- /#footer-inner -->
+        </div> <!-- /#footer-wrapper -->
+    </div> 
+</body>
+</html>
