@@ -1,0 +1,398 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:08
+Dear Friends,  Welcome to the Spoken Tutorial on <b>Solving ODEs using Scilab ode function</b>
+
+2
+00:00:09 --> 00:00:11
+At the end of this tutorial, you will learn how to:
+
+3
+00:00:12 --> 00:00:14
+Use Scilab ode function
+
+4
+00:00:15 --> 00:00:17
+Solve typical examples of <b>ODEs</b> and
+
+5
+00:00:18 --> 00:00:20
+Plot the solution.
+
+6
+00:00:21 --> 00:00:23
+The typical examples will be:
+
+7
+00:00:24 --> 00:00:25
+Motion of <b>simple pendulum</b>
+
+8
+00:00:26 --> 00:00:27
+<b>Van der Pol equation</b>
+
+9
+00:00:28 --> 00:00:29
+and <b> Lorenz system</b>.
+
+10
+00:00:30 --> 00:00:32
+To record this tutorial, I am using
+
+11
+00:00:33 --> 00:00:35
+<b>Ubuntu 12.04</b> as the operating system
+
+12
+00:00:36 --> 00:00:39
+and <b>Scilab 5.3.3</b> version.
+
+13
+00:00:40 --> 00:00:44
+To practice this tutorial, a learner should have basic knowledge of <b>Scilab</b>
+
+14
+00:00:45 --> 00:00:47
+and should know how to solve <b>ODEs.</b>
+
+15
+00:00:48 --> 00:00:55
+To learn <b>Scilab,</b> please refer to the relevant tutorials available on the <b>Spoken Tutorial</b> website.
+
+16
+00:00:56 --> 00:01:00
+The <b>ode</b> function is an <b>ordinary differential equation solver</b>.
+
+17
+00:01:01 --> 00:01:09
+The syntax is <b>y equal to ode</b> within parenthesis <b>y zero, t zero, t</b> and <b>f</b>.
+
+18
+00:01:10 --> 00:01:14
+Here <b>y zero</b> is the initial condition of the <b>ODEs</b>,
+
+19
+00:01:15 --> 00:01:16
+<b>t zero</b> is the <b>initial time</b>,
+
+20
+00:01:17 --> 00:01:18
+<b>t</b> is the <b>time range</b>,
+
+21
+00:01:19 --> 00:01:21
+and <b>f</b> is the <b>function</b>.
+
+22
+00:01:22 --> 00:01:24
+Consider the motion of <b>simple pendulum.</b>
+
+23
+00:01:25 --> 00:01:32
+Let <b>theta t</b> be the angle made by the <b>pendulum</b> with the <b>vertical</b> at time <b>t.</b>
+
+24
+00:01:33 --> 00:01:35
+We are given the initial conditions-
+
+25
+00:01:36 --> 00:01:38
+<b>theta of zero</b> is equal to <b>pi by four</b> and
+
+26
+00:01:39 --> 00:01:43
+<b>theta dash of zero</b> is equal to <b>zero.</b>
+
+27
+00:01:44 --> 00:01:46
+Then the position of the <b>pendulum</b> is given  by:
+
+28
+00:01:47 --> 00:01:55
+<b>theta double dash t minus g by l into sin of theta t equal to zero.</b>
+
+29
+00:01:56 --> 00:02:02
+Here <b>g equal to 9.8 m per second square</b> is the <b>acceleration due to gravity</b> and
+
+30
+00:02:03 --> 00:02:10
+<b> l equal to zero point five meter</b> is the length of the <b>pendulum.</b>
+
+31
+00:02:11 --> 00:02:21
+For the given initial conditions, we have to solve the <b>ODE</b> within the <b>time range zero less than equal to t less than equal to five.</b>
+
+32
+00:02:22 --> 00:02:24
+We also have to <b>plot</b> the solution.
+
+33
+00:02:25 --> 00:02:28
+Let us look at the code for solving this problem.
+
+34
+00:02:29 --> 00:02:33
+Open <b>Pendulum dot sci</b> on <b>Scilab editor.</b>
+
+35
+00:02:34 --> 00:02:39
+The first line of the code defines the initial conditions of the <b>ODE.</b>
+
+36
+00:02:40 --> 00:02:45
+Then we define the intial time value. And we provide the <b>time range.</b>
+
+37
+00:02:46 --> 00:02:51
+Next, we convert the given equation to a system of <b>first order ODEs.</b>
+
+38
+00:02:52 --> 00:02:55
+We substitute the values of <b>g</b> and <b>l</b> .
+
+39
+00:02:56 --> 00:03:02
+Here we take <b>y</b> to be the given <b>variable theta</b> and <b>y dash</b> to be <b>theta dash.</b>
+
+40
+00:03:03 --> 00:03:11
+Then we call the <b>ode</b> function with arguments <b>y zero, t zero, t</b> and the function <b>Pendulum.</b>
+
+41
+00:03:12 --> 00:03:16
+The solution to the equation will be a <b>matrix</b> with two <b>rows.</b>
+
+42
+00:03:17 --> 00:03:20
+The first <b>row</b> will contain the values of <b>y</b> in the given <b>time range.</b>
+
+43
+00:03:21 --> 00:03:26
+The second <b>row</b> will contain the values of <b>y dash </b> within the <b>time range. </b>
+
+44
+00:03:27 --> 00:03:30
+Hence we plot both the <b>rows</b> with respect to <b>time. </b>
+
+45
+00:03:31 --> 00:03:36
+Save and execute the file <b>Pendulum dot sci</b>.
+
+46
+00:03:37 --> 00:03:43
+The plot shows how the values of <b>y</b> and <b>y dash</b> vary with <b>time. </b>
+
+47
+00:03:44 --> 00:03:46
+Switch to <b>Scilab console</b>.
+
+48
+00:03:47 --> 00:03:53
+If you want to see the values of <b>y,</b> type <b>y</b> on the <b>console</b> and press <b>Enter.</b>
+
+49
+00:03:54 --> 00:03:57
+The values of <b>y</b> and <b>y dash</b> are displayed.
+
+50
+00:03:58 --> 00:04:02
+Let us solve <b>Van der Pol equation</b> using the <b>ode</b> function.
+
+51
+00:04:03 --> 00:04:05
+We are given the <b>equation </b>-
+
+52
+00:04:06 --> 00:04:19
+<b>v double dash of t plus epsilon into v of t square minus one into v dash of t plus v of t equal to zero.</b>
+
+53
+00:04:20 --> 00:04:27
+The initial conditions are <b>v of two equal to one</b> and <b>v dash of two equal to zero. </b>
+
+54
+00:04:28 --> 00:04:31
+Assume <b>epsilon is equal to zero point eight nine seven. </b>
+
+55
+00:04:32 --> 00:04:41
+We have to find the solution within the <b>time range two less than t less than ten</b> and then <b>plot</b>  the solution.
+
+56
+00:04:42 --> 00:04:46
+Let us look at the code for <b>Van der Pol equation. </b>
+
+57
+00:04:47 --> 00:04:52
+Switch to <b>Scilab editor</b> and open <b>Vander pol dot sci.</b>
+
+58
+00:04:53 --> 00:05:00
+We define the initial conditions of the <b>ODEs</b> and <b>time</b> and then define the <b>time range. </b>
+
+59
+00:05:01 --> 00:05:06
+Since the <b>inital time value</b> is given as <b>two</b>, we start the time range at two.
+
+60
+00:05:07 --> 00:05:14
+Then we define the <b>function Vander pol</b> and construct a system of <b>first order ODEs.</b>
+
+61
+00:05:15 --> 00:05:20
+We substitute the value of <b>epsilon</b> with <b>zero point eight nine seven. </b>
+
+62
+00:05:21 --> 00:05:24
+Here <b>y</b> refers to the <b>voltage v.</b>
+
+63
+00:05:25 --> 00:05:29
+Then we call <b>ode</b> function and solve the system of <b>equations.</b>
+
+64
+00:05:30 --> 00:05:34
+Finally we plot <b>y</b> and <b>y dash versus t.</b>
+
+65
+00:05:35 --> 00:05:40
+Save and execute the file <b>Vander pol dot sci.</b>
+
+66
+00:05:41 --> 00:05:44
+The <b>plot</b> showing <b>voltage versus time</b> is shown.
+
+67
+00:05:45 --> 00:05:49
+Let's move onto <b>Lorenz system of equations.</b>
+
+68
+00:05:50 --> 00:05:52
+The <b>Lorenz system of equations</b> is given by:
+
+69
+00:05:53 --> 00:05:59
+<b>x one dash equal to sigma into x two minus x one</b>,
+
+70
+00:06:00 --> 00:06:07
+<b>x two dash equal to one plus r minus x three into x one minus x two</b> and
+
+71
+00:06:08 --> 00:06:15
+<b>x three dash equal to x one into x two minus b into x three.</b>
+
+72
+00:06:16 --> 00:06:28
+The initial conditions are <b>x one zero  equal to minus ten</b>,  <b>x two zero equal to ten</b> and <b>x three zero equal to twenty five.</b>
+
+73
+00:06:29 --> 00:06:36
+Let <b>sigma</b> be equal to <b>ten,  r</b> be equal to <b>twenty eight</b> and <b>b</b> equal to <b>eight by three.</b>
+
+74
+00:06:37 --> 00:06:43
+Switch to <b>Scilab editor</b> and open <b>Lorenz dot sci</b>.
+
+75
+00:06:44 --> 00:06:47
+We start by defining the initial conditions of the <b>ODEs.</b>
+
+76
+00:06:48 --> 00:06:53
+Since there are three different <b>ODEs,</b> there are three initial conditions.
+
+77
+00:06:54 --> 00:06:59
+Then we define the <b>inital time</b> condition and next the <b>time range.</b>
+
+78
+00:07:00 --> 00:07:07
+We define the <b>function Lorenz</b> and then define the given constants <b>sigma, r</b> and <b>b.</b>
+
+79
+00:07:08 --> 00:07:11
+Then we define the <b>first order ODEs.</b>
+
+80
+00:07:12 --> 00:07:17
+Then we call the <b>ode</b> function to solve the <b>Lorenz system of equations.</b>
+
+81
+00:07:18 --> 00:07:20
+We equate the solution to <b>x.</b>
+
+82
+00:07:21 --> 00:07:27
+Then we <b>plot x one, x two</b> and <b>x three versus time.</b>
+
+83
+00:07:28 --> 00:07:32
+Save and execute the file <b>Lorenz dot sci.</b>
+
+84
+00:07:33 --> 00:07:38
+The <b>plot</b> of <b>x one, x two</b> and <b>x three versus time</b> is shown.
+
+85
+00:07:39 --> 00:07:40
+Let us summarize this tutorial.
+
+86
+00:07:41 --> 00:07:49
+In this tutorial we have learnt to develop <b>Scilab code</b> to solve an <b>ODE</b> using <b>Scilab ode function</b>.
+
+87
+00:07:50 --> 00:07:52
+Then we have learnt to <b>plot</b> the solution.
+
+88
+00:07:53 --> 00:07:55
+Watch the video available at the  link shown below.
+
+89
+00:07:56 --> 00:07:58
+It summarizes the Spoken Tutorial project.
+
+90
+00:07:59 --> 00:08:03
+If you do not have good bandwidth, you can download and watch it.
+
+91
+00:08:04 --> 00:08:05
+The spoken tutorial project Team:
+
+92
+00:08:06 --> 00:08:08
+Conducts workshops using spoken tutorials.
+
+93
+00:08:09 --> 00:08:12
+Gives certificates to those who pass an online test.
+
+94
+00:08:13 --> 00:08:19
+For more details, please write to contact@spoken-tutorial.org.
+
+95
+00:08:20 --> 00:08:22
+Spoken Tutorial Project is a part of the Talk to a Teacher project.
+
+96
+00:08:23 --> 00:08:30
+It is supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+97
+00:08:31 --> 00:08:35
+More information on this mission is available at the link shown below.
+
+98
+00:08:36 --> 00:08:37
+This is Ashwini Patil, signing off.
+
+99
+00:08:38 --> 00:08:43
+Thank you for joining.
+

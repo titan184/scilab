@@ -1,0 +1,239 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:06
+Dear Friends,Welcome to the spoken tutorial on “<b>Signal Processing using Scilab</b>”
+
+2
+00:00:07 --> 00:00:18
+In this tutorial, using Scilab, I will show you how to Generate different kinds of signals , and Perform different operations to analyse signals.
+
+3
+00:00:19 --> 00:00:29
+To record this tutorial, I am using <b>Ubuntu 11.04</b> as the operating system with <b>Scilab 5.3.3</b> version
+
+4
+00:00:30 --> 00:00:34
+Before practicing this tutorial, a learner should have a basic knowledge of Scilab.
+
+5
+00:00:35 --> 00:00:41
+To know the basics of Scilab, please refer to the series of basic level of spoken tutorials in Scilab
+
+6
+00:00:42 --> 00:00:44
+which is available on our website www.spoken-tutorial.org
+
+7
+00:00:45 --> 00:00:57
+In this tutorial, I will describe about 3 basic Signals.Plotting continuous and discrete sine wave.Plotting <b>step function</b>. Plotting <b>ramp function</b>.
+
+8
+00:00:58 --> 00:01:01
+Let me start with “Plotting continuous and discrete sine wave”
+
+9
+00:01:02 --> 00:01:05
+Let us switch to the Scilab Console Window.
+
+10
+00:01:06 --> 00:01:16
+Here type: <b>t equal to zero colon zero point one colon two multiplied by precentage pi semicolon.</b>
+
+11
+00:01:17 --> 00:01:32
+Then <b>x equal to sin of t semicolon then plot 2D into bracket t comma x</b>and press <b>Enter</b> key on your keyboard.
+
+12
+00:01:33 --> 00:01:35
+This is a <b>continous sine wave</b>
+
+13
+00:01:36 --> 00:01:38
+Let us discuss the <b>discrete sine wave.</b>
+
+14
+00:01:39 --> 00:01:53
+On the console window type: <b>plot two d3 within bracket invertes comma gnn comma t comma x and press Enter.</b>
+
+15
+00:01:54 --> 00:01:56
+This is <b>discrete sine wave.</b>
+
+16
+00:01:57 --> 00:02:03
+Let us now discuss about Plotting <b>step function</b> and plotting <b>ramp function.</b>
+
+17
+00:02:04 --> 00:02:13
+I have already written the code to generate <b>step</b> and <b>ramp</b> signal in the file called <b>signals.sce.</b>
+
+18
+00:02:14 --> 00:02:26
+Let us open this file <b>signal.sce</b> using <b>scilab editor</b>.Let us execute this code.Click on the “Execute” button in the Menu bar
+
+19
+00:02:27 --> 00:02:31
+<b>Step</b> and <b>Ramp</b> signal is displayed in this plot.
+
+20
+00:02:32 --> 00:02:42
+Now let us learn how to perform different operations to analyse signals.Let us see how to perform <b>Convolution</b> between two signals.
+
+21
+00:02:43 --> 00:02:54
+Let us switch to the Scilab Console window and type<b>x equals to within square bracket one comma two comma three comma four</b>
+
+22
+00:02:55 --> 00:03:03
+Then type <b>h equals to within square bracket one comma one comma one</b>
+
+23
+00:03:04 --> 00:03:16
+Now let us apply the <b>convolution</b> by typing<b> convol opening bracket x comma h closing bracket</b> and press Enter on your keyboard.
+
+24
+00:03:17 --> 00:03:19
+An output can be seen here.
+
+25
+00:03:20 --> 00:03:29
+Now let us learn <b>Discrete fourier transform</b> for a discrete sequence by using the inbuilt command <b>dft().</b>
+
+26
+00:03:30 --> 00:03:40
+On the console window here type <b>x equals to within square bracket one comma two comma three comma four</b>
+
+27
+00:03:41 --> 00:03:58
+ThenType<b> within square bracket xf equals to dft into bracket x comma minus 1</b>Where x is the input vector and flag value is -1 for DFT.
+
+28
+00:03:59 --> 00:04:00
+Let us press Enter
+
+29
+00:04:01 --> 00:04:04
+The output appears as this
+<p><b>10. </b>
+<b>- 2. + 2.i </b>
+<b>- 2. - 9.797D-16i </b>
+<b>- 2. - 2.i </b>
+</p>
+
+30
+00:04:05 --> 00:04:14
+Now I will show you how to calculate inverse discrete <b>fourier transform</b>. This can be done by using the same inbuilt command <b>dft().</b>
+
+31
+00:04:15 --> 00:04:30
+On the Scilab console window type: <b>squareBracket x equals to dft within bracket xf comma 1</b>Here the <b>flag value</b> is 1 for <b>idft.</b>
+
+32
+00:04:31 --> 00:04:33
+This is the output
+
+33
+00:04:34 --> 00:04:38
+Let us calculate discrete fourier transform using <b>fft()</b>
+
+34
+00:04:39 --> 00:04:48
+On the console window, type <b>x= x equals to square bracket one comma two comma three comma four</b>
+
+35
+00:04:49 --> 00:04:58
+Press Enter and type  y equals to fft within bracket x comma minus one
+
+36
+00:04:59 --> 00:05:04
+Press Enter and you can see the output as these:-<b>10. - 2. + 2.i - 2. - 2. - 2.i </b>
+
+37
+00:05:05 --> 00:05:11
+Let us now see how to calculate inverse discrete fourier transform by using <b>fft().</b>
+
+38
+00:05:12 --> 00:05:32
+On the Scilab console window type <b>y equals to within square bracket ten comma minus two plus two into percentage i comma minus two comma minus two minus two into percentage i.</b>
+
+39
+00:05:33 --> 00:05:44
+and Press EnterType  x equals to fft within bracket y comma 1 and Press Enter
+
+40
+00:05:45 --> 00:05:48
+The output will be displayed as this
+
+41
+00:05:49 --> 00:05:52
+Let us now find out the correlation between two vectors.
+
+42
+00:05:53 --> 00:05:55
+To do this on the Scilab console window,
+
+43
+00:05:56 --> 00:06:07
+Type <b>x equals to within square bracket one comma two comma three comma four</b>and press Enter
+
+44
+00:06:08 --> 00:06:19
+Type<b> x2 equals to within square braccket one comma three comma one comma five </b>and press Enter
+
+45
+00:06:20 --> 00:06:33
+Type <b>R x  x two equals to corr within bracket x comma x two comma four </b>and press Enter
+
+46
+00:06:34 --> 00:06:37
+The output will be displayed as shown.
+
+47
+00:06:38 --> 00:06:41
+Let us learn how to sample the given signal
+
+48
+00:06:42 --> 00:06:51
+Let me open sampling.sce where I have already written the code in sampling.sce .Here click on the “<b>Execute</b>”button.
+
+49
+00:06:52 --> 00:06:55
+A plot is displayed.
+
+50
+00:06:56 --> 00:06:57
+Let us summarise.
+
+51
+00:06:58 --> 00:07:03
+In this tutorial we have learnt How to Plot sine, step and ramp signal.
+
+52
+00:07:04 --> 00:07:11
+To perform Linear convolution by convol().To perform DFT and IDFT by dft().
+
+53
+00:07:12 --> 00:07:19
+To perform FFT by fft(). To find out the Correlation by corr(). To do sampling
+
+54
+00:07:20 --> 00:07:22
+Watch the video available atthis URL <a class="external free" href="http://spoken-tutorial.org/What" rel="nofollow">http://spoken-tutorial.org/What</a> is a Spoken Tutorial
+
+55
+00:07:23 --> 00:07:29
+It summarises the Spoken TutorialprojectIf you do not have goodbandwidth, you can also download and watch it
+
+56
+00:07:30 --> 00:07:41
+The Spoken Tutorial Project Team Conducts workshops using spokentutorials. Gives certificates to those who pass an online test Please contact us contact@spoken-tutorial.org
+
+57
+00:07:42 --> 00:07:50
+Spoken Tutorial Project is a part of the Talk to a Teacher project It is supported by the National Mission on Education throughICT, MHRD, Government of India
+
+58
+00:07:51 --> 00:07:56
+This script has been contributed by Manas and this is Sheetal Prabhu signing off. Thank you for joining.
+
