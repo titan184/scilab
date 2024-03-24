@@ -1,0 +1,354 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:05
+Welcome to the spoken tutorial on <b>Scripts and Functions</b> with Scilab.
+
+2
+00:00:06 --> 00:00:11
+Let us start with a brief introduction to the <b>file formats</b> in Scilab.
+
+3
+00:00:12 --> 00:00:20
+When several commands are to be executed, it may be more convenient to write these statements into a  file with the Scilab editor.
+
+4
+00:00:21 --> 00:00:23
+These are called as SCRIPT files.
+
+5
+00:00:24 --> 00:00:33
+To execute the commands written in such a script file, the <b>exec</b> function can be used followed by the name of the script file.
+
+6
+00:00:34 --> 00:00:41
+These files generally have the extension <b>.sce</b> or <b>.sci</b>, depending on its content.
+
+7
+00:00:42 --> 00:00:50
+Files having the <b>.sci</b> extension contain Scilab function and or user defined functions.
+
+8
+00:00:51 --> 00:00:59
+Executing these files loads the functions into Scilab environment (but does not execute them), whereas
+
+9
+00:01:00 --> 00:01:07
+files having the <b>.sce</b> extension contain Scilab function and User defined functions.
+
+10
+00:01:08 --> 00:01:20
+Please remember that the convention of naming the extension as .sce and .sci are not rules but a convention followed by the scilab community.
+
+11
+00:01:21 --> 00:01:26
+Let us open Scilab console window on the computer.
+
+12
+00:01:27 --> 00:01:34
+Check on the present working directory by typing the command <b>pwd</b> on the command prompt.
+
+13
+00:01:35 --> 00:01:48
+Go to the Task bar of scilab console window and click on Editor option to open the scilab editor.
+
+14
+00:01:49 --> 00:02:02
+I have already typed the commands in a file and saved it as helloworld.sce, therefore I will open that file using Open a file shortcut icon.
+
+15
+00:02:03 --> 00:02:09
+Select helloworld.sce file and click on Open.
+
+16
+00:02:10 --> 00:02:19
+You may type the commands in the new file and save this file to the current working directory as helloworld.sce through the File menu.
+
+17
+00:02:20 --> 00:02:28
+Go to Execute button on the scilab editors menu bar and select Load into Scilab option.
+
+18
+00:02:29 --> 00:02:33
+This will load the file into  scilab console.
+
+19
+00:02:34 --> 00:02:42
+After loading the file on the  console the script produces the output as you see.
+
+20
+00:02:43 --> 00:02:48
+It contains both the commands and the resulting output for the respective commands.
+
+21
+00:02:49 --> 00:02:54
+Now change the value of a to 1.
+
+22
+00:02:55 --> 00:03:01
+In the editor, go to the File menu and click on Save.
+
+23
+00:03:02 --> 00:03:11
+We can also execute the script directly from the scilab interpreter using the <b>exec</b> command and giving the path to the script file as:
+
+24
+00:03:12 --> 00:03:30
+exec into brackets into double quotes helloworld.sce, that is the file name, and press Enter.
+
+25
+00:03:31 --> 00:03:36
+The script file produces a similar output with the use of <b>exec</b> function.
+
+26
+00:03:37 --> 00:03:38
+Let us now talk about <b>functions</b>.
+
+27
+00:03:39 --> 00:03:45
+A function definition starts with the keyword <b>function</b> and ends with the keyword <b>endfunction</b>.
+
+28
+00:03:46 --> 00:03:56
+I have already saved a function file in function.sci, using the scilab editor.
+
+29
+00:03:57 --> 00:04:02
+I will open that file.
+
+30
+00:04:03 --> 00:04:07
+As you see, the function is defined here.
+
+31
+00:04:08 --> 00:04:20
+In these, <b>degrees</b> is the output parameter and <b>radians</b> is the input parameter.
+
+32
+00:04:21 --> 00:04:25
+To the function name <b>radians2degrees</b>.
+
+33
+00:04:26 --> 00:04:39
+I will  load this function in Scilab, using the Execute menu option.
+
+34
+00:04:40 --> 00:04:43
+The function is now loaded in the scilab console.
+
+35
+00:04:44 --> 00:04:46
+It can also be loaded  using the <b>exec</b> command.
+
+36
+00:04:47 --> 00:04:55
+Once a function is loaded, it can be called like any other Scilab function by passing specific arguments to that function.
+
+37
+00:04:56 --> 00:05:01
+Make a mental note of the percent sign (%) and recall the reason of its use.
+
+38
+00:05:02 --> 00:05:16
+Now let us find values for radians2degrees of %pi/2 and radians2degrees of (%pi/4).
+
+39
+00:05:17 --> 00:05:27
+percent pi/2  and radians2degrees  percent pi by 4 (%pi/4).
+
+40
+00:05:28 --> 00:05:32
+Now we will see a function with more than one input and output arguments.
+
+41
+00:05:33 --> 00:05:43
+This function will take <b>polar coordinates</b> as input argument and returns <b>rectangular coordinates</b> as output arguments.
+
+42
+00:05:44 --> 00:05:50
+I will open the file which I have already typed.
+
+43
+00:05:51 --> 00:06:05
+Here you can see, <b>x</b> and <b>y</b> are the output parameters and <b>r</b> and <b>theta</b> are the input parameters to the function <b>polar2rect</b>.
+
+44
+00:06:06 --> 00:06:20
+I will  load this function in scilab using the <b>exec</b> option.
+
+45
+00:06:21 --> 00:06:30
+Once the function is loaded, we need to call the function. This function requires two input arguments and two output arguments.
+
+46
+00:06:31 --> 00:06:36
+Therefore r = 2,
+
+47
+00:06:37 --> 00:06:43
+theta = 45;
+
+48
+00:06:44 --> 00:07:24
+and now we will call it x1 comma y1, output parameters, is equal to function name <b>polar2rect into bracket  r comma theta</b> and press Enter.
+
+49
+00:07:25 --> 00:07:28
+You will see the value of x1 and y1.
+
+50
+00:07:29 --> 00:07:37
+One of the interesting features of Scilab is, you can define any number of functions in a single <b>.sci</b> file.
+
+51
+00:07:38 --> 00:07:54
+While doing this, please remember that by default all the variables defined in a function are local, the scope of these variables used in a particular function ends with the <b>endfunction</b> keyword of the function definition.
+
+52
+00:07:55 --> 00:08:04
+Advantage of this feature is that, we can use same variable names in different function.
+
+53
+00:08:05 --> 00:08:09
+These variables won't get mixed up unless we use the global option.
+
+54
+00:08:10 --> 00:08:17
+To know more about the global variables, type <b>help global</b>.
+
+55
+00:08:18 --> 00:08:25
+Please note that if any variable is to be "watched" or monitored inside a function then <b>disp</b> is required.
+
+56
+00:08:26 --> 00:08:33
+Inside a function file, you can check for yourself the effect of putting a semicolon ( ; ) at the end of a statement.
+
+57
+00:08:34 --> 00:08:37
+Also check this for <b>disp</b> statements.
+
+58
+00:08:38 --> 00:08:45
+<b>Inline Functions</b>: Functions are segments of code that have well defined input and output as well as local variables.
+
+59
+00:08:46 --> 00:08:52
+The simplest way to define a function  is by using the command `<b>deff</b>.
+
+60
+00:08:53 --> 00:09:01
+Scilab allows the creation of in-line functions and are especially useful when the body of the function is short.
+
+61
+00:09:02 --> 00:09:06
+This can be done with the help of the function deff().
+
+62
+00:09:07 --> 00:09:09
+It takes two string parameters.
+
+63
+00:09:10 --> 00:09:18
+The first string defines the interface to the function and the second string defines the statements of the function.
+
+64
+00:09:19 --> 00:09:25
+The <b>deff</b> command defines the function in the Scilab and also loads it.
+
+65
+00:09:26 --> 00:09:33
+There is no need to load the function defined by using <b>deff</b> command explicitly through execute menu option .
+
+66
+00:09:34 --> 00:09:40
+Let us see an example to illustrate this concept:
+
+67
+00:09:41 --> 00:09:50
+I will open a file <b>inline.sci</b> where I have written the inline function.
+
+68
+00:09:51 --> 00:09:56
+I will resize the editor window.
+
+69
+00:09:57 --> 00:10:12
+As mentioned earlier, the first string defines the function declaration and the second string defines the statements of the function.
+
+70
+00:10:13 --> 00:10:53
+We will load this function in Scilab editor and use it to find the values of degrees2radians of 90 and degrees2radians of 45.
+
+71
+00:10:54 --> 00:10:59
+A function should call, not just other functions within itself, but also <b>itself</b>.
+
+72
+00:11:00 --> 00:11:02
+This is <b>recursive</b> calling of a function.
+
+73
+00:11:03 --> 00:11:09
+This is required, for example, when writing a function to calculate the factorial of an integer.
+
+74
+00:11:10 --> 00:11:13
+Let us extend the discussion on file formats in Scilab:
+
+75
+00:11:14 --> 00:11:22
+As mentioned earlier Scilab uses two types of file formats, namely the <b>.sce</b> file format and the <b>.sci</b> file formats.
+
+76
+00:11:23 --> 00:11:34
+The files with the <b>.sce</b> file extension are the script files which contain the Scilab commands that you enter during an interactive kind of Scilab session.
+
+77
+00:11:35 --> 00:11:51
+They can comprise comment lines utilized in documenting the function and they can also use the command <b>exec</b> to execute the script.
+
+78
+00:11:52 --> 00:11:59
+The files with the <b>.sci</b> file extension are the function files that start with the function statement.
+
+79
+00:12:00 --> 00:12:19
+A single <b>.sci</b> file can have multiple function definitions which themselves contain any number of Scilab statements, that perform operations on the function arguments or on the output variables, after they have been evaluated.
+
+80
+00:12:20 --> 00:12:24
+This brings us to the end of this spoken tutorial on <b>Scripts and Functions</b> in Scilab.
+
+81
+00:12:25 --> 00:12:30
+There are many other functions in Scilab which will be covered in other spoken tutorials.
+
+82
+00:12:31 --> 00:12:32
+Keep watching the Scilab links.
+
+83
+00:12:33 --> 00:12:39
+This spoken tutorial: has been created by the Free and Open Source Software in Science and Engineering Education (FOSSEE).
+
+84
+00:12:40 --> 00:12:49
+More information on the FOSSEE project could be obtained from <a class="external free" href="http://fossee.in" rel="nofollow">http://fossee.in</a> or <a class="external free" href="http://scilab.in" rel="nofollow">http://scilab.in</a>
+
+85
+00:12:50 --> 00:12:55
+Supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+86
+00:12:56 --> 00:13:05
+For more information, visit: <a class="external free" href="http://spoken-tutorial.org/NMEICT-Intro" rel="nofollow">http://spoken-tutorial.org/NMEICT-Intro</a>.
+
+87
+00:13:06 --> 00:13:09
+This is Anuradha Amrutkar from IIT Bombay. signing off.
+
+88
+00:13:10 --> 00:13:15
+Thanks for joining us. Goodbye.
+

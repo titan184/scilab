@@ -1,0 +1,198 @@
+<html>
+<head>
+<title>
+	 
+      Spoken Tutorial Forums
+      
+</title>
+        <link rel="stylesheet" href="../../../includes/css/bootstrap_forum.min.css" type="text/css" media="screen" charset="utf-8" />
+         <link rel="stylesheet" href="../../../includes/css/slick.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="../../../includes/css/main_forum.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="../../../includes/css/nice-bar.css" type="text/css" media="screen" charset="utf-8" />
+      <link rel="stylesheet" href="../../../includes/css/theme.blue.css" type="text/css" media="screen" charset="utf-8" />
+</head>
+<body>
+	 <div id="page-wrapper">
+        <div id="header-wrapper">
+            <div id="header-inner">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+                            <div class="navbar-brand">
+                                <img id="logo" src="../../../includes/images/logo.png">
+                                Spoken Tutorial Forums
+                                </div>
+                        </div>
+                        </div> <!-- /.container -->
+                </nav>
+            </div> <!-- /#header-inner -->
+        </div>
+        <div id="content-wrapper">
+            <div id="content-inner" class="container">
+                <div id="content" class="col-lg-12 col-md-12 col-sm-12">
+                    
+                    <div class="row">
+    <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="question ">
+        <div class="title ">
+           Ploting
+        </div>
+        
+        <div id="questionNicPanel"></div>
+        <div class="body">
+            <span style="color: rgb(73, 80, 87); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">how to change color of graph and how to do simulation in phase diagram?</span>
+        </div>
+        <br>
+        
+        <span class="category">
+            <small>
+                <a>
+                    Scilab
+                </a>   
+            </small>
+        </span>
+        
+        <span class="tutorial">
+            <small>
+            <a>
+                    Plotting-2D-graphs
+             </a>       
+            </small>
+        </span>
+        
+        <span class="minute_range ">
+            <small>
+            <a>
+                    01-02 min
+             </a>       
+            </small>
+        </span>
+        
+        <span class="second_range ">
+            <small>
+                    <a>
+                    0-10 sec
+                    </a>
+            </small>
+        </span>
+       
+        
+        <span class="meta">
+            <small>
+                <i>
+                    02-10-20, 2:04 p.m.
+                </i>
+            </small>
+            
+            <span class="user">
+                2018pms5152@mnit.ac.in
+            </span>
+        </span>
+    </div> <!-- /.question -->
+    </div>
+</div> 
+
+<h4><u>Answers:</u></h4>
+<div id="answerPanelWrapper" style="display:none;">
+    <div id="answerNicPanel" style="display:none;"></div>
+</div>
+
+<div id="commentPanelWrapper" style="display:none;">
+    <div id="commentNicPanel" style="display:none;"></div>
+</div>
+
+<div class="row">
+    <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="answer " id="answer4644">
+            
+            <div class="body" id="body4644">
+                <div>I have taken one example to demonstrate how to change the color of the plot:</div><div><br></div><div>// Plot function<br>clc();<br>x = -%pi/2:0.01:%pi/2;<br>y = sin(x);<br>plot(x,y);<br>xlabel('x [rad]','FontSize',3);<br>ylabel('y(x)','FontSize',3);<br>title('y(x) = sin(x)','FontSize',5);<br>xgrid();<br><br>// Get graphic handles<br>hf = gcf();<br>ha = gca();<br><br>// Neon colors setup<br>// 2- blue, 3 - green, 4 - light blue, <br>// 5 - red, 6 - magenta, 7 - yellow<br>neon1 = 2; // grid<br>neon2 = 3; // ticks<br>neon3 = 6; // text<br>neon4 = 4; // line plot<br><br>// Set colors<br>hf.background = 0; // outer area<br>ha.background = 0; // inner area<br>ha.foreground = neon1; // axes rectangle<br>ha.font_color = neon2; // ticks<br>ha.grid =[neon1,neon1]; // grid<br>ha.title.font_foreground = neon3; // title<br>ha.x_label.font_foreground = neon3; // x-label<br>ha.y_label.font_foreground = neon3; // y-label<br>ha.children.children.foreground = neon4; // line plot<br>ha.children.children.thickness = 3; // line thickness<br><br><br></div>
+            </div>
+            
+            <span class="meta">
+                <small>
+                    <i>
+                        07-10-20, 8:36 a.m.
+                    </i>
+                </small>
+                
+                <span class="user">
+                    rashpat93
+                </span>
+            </span>
+        </div> <!-- /.answer -->
+        
+        <div class="row">
+            <div class="comments pull-right col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                <!-- displaying comments -->
+                
+                
+                
+                <!-- form to add comment -->
+      
+            </div> <!-- comments -->
+        </div> <!-- /.row -->
+        <br> <hr>
+    </div> <!-- /.answer-wrapper -->
+</div> <!-- /.row -->
+
+<div class="row">
+    <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="answer " id="answer4649">
+            
+            <div class="body" id="body4649">
+                There are two ways through which you can change color of graph,&nbsp;<div>1. By using plot command, i.e. plot(x,y, color="black") or any other color of your choice. Also there are color id of every color that you can find on help browser, and then you can directly write that color id in plot command, for example: color code for red is 5, so we can use plot2d(x,y,5).</div><div>note that, if we are using color id, we use specified plot2d or plot3d.</div><div>2. color of the graph can also be changed using edit option on menu bar of the graph window,&nbsp;</div><div>edit&gt;axis properties&gt;compound(1)&gt;polyline(1)&gt;foreground color</div><div><br></div><div>Simulations in phase diagram can also be done in same manner. for many such options please go through the 'edit' option on menu bar of graph window</div>
+            </div>
+            
+            <span class="meta">
+                <small>
+                    <i>
+                        07-10-20, 8:51 a.m.
+                    </i>
+                </small>
+                
+                <span class="user">
+                    smridhi.chawla.5@gmail.com
+                </span>
+            </span>
+        </div> <!-- /.answer -->
+        
+        <div class="row">
+            <div class="comments pull-right col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                <!-- displaying comments -->
+                
+                
+                
+                <!-- form to add comment -->
+      
+            </div> <!-- comments -->
+        </div> <!-- /.row -->
+        <br> <hr>
+    </div> <!-- /.answer-wrapper -->
+</div> <!-- /.row -->
+
+
+            <a href="http://forums.spoken-tutorial.org/question/3435/Ploting.replace(' ','-')/ " target="_blank">Click here to reply/comment online</a>
+                    
+                </div> <!-- /#content -->
+            </div> <!-- /#content-inner -->
+        </div>
+        <div id="footer-wrapper" class="container">
+            <div id="footer-inner" class="col-lg-12 col-md-12 col-sm-12">
+                <div class="cc">
+                    <a class="cc-logo" rel="license">
+                        <img src="../../../includes/images/cc-logo-88x31.png" alt="CC logo"> 
+                    </a> Spoken Tutorial Forum by <a href="http://www.iitb.ac.in" target="_blank">IIT Bombay</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+                </div> 
+            </div> <!-- /#footer-inner -->
+        </div> <!-- /#footer-wrapper -->
+    </div> 
+</body>
+</html>

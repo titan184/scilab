@@ -1,0 +1,422 @@
+<b>Narration</b>
+
+1
+00:00:00 --> 00:00:03
+Welcome to the spoken tutorial on <b>Plotting 2D graphs</b> with <b>Scilab</b>.
+
+2
+00:00:04 --> 00:00:09
+Assuming that Scilab is installed on your computer, we will discuss <b>plots</b> in Scilab.
+
+3
+00:00:10 --> 00:00:14
+Scilab offers many ways to create and customize various types of 2D and 3D plots.
+
+4
+00:00:15 --> 00:00:23
+The several common charts Scilab can create are: <b>x-y plots, contour plots, 3D plots, histograms, bar charts</b> etc...
+
+5
+00:00:24 --> 00:00:27
+Now open your Scilab console window.
+
+6
+00:00:28 --> 00:00:33
+I will use Plotting.sce file to cut and paste the commands.
+
+7
+00:00:34 --> 00:00:38
+In order to plot, we need a set of points. Let us create a sequence of equally spaced points.
+
+8
+00:00:39 --> 00:00:44
+This can be done by the <b>linspace</b> command which creates a linearly equally spaced vector.
+
+9
+00:00:45 --> 00:00:47
+For Example,
+
+10
+00:00:48 --> 00:00:56
+<b>x</b> is a row vector with 5 points linearly equally spaced between 1 and 10.
+
+11
+00:00:57 --> 00:01:07
+Similarly <b>y</b> is a row vector with linearly equally spaced 5 points between 1 and 20.
+
+12
+00:01:08 --> 00:01:13
+More information on <b>linspace</b> can be obtained from the <b>Help</b> documentation.
+
+13
+00:01:14 --> 00:01:18
+We will now plot a graph with the arguments x and y using the <b>plot</b> function.
+
+14
+00:01:19 --> 00:01:22
+This is similar to the one used in <b>matlab</b>.
+
+15
+00:01:23 --> 00:01:30
+<b>plot(x,y)</b> creates a graph of x verses y as you see.
+
+16
+00:01:31 --> 00:01:35
+Notice that the <b>Graphics window</b> is labeled as '0'.
+
+17
+00:01:36 --> 00:01:40
+We will open another graphic window using the <b>xset</b> function.
+
+18
+00:01:41 --> 00:01:42
+I will close this.
+
+19
+00:01:43 --> 00:01:49
+Cut the <b>xset</b> function, paste in Scilab, hit Enter.
+
+20
+00:01:50 --> 00:01:53
+You will see a <b>Graphic window number 1</b>.
+
+21
+00:01:54 --> 00:02:02
+Note that two arguments are passed to this function namely the 'window' and 1.
+
+22
+00:02:03 --> 00:02:05
+The next graph will be plotted on this window.
+
+23
+00:02:06 --> 00:02:13
+For Scilab, <b>plot2d</b> is the native function used to plot 2d graphs.
+
+24
+00:02:14 --> 00:02:25
+<b>plot2d</b> command plots a graph of x verses y as you see.
+
+25
+00:02:26 --> 00:02:30
+Notice that there is a third argument called 'style'.
+
+26
+00:02:31 --> 00:02:35
+<b>style</b> argument is optional. It is used to customize the appearance of the plot.
+
+27
+00:02:36 --> 00:02:43
+For positive values of style, the curve is plain with different colours like green for 3 in our case.
+
+28
+00:02:44 --> 00:02:45
+The default value of style is 1.
+
+29
+00:02:46 --> 00:02:50
+Try plotting graphs for negative values and see the difference in appearance yourself.
+
+30
+00:02:51 --> 00:02:56
+Also we can set the start points and end points for x and y axes by passing the fourth argument.
+
+31
+00:02:57 --> 00:03:06
+It is called <b>rect</b>. As you see,
+
+32
+00:03:07 --> 00:03:13
+we have x axis starting from 1 to 10 and y axis from 1 to 20.
+
+33
+00:03:14 --> 00:03:23
+The order of argument in the <b>rect</b> command is <b>xmin, ymin, xmax</b> and <b>ymax</b>.
+
+34
+00:03:24 --> 00:03:27
+Let us now learn about title, axis and legends.
+
+35
+00:03:28 --> 00:03:37
+To configure labels to the axis and title to the plot we can use the commands <b>title, xlabel</b> and <b>ylabel</b>.
+
+36
+00:03:38 --> 00:03:44
+I will cut this set of commands and paste in the console. Hit Enter.
+
+37
+00:03:45 --> 00:03:57
+You will see that the graph has been labeled x to the x-axis, y to the y-axis and the title of the graph is 'My title'.
+
+38
+00:03:58 --> 00:04:03
+You may want to configure the <b>title</b> and <b>axes</b> of the plot in a single command instead of 3
+
+39
+00:04:04 --> 00:04:10
+For this purpose we use the <b>xtitle</b>  command with all the 3 arguments.
+
+40
+00:04:11 --> 00:04:17
+I will cut this command, paste in scilab, <b>Enter</b>.
+
+41
+00:04:18 --> 00:04:25
+Now you see that the x axis label is X axis , Y axis and the title is 'My title'.
+
+42
+00:04:26 --> 00:04:35
+The <b>clf()</b> function that I am typing now, will clear the graphic window as you see.
+
+43
+00:04:36 --> 00:04:40
+It is useful while plotting different graphs on the same graphic window.
+
+44
+00:04:41 --> 00:04:43
+I will close this window.
+
+45
+00:04:44 --> 00:04:50
+Sometimes we need to compare two sets of data in the same plot, that is, one set of x data and two sets of y data.
+
+46
+00:04:51 --> 00:04:55
+Let us see an example for this, I will scroll down.
+
+47
+00:04:56 --> 00:05:02
+We will define the x-axis points in a row vector <b>x</b> using the <b>linspace</b> command.
+
+48
+00:05:03 --> 00:05:04
+Let us define a function
+
+49
+00:05:05 --> 00:05:06
+y1 = x square.
+
+50
+00:05:07 --> 00:05:09
+plot x verses y1.
+
+51
+00:05:10 --> 00:05:14
+Define another function y2 = 2 x square.
+
+52
+00:05:15 --> 00:05:16
+plot x verses y2.
+
+53
+00:05:17 --> 00:05:21
+We will also give label and title to our graph.
+
+54
+00:05:22 --> 00:05:32
+Notice that we have additionally passed ”o-” and ”+ -” commands to the plot function, to change the appearance of the curve.
+
+55
+00:05:33 --> 00:05:36
+These arguments are not a part of the <b>plot2d</b> function.
+
+56
+00:05:37 --> 00:05:40
+They can be used only with the <b>plot</b> function.
+
+57
+00:05:41 --> 00:05:48
+I will copy these set of commands and paste in the Scilab console.
+
+58
+00:05:49 --> 00:05:50
+You see the graph.
+
+59
+00:05:51 --> 00:05:55
+Wouldn't it be of great help to know which curve is associated with which function?
+
+60
+00:05:56 --> 00:06:07
+This can be achieved using the <b>legend</b> command as you see.
+
+61
+00:06:08 --> 00:06:18
+"o-" curve represents function y1=x square  and "+-" curve represents function y2=2*x^2 (y2=2x square)
+
+62
+00:06:19 --> 00:06:21
+I will close this graphic window.
+
+63
+00:06:22 --> 00:06:27
+We will now discuss about <b>plot2d demos</b> and <b>subplot</b> function.
+
+64
+00:06:28 --> 00:06:30
+Scilab provides <b>demos</b> for all its major functions.
+
+65
+00:06:31 --> 00:06:38
+<b>Demos</b> of <b>plot2d</b> can be viewed through the <b>demonstration</b> tab.
+
+66
+00:06:39 --> 00:06:50
+Click on <b>Graphics</b>, click <b>2D and 3D plots</b> and select a demo out of the various demos provided.
+
+67
+00:06:51 --> 00:06:53
+I will click on <b>plot2d</b>.
+
+68
+00:06:54 --> 00:06:54
+You will see the demo graph.
+
+69
+00:06:55 --> 00:07:01
+The code for this graph can also be seen by clicking on the <b>view code</b> button here.
+
+70
+00:07:02 --> 00:07:06
+This link does not open in <b>Mac OS</b> but  it works in <b>Windows</b> and <b>Linux</b>.
+
+71
+00:07:07 --> 00:07:11
+Never the less in Mac the code can be viewed through the directory.
+
+72
+00:07:12 --> 00:07:14
+Let us go to the terminal.
+
+73
+00:07:15 --> 00:07:20
+Currently I am in 'demos' directory of Scilab 5.2 as shown.
+
+74
+00:07:21 --> 00:07:26
+The full path to this directory is shown here.
+
+75
+00:07:27 --> 00:07:35
+We will type <b>ls</b> to see the list of demos available, as you see here.
+
+76
+00:07:36 --> 00:07:45
+Then we will select the 2d_3d_plots directory and hit <b>Enter</b>.
+
+77
+00:07:46 --> 00:07:54
+Type <b>ls</b> again to see the various <b>demo code</b> available in the 'sce' files.
+
+78
+00:07:55 --> 00:07:59
+We will view the code for the demo which we have seen earlier.
+
+79
+00:08:00 --> 00:08:10
+Type <b>more plot2d.dem.sce</b> and hit <b>Enter</b>.
+
+80
+00:08:11 --> 00:08:17
+Here you will see the code for the demo graph of plot2d function.
+
+81
+00:08:18 --> 00:08:20
+I will close the terminal.
+
+82
+00:08:21 --> 00:08:25
+I will close the demo graph and the demo window.
+
+83
+00:08:26 --> 00:08:28
+Similarly you can go through the other demos and explore Scilab.
+
+84
+00:08:29 --> 00:08:32
+Let us now discuss about <b>subplot</b> function.
+
+85
+00:08:33 --> 00:08:36
+The <b>subplot()</b> function divides the graphics window into a matrix of sub-windows.
+
+86
+00:08:37 --> 00:08:42
+To explain this function we will use demos for plotting 2D graphs in Scilab.
+
+87
+00:08:43 --> 00:08:57
+For example, type <b>plot2d</b> in your console and see the demo plot for this function.
+
+88
+00:08:58 --> 00:08:59
+I will close this window.
+
+89
+00:09:00 --> 00:09:09
+The <b>subplot</b> command breaks the graphics window into a '2 by 2' matrix of sub-windows represented by the first two arguments in the subplot command.
+
+90
+00:09:10 --> 00:09:14
+The third argument denotes the current window in which the plot will be plotted.
+
+91
+00:09:15 --> 00:09:23
+I will execute this whole set of commands by copying it to the scilab console.
+
+92
+00:09:24 --> 00:09:27
+You can see 4 plots in a single plot window .
+
+93
+00:09:28 --> 00:09:31
+The plot obtained can be saved as an image on your computer.
+
+94
+00:09:32 --> 00:09:38
+Click on the graphic window, go to <b>File</b> menu, select <b>Export to</b> .
+
+95
+00:09:39 --> 00:09:49
+Give a suitable title to your plot.
+
+96
+00:09:50 --> 00:09:53
+Select a destination folder to save your file.
+
+97
+00:09:54 --> 00:09:58
+Select the file format in which you want your image to appear.
+
+98
+00:09:59 --> 00:10:04
+I will select the JPEG format and click <b>Save</b>.
+
+99
+00:10:05 --> 00:10:10
+Browse through the directory to open the image and verify yourself whether it has been saved or not.
+
+100
+00:10:11 --> 00:10:14
+This brings us to the end of this spoken tutorial on <b>Plotting in Scilab</b>.
+
+101
+00:10:15 --> 00:10:19
+There are many other functions in Scilab which will be covered in other spoken tutorials.
+
+102
+00:10:20 --> 00:10:21
+Keep watching the Scilab links.
+
+103
+00:10:22 --> 00:10:28
+Spoken Tutorials are part of the Talk to a Teacher project, supported by the National Mission on Education through ICT.
+
+104
+00:10:29 --> 00:10:31
+More information on the same is available on the following link.
+
+105
+00:10:32 --> 00:10:37
+Thanks for joining. Good bye.
+

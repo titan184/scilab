@@ -1,0 +1,2285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>
+            Scripts and Functions - English | spoken-tutorial.org
+        </title>
+        <link rel="shortcut icon" href="../../../includes/images/favicon.ico">
+        <link rel="stylesheet" href="../../../includes/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="../../../includes/css/font-awesome.min.css" type="text/css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="../../../includes/css/main.css" type="text/css" media="screen" charset="utf-8">
+        <link href="../../../includes/css/video-js.min.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            .video-js {
+                padding-top: 56.25%
+            }
+            .vjs-fullscreen {
+                padding-top: 0px;
+            }
+            .playlist-container{
+                background: #1a1a1a;
+                margin-bottom: 20px;
+            }
+            .description, .order {
+                font-size: 13px;
+            }
+            .forward {
+                float: right;
+            }
+            .playlist ul {
+                 height: 330px;
+                 overflow-y: scroll;
+                 margin-bottom: 0px;
+            }
+            .playlist, .playlist-container, .video-container{
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .playlist ul{
+                list-style:none;
+                padding-left: 0px;
+            }
+            .playlist ul .playlist-item{
+                clear: both;
+                overflow: hidden;
+            }
+            .playlist ul .playlist-item.active{
+                background: #3a3a3a;
+            }
+            .playlist ul .playlist-item a{
+                color: white;
+                display: block;
+                overflow: hidden;
+                padding: 15px 10px;
+            }
+            .playlist ul .playlist-item.active a{
+                color: orange;
+            }
+            .playlist ul .playlist-item:hover{
+                background: gray;
+            }
+            .playlist ul .playlist-item .thumb, .playlist ul .playlist-item .thumb .order{
+                padding-right: 10px;
+            }
+            .playlist-info{
+                color: white;
+                padding: 10px;
+                background: black;
+            }
+            .playlist-controls{
+                background: black;
+                border-top: 1px solid #3a3a3a;
+                padding: 10px 0;
+            }
+            .playlist-controls a{
+                color: white;
+            }
+            .playlist-controls span{
+                margin: 0 10px;
+            }
+            #content-wrapper #content-inner div.container{
+                padding-left: 0px;
+            }
+            p.list-group-item-text {
+                margin-top: 7px;
+            }
+            .list-zipfiles {
+                overflow-x: hidden;
+                max-height: 150px;
+            }
+            .review-data pre {
+                margin-bottom: 0px;
+            }
+            .video-js .vjs-tech{
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+            }
+        .vjs-tt-cue {
+            font-size: 16px;
+        }
+        .video-js .vjs-text-track {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .custom-jumbotron {
+            background-color: white !important;
+            border: none;
+            padding: 0px !important;
+        }
+        .custom-jumbotron p {
+            padding-left: 20px;
+        }
+        .custom-jumbotron h3 {
+            margin-top: 10px;
+        }
+        .video-visits {
+            text-align: right;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .container.playlist-container.col-lg-12.col-md-12.col-sm-12 {
+            margin-bottom: 10px;
+        }
+        .col-lg-5.col-md-5.col-sm-5.no-padding-right.right-bar {
+            margin-top: 5px;
+        }
+        .video-info{
+            display: none;
+        }
+        .breadcrumb {
+            background: white;
+            margin: 0px;
+        }
+        .list-group-item{
+            border-top: none;
+            padding-top: 0px;
+        }
+        .list-group-item:first-child {
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .hline {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .video-share {
+            margin-bottom: 10px;
+        }
+        .inner-shadow {
+            padding: 15px;
+            /*-webkit-box-shadow: 0px 0px 10px 0px rgba(84, 70, 70, 0.87);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(84, 70, 70, 0.87);
+            box-shadow: 0px 0px 10px 0px rgba(84, 70, 70, 0.87);*/
+            border: 1px solid #ddd;
+        }
+        .inner-sidebar {
+            padding-left: 15px;
+            padding-top: 5px;
+        }
+        .inner-content-body {
+            margin-top: 5px;
+        }
+        .video-info-show-more, .list-group-item-container, .panel {
+            margin-bottom: 14px;
+        }
+        a.list-group-item .list-group-item-heading {
+            color: #337AB7;
+        }
+        .panel-body-heading {
+            font-size: 16px;
+            margin-bottom: 0px;
+            color: #337AB7;
+        }
+        .panel-body .hline {
+            margin-bottom: 8px;
+        }
+        .forum-questions h4 {
+            font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+            font-size: 18px;
+            font-weight: bold;
+        }
+       .forum-questions .question {
+         padding-left: 5px;
+         padding-right: 5px;
+             padding-top: 5px;
+            clear: both;
+        }
+        .forum-questions .question a {
+            font-weight: bold;
+        }
+        .forum-questions .question p {
+            font-weight: normal;
+            padding: 5px;
+            font-size: 13px !important;
+            font-family: Verdana, Arial, Helvetica, sans-serif !important;
+            color: rgb(85, 85, 85) !important;
+            line-height: 18px !important;
+        }
+        .forum-questions .question p span, .forum-questions .question p div {
+            font-size: 13px !important;
+            font-family: Verdana, Arial, Helvetica, sans-serif !important;
+            color: rgb(85, 85, 85) !important;
+            line-height: 18px !important;
+        }
+        .hline-inner {
+            clear: both;
+        }
+        small {
+            padding: 3px 5px;
+            margin: 0 5px 0 0;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -o-border-radius: 3px;
+            border-radius: 3px;
+            background: #424242;
+            color: #ffffff;
+            width: 100px;
+            overflow: hidden;
+        }
+        small.timing {
+            background: #a26dc8;
+        }
+        .forum-post {
+            color: #4F8811;
+        }
+
+    .ScrollStyle
+    {
+        max-height: 370px;
+         min-height: 370px;
+        overflow:scroll;
+
+        float: left;
+        background: white;
+    }
+
+            .video-js.vjs-fullscreen .vjs-tt-cue { font-size: 22px; }
+        </style>
+        <script src="../../../includes/js/video.js"></script>
+    </head>
+    <body>
+        <div id="page-wrapper">
+            <!-- header begin -->
+            <div id="header-wrapper">
+                <nav class="navbar yamm navbar-default navbar-fixed-top" role="navigation">
+                    <div id="header-inner">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                                    <span class="sr-only">Toggle Navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a href="">
+                                    <img width="110px" src="../../../includes/images/logo.png">
+                                    Spoken <span class="title">Tutorial</span>
+                                </a>
+                            </div>
+                        </div> <!-- /.container-fluid -->
+                    </div> <!-- /#header-inner -->
+                </nav>
+            </div> <!-- /#header-wrapper -->
+            <!-- header end -->
+
+
+
+
+            <div id="content-wrapper">
+                <div id="content-inner" class="container">
+                    <div id="content" class="col-lg-12 col-md-12 col-sm-12">
+                     <b><h4 class="page-title">Scripts and Functions - English</h4></b>
+                        <row>
+                            <div class='container playlist-container col-lg-12 col-md-12 col-sm-12'>
+                                <div class="video-container col-lg-8 col-md-8 col-sm-8">
+                                    <video id="st_video" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" data-setup="{}">
+                                        <source src="./Scripts-and-Functions-English.webm" type="video/webm" />
+                                        <track kind="captions" src="./Scripts-and-Functions-English.srt" srclang="en" label="English" />
+                                    </video>
+                                </div>
+                                <div class="container">
+                                    <div id="content">
+                                        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                                            <li style="width:190px" class="active" ><a href="#forums" data-toggle="tab">Questions posted on Forums</a></li>
+                                            <li style="width:180px;" ><a style= "min-height: 60px;padding-top: 12px;" href="#tutorials" data-toggle="tab">Scilab Tutorials - English </a></li>
+                                            <div id="my-tab-content" class="tab-content">
+                                                <div class="tab-pane active" id="forums" >
+                                                    <div id="forums_Q" class='ScrollStyle' style="width: 32%; " >
+ 
+                                                        
+                                                        <h4 style="font-family: Menlo;font-size: 16px; padding-left: 8px; ">Questions posted on ST Forums: </h4>
+                                                        <ul class="forum-questions" id="forum_Q" style="padding : 6px ">
+     
+                                                        
+
+                                                        <li class="question" id="4049">
+                                                        <a href="../../29/29/answer-to-question-4049.html" target="_blank" class="4049">Problem printing a graph on a GUI using scilab 6.0.2 for windows</a>
+                                                        <p>Hi all, how are you?.I'm making an GUI in scilab to print and update the graph of a second order system with scilab, this GUI has a fram to input the coefficients of the system and a button to calculate and display the system, the problem is that right now the code written in the .sce file is giving me an error or running partially because it says that the function used to print the response of the system is not defined, that function is "Sis_Motor(...)" .The code is the following:// Parámetros globales de ventana
+global margin_x margin_y;
+global frame_w frame_h plot_w plot_h;
+
+//Inicialización de parámetros de ventana
+frame_w=300; frame_h=500;           //Altura y anchura del marco.
+plot_w=600; plot_h=frame_h;         //Altura y anchura de la impresión.
+margin_x=15; margin_y=15;           //Margen horizontal y vertical para
+                                    //elementos.
+defaultfont="arial";                //Fuente por defecto.
+axes_w=3*margin_x+frame_w+plot_w;   //Anchura de los ejes.
+axes_h=2*margin_y+frame_h;          //Altura de los ejes (100 =&gt; Altura de la
+                                    //barra de herramientas).
+sistem_graf=scf(10);                //Crea una ventana con id=10 y la hace la
+                                    //ventana corriente.
+
+//Color de fondo y texto
+
+sistem_graf.background=-2;
+sistem_graf.figure_position=[100 100];
+sistem_graf.figure_name=gettext("Comportamiento del motor");
+
+//Cambio de dimensiones de la figura
+sistem_graf.axes_size=[axes_w axes_h];
+
+//Nuevo menú
+h2=uimenu("parent",sistem_graf,"label",gettext("Acerca de"));
+
+//Agregando submenús al nuevo menú
+uimenu("parent",h2,"label",gettext("Acerca de"),"callback","Motor_Acerca_De();");
+
+//Creación del marco
+mi_marco=uicontrol("parent",sistem_graf, "relief","groove", ...
+"style","frame", "units","pixels", ...
+"position",[ margin_x margin_y frame_w frame_h], ...
+"horizontalalignment","center", "background",[1 1 1], ...
+"tag","frame_control");
+
+//Título del marco
+titulo_mi_marco=uicontrol("parent",sistem_graf, "style","text", ...
+"string","Parámetros del sistema", "units","pixels", ...
+"position",[30+margin_x margin_y+frame_h-10 frame_w-60 20],...
+"fontname",defaultfont, "fontunits","points", ...
+"fontsize",16, "horizontalalignment","center", ...
+"background",[1 1 1], "tag","title_frame_control");
+
+//Adicionando parámetros del modelo
+guih1=frame_w;
+guih1o=200;
+
+//Lista de etiquetas ordenadas
+labels1=["La [H]","Ra [Ohm]","In [A]","Par [N*m]","Ke [V/krpm]","j [N/m^2]"];
+//Lista ordenada de valores por defecto
+values1=[0.00074,0.3,8.7,0.48,3.9,0.0035];
+//Posicionamiento
+l1=30;l2=100;l3=110;
+for k=1:size(labels1,2)
+    uicontrol("parent",sistem_graf,"style","text","string",labels1(k),"position",[l1,guih1-k*20+guih1o,l2,20],"horizontalalignment","left","fontsize",14,"background",[1 1 1]);
+    guientry(k)=uicontrol("parent",sistem_graf,"style","edit","string",string(values1(k)),"position",[l3,guih1-k*20+guih1o,180,20],"horizontalalignment","left","fontsize",14,"background",[.9 .9 .9],"tag",labels1(k));
+end
+
+//Adicionando parámetros de simulación
+guih2=240;
+guih2o=80;
+labels2=["Tinicio [s]","Tfin [s]","Tpaso [s]"];
+values2=["0","0.5","0.001"];
+l1=40;l2=100;l3=110;
+
+for k=1:size(labels2,2)
+    uicontrol("parent",sistem_graf,"style","text","string",labels2(k),"position",[l1,guih2-k*20+guih2o,l2,20],"horizontalalignment","left","fontsize",14,"background",[1 1 1]);
+    guientry2(k)=uicontrol("parent",sistem_graf,"style","edit","string",values2(k),"position",[l3,guih2-k*20+guih2o,120,20],"horizontalalignment","left","fontsize",14,"background",[.9 .9 .9],"tag",labels2(k));
+end
+
+//Adicionando un botón
+huibutton=uicontrol(sistem_graf,"style","pushbutton",...
+"position",[110 100 100 20],"String","Graficar",...
+"BackgroundColor",[.9 .9 .9], "fontsize",14,...
+"Callback","Sistema");
+
+//Gráfico inicial
+Sis_Motor(values1(1),values1(2),values1(3),values1(4),...
+values1(5),values1(6));
+//Redibujando ventana
+
+//Cálculo del sistema
+function [Wn, Zita, ftr, fta]=Sis_Motor(in, par, la, ra, ke, j)
+    kt=par/in;
+    n=kt/(j*la);
+    b=j/10;
+    d=[((b*ra+ke*kt)/(j*la)) ((b*la+j*ra)/(j*la)) 1];
+    dpoly=poly(d,'s','c');
+    t=[values2(1):values2(3):values2(2)];
+    fta=syslin('c',n,dpoly);
+    ftr=fta/(1+fta);
+    [Wn,Zita]=damp(ftr);    
+    graf=csim('step',t,ftr);
+    delete(gca());
+    plot2(t,graf);
+    legend('Respuesta al escalón');
+    //Línea vertical.
+    set(gca(),"auto_clear","off");
+    graf_eje=gca();
+    graf_eje.axes_bounds=[1/3,0,2/3,1];    
+endfunction
+
+//Graficando la función
+function Grafi()
+//    delete(gca());
+    Sis_Motor(alues1(1),values1(2),values1(3),values1(4),...
+values1(5),values1(6));  
+//    plot2d(t,graf);
+//    legend('Respuesta al escalón');
+//    set(gca(),"auto_clear","off");
+//    graf_eje=gca();
+//    graf_eje.axes_bounds=[1/3,0,2/3,1];
+endfunction
+
+function Motor_Acerca_De()
+    msg=msprintf(gettext("Aplicación desarrollada por el Ing. Valery Ramirez y basada en los instructivos del equipo de Openeering."));
+    messagebox(msg,gettext("Acerca de"),"info","modal");
+endfunctionThe line with the problem is the 83 after where it says "//Gráfico inicial", the function is called with "Sis_Motor(values1(1),values1(2),values1(3),values1(4),...values1(5),values1(6));"and the function is defined some lines bellow the call.The error is that the funcion (its called variable) "Sis_Motor" is not defined but I don't know why.If anyone can help me with that I'll be very grateful.Thanks in advance for the help
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">01-02M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 17, 2024, 10:43 p.m.</span>
+                                                                
+                                                                    <small>vra</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="3916">
+                                                        <a href="../../29/29/answer-to-question-3916.html" target="_blank" class="3916">exponential functions</a>
+                                                        <p>how to find e^pi(i)
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">02-03M</small>
+                                                            <small class="timing">0-10S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 11, 2024, 5:02 a.m.</span>
+                                                                
+                                                                    <small>Kanekarankita</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="3434">
+                                                        <a href="../../29/29/answer-to-question-3434.html" target="_blank" class="3434">software</a>
+                                                        <p>my software automatically closes after 2-3 minutes. why this problem occurs even i install two times
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">02-03M</small>
+                                                            <small class="timing">0-10S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 20, 2024, 3:36 a.m.</span>
+                                                                
+                                                                    <small>2018pms5152@mnit.ac.in</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="3287">
+                                                        <a href="../../29/29/answer-to-question-3287.html" target="_blank" class="3287">Present working directory</a>
+                                                        <p>How do I get to know my present working directory?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">03-04M</small>
+                                                            <small class="timing">20-30S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 16, 2024, 2:23 p.m.</span>
+                                                                
+                                                                    <small>hbammkanti</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="3272">
+                                                        <a href="../../29/29/answer-to-question-3272.html" target="_blank" class="3272">Cannot find Load into Scilab option in Scilab 6.1.0</a>
+                                                        <p>I am using Scilab 6.1.0 on Ubuntu 18.04, and I am unable to find the 'Load into Scilab' option.
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">02-03M</small>
+                                                            <small class="timing">20-30S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 11, 2024, 1:48 a.m.</span>
+                                                                
+                                                                    <small>hbammkanti</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="3271">
+                                                        <a href="../../29/29/answer-to-question-3271.html" target="_blank" class="3271">Where to find editor option?</a>
+                                                        <p>I can't find the editor option on Scilab 6.1.0. I am using Ubuntu 18.04.
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">01-02M</small>
+                                                            <small class="timing">30-40S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 16, 2024, 10:17 p.m.</span>
+                                                                
+                                                                    <small>hbammkanti</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="3151">
+                                                        <a href="../../29/29/answer-to-question-3151.html" target="_blank" class="3151">How to solve two equations in Scilab?</a>
+                                                        <p>I have two equations in my hand with unknowns.2.1 + 5.6*a - 3.2*b = 53.9 -9.5*a - 7.6*b = 7How to solve these equations in Scilab and get the values of a and b ?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">06-07M</small>
+                                                            <small class="timing">20-30S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 18, 2024, 9:53 a.m.</span>
+                                                                
+                                                                    <small>trulyajays</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="2859">
+                                                        <a href="../../29/29/answer-to-question-2859.html" target="_blank" class="2859">file</a>
+                                                        <p>Is sci lab editor and Sci Note are same ? In 6 .0 i didnt find the Sci lab editor and on execution of Sci Note it shows an error
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">02-03M</small>
+                                                            <small class="timing">20-30S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 13, 2024, 9 a.m.</span>
+                                                                
+                                                                    <small>patel.yogeshwari7@gmail.com</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1282">
+                                                        <a href="../../29/29/answer-to-question-1282.html" target="_blank" class="1282">Script related query</a>
+                                                        <p>HelloI am from Shree L.R.Tiwari College of Engineering,Thane would like to know that in scripts how more than 2 or more scripts can be accumulated in the same editor.
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">05-06M</small>
+                                                            <small class="timing">30-40S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 7:13 p.m.</span>
+                                                                
+                                                                    <small>Shashankisingh</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1273">
+                                                        <a href="../../29/29/answer-to-question-1273.html" target="_blank" class="1273">about execution</a>
+                                                        <p>in scilab can we get line by line execuion like MATLAB?and can we get line by line value of any program in scilab?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">03-04M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 12:21 p.m.</span>
+                                                                
+                                                                    <small>Rachana28</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1268">
+                                                        <a href="../../29/29/answer-to-question-1268.html" target="_blank" class="1268">Deff command</a>
+                                                        <p>what is Deff command?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">09-10M</small>
+                                                            <small class="timing">40-50S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 2:36 p.m.</span>
+                                                                
+                                                                    <small>rupalilokhande</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1251">
+                                                        <a href="../../29/29/answer-to-question-1251.html" target="_blank" class="1251">Scipt and Function</a>
+                                                        <p>When a function is declared with multiple return values, should the variable names in function declaration and definition should match?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">07-08M</small>
+                                                            <small class="timing">40-50S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 9:39 a.m.</span>
+                                                                
+                                                                    <small>mahajanvinay83</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1242">
+                                                        <a href="../../29/29/answer-to-question-1242.html" target="_blank" class="1242">inline function</a>
+                                                        <p>deff("[v1]=sortvect1(v1)","gsort(v1)")disp(v1)the inline function&nbsp; working for gsort or for round functiondeff("[v2]=roundtvect2(v2)","round(v2)")
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">06-07M</small>
+                                                            <small class="timing">40-50S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 20, 2024, 7:38 p.m.</span>
+                                                                
+                                                                    <small>Kkishor84k</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1231">
+                                                        <a href="../../29/29/answer-to-question-1231.html" target="_blank" class="1231">function</a>
+                                                        <p>how to overload function in scilab
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">09-10M</small>
+                                                            <small class="timing">0-10S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 6:35 a.m.</span>
+                                                                
+                                                                    <small>Ashwani0603</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1227">
+                                                        <a href="../../29/29/answer-to-question-1227.html" target="_blank" class="1227">regarding inline function</a>
+                                                        <p>deff("[v1]=sortvect1(v1)","gsort(v1)")disp(v1)the inline function doesnot seem to work for gsort or for round functiondeff("[v2]=roundtvect2(v2)","round(v2)")
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">06-07M</small>
+                                                            <small class="timing">40-50S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 8:41 a.m.</span>
+                                                                
+                                                                    <small>jeyasheelarakkini</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1215">
+                                                        <a href="../../29/29/answer-to-question-1215.html" target="_blank" class="1215"> scripts and functions</a>
+                                                        <p>In same video at 8.31 a statement given about semicolon ...what is the meaning for the statement(Inside a function file,you can check for yourself the effect of putting a semicolon...)
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">08-09M</small>
+                                                            <small class="timing">40-50S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 11:09 a.m.</span>
+                                                                
+                                                                    <small>chitraraj05</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1205">
+                                                        <a href="../../29/29/answer-to-question-1205.html" target="_blank" class="1205">Scripts and function</a>
+                                                        <p>Sir,&nbsp;In video tutorial at 2.38 sec shown output along with the code but im getting only output my code is not displaying in output consolein line number 2 (ie a=5;b=2;c=3; -- here without semicolon also working ..what is the use of semicolon ???)
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">02-03M</small>
+                                                            <small class="timing">30-40S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 2:34 p.m.</span>
+                                                                
+                                                                    <small>chitraraj05</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1199">
+                                                        <a href="../../29/29/answer-to-question-1199.html" target="_blank" class="1199">Scripts and Functions</a>
+                                                        <p>Sir/Madam,&nbsp; &nbsp; In scripts and functions video, 2.21 sec shows the click the execute then load into the scilab. But scilab 5.5.2 shows the file with echo, files no echo, until the caret with echo, save and execute files atlast save and execute all files&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; How i do this process? Give me direction
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">02-03M</small>
+                                                            <small class="timing">20-30S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 6:29 p.m.</span>
+                                                                
+                                                                    <small>krishnagandhi</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1179">
+                                                        <a href="../../29/29/answer-to-question-1179.html" target="_blank" class="1179">Function with multiple return values</a>
+                                                        <p>When a function is declared with multiple return values, should the variable names in function declaration and definition should match?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">13-14M</small>
+                                                            <small class="timing">50-60S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 2:29 p.m.</span>
+                                                                
+                                                                    <small>poornimanaik</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1177">
+                                                        <a href="../../29/29/answer-to-question-1177.html" target="_blank" class="1177">Data types of function parameters</a>
+                                                        <p>Can i specifying data type of parameters in function definition?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">13-14M</small>
+                                                            <small class="timing">50-60S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 9:29 a.m.</span>
+                                                                
+                                                                    <small>poornimanaik</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1102">
+                                                        <a href="../../29/29/answer-to-question-1102.html" target="_blank" class="1102">prompt in console</a>
+                                                        <p>how to get prompt window in console as shown in video at 7.00sec
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">07-08M</small>
+                                                            <small class="timing">0-10S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 3:15 p.m.</span>
+                                                                
+                                                                    <small>akhtarnadaf</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1100">
+                                                        <a href="../../29/29/answer-to-question-1100.html" target="_blank" class="1100">Load into scilab</a>
+                                                        <p>Execute button does not show load into scilab option.Scilab version 5.5.2
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">13-14M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 7:43 a.m.</span>
+                                                                
+                                                                    <small>akhtarnadaf</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1096">
+                                                        <a href="../../29/29/answer-to-question-1096.html" target="_blank" class="1096">Scripts and Functions</a>
+                                                        <p>while executing a file with no eco I am given the below output on consoleexec('C:\\\\\\\\Users\\\\\\\\Acer\\\\\\\\Documents\\\\\\\\kk.sce', -1)
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">03-04M</small>
+                                                            <small class="timing">30-40S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 3:49 p.m.</span>
+                                                                
+                                                                    <small>arpitthakur</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+                                                            </ul>
+                                                            
+                                                    </div>
+
+                                                </div>
+                                                <div class="tab-pane " id="tutorials" >
+                                                    <div class='playlist col-lg-4 col-md-4 col-sm-4'>
+                                                        <div class='playlist-controls'>
+                                                            <span class='backward'></span>
+                                                            <span class='forward'></span>
+                                                        </div>
+                                                        <ul>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1271/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>1</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Introduction to Scilab and its benefits
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1272/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>2</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Self learning of Scilab through Spoken Tutorials
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1273/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>3</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            The amazing resource of Scilab Textbook Companion
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1274/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>4</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Scilab Lab migration, Toolboxes and Forums
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/5/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>5</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Installing
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/6/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>6</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Getting Started
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/30/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>7</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Vector Operations
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/15/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>8</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Matrix Operations
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/24/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>9</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Conditional Branching
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/25/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>10</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Iteration
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item active" data="11">
+                                                        <a href="../../29/29/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'><i class="fa fa-play"></i></span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Scripts and Functions
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/27/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>12</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Plotting 2D graphs
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/381/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>13</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Xcos Introduction
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/394/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>14</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            File handling
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/395/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>15</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            User Defined Input and Output
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/396/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>16</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Integration
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/397/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>17</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Solving Non linear Equations
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/398/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>18</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Linear equations Gaussian Methods
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/399/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>19</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Linear equations Iterative Methods
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/400/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>20</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Interpolation
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/401/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>21</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            ODE Euler methods
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/402/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>22</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            ODE Applications
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/403/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>23</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Optimization Using Karmarkar Function
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/405/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>24</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Digital Signal Processing
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/410/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>25</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Control systems
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/411/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>26</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Discrete systems
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/412/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>27</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Calling User Defined Functions in XCOS
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/981/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>28</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Simulating a PID controller using XCOS
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1464/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>29</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Developing Scilab Toolbox for calling external C libraries
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1476/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>30</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Developing Scilab Toolbox for calling Python and its functions
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1752/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>31</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Interactive Simulation in Xcos using slider
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1753/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>32</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            User-defined variables in Xcos
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1754/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>33</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Loading and saving data in Xcos
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1755/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>34</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Conditional operations in Xcos
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1756/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>35</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Super Blocks in Xcos
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <script type="text/javascript">
+                                    jQuery(document).ready(function ($) {
+                                    $("#tabs").tab();
+                                    });
+                                    </script> 
+                                </div>
+                            </div>
+                        </row>
+                        <row>
+                            <div class="col-lg-7 col-md-7 col-sm-7 no-padding-left">
+                                <ol class="breadcrumb">
+                                    
+                                        
+                                            <li><a href="../Scilab-Instruction-Sheet-English.pdf" target="_blank">Instruction Sheet</a></li>
+                                        
+                                    
+
+                                    
+                                        
+                                            <li><a href="../Scilab-Installation-Sheet-English.pdf" target="_blank">Installation Sheet</a></li>
+                                        
+                                    
+                                </ol>
+                                <pre class="custom-jumbotron"><b>Outline:<br /></b>Scripts and Functions
+
+*Introduction to the file formats in Scilab.
+*SCRIPT files.
+*sce versus .sci
+*Inline functions.
+
+</pre>
+                            </div>
+                            <div class="col-lg-5 col-md-5 col-sm-5 no-padding-right">
+                                <div class="list-group">
+                                    
+                                        <div  class="list-group-item">
+                                            <a href="./resources/Scripts-and-Functions-Assignment.pdf" target="_blank" class="list-group-item">
+                                                <h4 class="list-group-item-heading"><i class="fa fa-2 fa-globe"></i> Assignment</h4>
+                                            </a>
+                                            <p class="list-group-item-text">
+                                                <span style="text-align: left">Status: <i class="fa fa-1 fa-check-circle review-accepted" title="Accepted"></i></span>
+                                            </p>
+                                        </div>
+                                    
+                                    
+                                        <div  class="list-group-item">
+                                            <a href="./resources/Scripts-and-Functions-Codefiles.zip" target="_blank" class="list-group-item">
+                                                <h4 class="list-group-item-heading"><i class="fa fa-2 fa-globe"></i> Code files</h4>
+                                                
+                                                    
+                                                        
+                                                            <ul class="list-zipfiles">
+                                                                
+                                                                    <li>Script-and-Functions-codefile/</li>
+                                                                
+                                                                    <li>Script-and-Functions-codefile/inline.sci</li>
+                                                                
+                                                                    <li>Script-and-Functions-codefile/2outputs.sci</li>
+                                                                
+                                                                    <li>Script-and-Functions-codefile/helloworld.sce</li>
+                                                                
+                                                                    <li>Script-and-Functions-codefile/function.sci</li>
+                                                                
+                                                            </ul>
+                                                        
+                                                    
+                                                
+                                            </a>
+                                            <p class="list-group-item-text">
+                                                <span style="text-align: left">Status: <i class="fa fa-1 fa-check-circle review-accepted" title="Accepted"></i></span>
+                                            </p>
+                                        </div>
+                                    
+                                    
+                                    <!-- 
+                                        <div  class="list-group-item">
+                                            <a href="./resources/Scripts-and-Functions-Slides.zip" target="_blank" class="list-group-item">
+                                                <h4 class="list-group-item-heading"><i class="fa fa-2 fa-globe"></i> Slides</h4>
+                                                
+                                                    
+                                                        
+                                                            <ul class="list-zipfiles">
+                                                                
+                                                                    <li>Scripts_functions.pdf</li>
+                                                                
+                                                                    <li>Scripts_functions.tex</li>
+                                                                
+                                                            </ul>
+                                                        
+                                                    
+                                                
+                                            </a>
+                                            <p class="list-group-item-text">
+                                                <span style="text-align: left">Status: <i class="fa fa-1 fa-check-circle review-accepted" title="Accepted"></i></span>
+                                            </p>
+                                        </div>
+                                     -->
+
+                                </div>
+                            </div>
+                        </row>
+                    </div>
+                </div><!-- /#content-inner .container -->
+            </div><!-- /#content-wrapper -->
+
+
+
+
+
+            <div id="footer-wrapper">
+                <div class="container-inner sans-serif">
+                    <div class="container">
+                        <div class="col-lg-8 col-md-8 col-sm-8  footer-links">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <ul class="list-unstyled">
+                                    <li><a href="http://fossee.in/" target="_blank">FOSSEE Project</a></li>
+                                    <li><a href="http://www.scilab.in/" target="_blank">Scilab Project</a></li>
+                                    <li><a href="http://www.oscad.in/" target="_blank">Oscad</a></li>
+                                    <li><a href="http://python.fossee.in/" target="_blank">Python</a></li>
+                                    <li><a href="http://cfd.fossee.in/" target="_blank">CFD</a></li>
+                                    <li><a href="http://or.fossee.in/" target="_blank">OR-Project</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <ul class="list-unstyled">
+                                    <li><a href="http://aakashlabs.org/" target="_blank">Aakash Labs</a></li>
+                                    <li><a href="http://www.co-learn.in/" target="_blank">Co-learn</a></li>
+                                    <li><a href="http://www.sakshat.ac.in/" target="_blank">Education Mission</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <ul class="list-unstyled">
+                                    <li><a href="http://process.spoken-tutorial.org/index.php/Software-Training#About_SELF_Workshops" target="_blank">Software Training</a></li>
+                                    <li><a href="http://process.spoken-tutorial.org/" target="_blank">Creation</a></li>
+                                    <li><a href="https://spoken-tutorial.org/articles/" target="_blank">News</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <ul class="list-unstyled">
+                                    <li><a href="https://spoken-tutorial.org/about" target="_blank">About</a></li>
+                                    <!-- <li><a href="http://localhost:8000/tutorial-search/#" target="_blank">Partners</a></li> -->
+                                    <li><a href="https://spoken-tutorial.org/software-training/" target="_blank">Training</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 license fill">
+                            <div class="fill">
+                                <footer>
+                                    Developed at IIT Bombay <br>
+                                    This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" class="ext" target="_blank">Creative Commons</a>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /#page-wrapper -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="../../../includes/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../includes/js/bootstrap.min.js"></script>
+        
+        <script>
+            // set video player volume by 20%
+            var myPlayer = videojs('st_video');
+            myPlayer.volume(0.2);
+            currentVideo = $('.playlist-item.active');
+            nextVideo = currentVideo.next('li');
+            prevVideo = currentVideo.prev('li');
+            var tmpHtml = currentVideo.attr('data') + '/' + $('.video-count').html()
+            $('.video-count').html(tmpHtml)
+            if(nextVideo.length){
+                //console.log(nextVideo.children('a').attr('href'));
+                $('.forward').html('<a href="'+nextVideo.children('a').attr('href')+'"><i class="fa fa-1 fa-fast-forward"></i></a>');
+            } else {
+                $('.forward').html('<i class="fa fa-1 fa-fast-forward"></i>');
+            }
+            if(prevVideo.length){
+                //console.log(prevVideo.children('a').attr('href'));
+                $('.backward').html('<a href="'+prevVideo.children('a').attr('href')+'"><i class="fa fa-1 fa-fast-backward"></i></a>');
+            } else {
+                $('.backward').html('<i class="fa fa-1 fa-fast-backward"></i>');
+            }
+        </script>
+        <script type="text/javascript">
+
+            var player,
+    tag = document.createElement('script'),
+    firstScriptTag = document.getElementsByTagName('script')[0];
+    var flag= false;
+  
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    function onPlaybackQualityChange(event) {
+        console.log(event);
+    }
+
+    Number.prototype.between = function (min, max) {
+        return this >= min && this <= max;
+    };
+
+            var ik_player;
+            //this function is called by the API
+            function onYouTubeIframeAPIReady() {
+                //creates the player object
+                ik_player = new YT.Player('player');
+                //Holds a reference to the YouTube player
+                //subscribe to events
+                ik_player.addEventListener("onReady",       "onReady");
+                ik_player.addEventListener("onStateChange", "onStateChange");
+            }
+
+             function formatTime(time){
+        time = Math.round(time);
+        var minutes = Math.floor(time / 60),
+        seconds = time - minutes * 60;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        return minutes + "." + seconds;
+        }
+
+    function onReady(event) {
+        function logDuration() {
+
+         window.setTimeout(logDuration,1000);
+         var cur_time = formatTime(ik_player.getCurrentTime()).toString();
+         var duration=  formatTime(ik_player.getDuration()).toString();
+
+        if(parseFloat(cur_time) == parseFloat(duration.toString())){
+         $('.ScrollStyle').find('.question').css("background-color", "white");
+        }else{
+        trigger(cur_time, duration);
+        }
+       
+            
+
+        return cur_time
+        }
+        logDuration();
+        $("#text").click(function(e){
+                        ik_player.pauseVideo()
+                setForum(logDuration())
+           
+        });
+
+
+    //var title = $('#text').html("Post your Question on the Forum");
+       // $("#text").click(function(e){
+     // e.preventDefault();
+         // alert(logDuration());
+            //title.html('new title'+logDuration());
+       // });
+        }
+
+      function trigger(cur_time, duration){
+      //$("#playerHolder").text("dura"+duration);
+        
+            min_range = '01-02'
+            sec_range = '10-20'
+
+            id = '4049'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '4049' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'4049').css('background-color')
+          if($("#"+'4049').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'4049').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '02-03'
+            sec_range = '0-10'
+
+            id = '3916'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '3916' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'3916').css('background-color')
+          if($("#"+'3916').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'3916').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '02-03'
+            sec_range = '0-10'
+
+            id = '3434'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '3434' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'3434').css('background-color')
+          if($("#"+'3434').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'3434').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '03-04'
+            sec_range = '20-30'
+
+            id = '3287'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '3287' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'3287').css('background-color')
+          if($("#"+'3287').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'3287').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '02-03'
+            sec_range = '20-30'
+
+            id = '3272'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '3272' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'3272').css('background-color')
+          if($("#"+'3272').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'3272').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '01-02'
+            sec_range = '30-40'
+
+            id = '3271'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '3271' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'3271').css('background-color')
+          if($("#"+'3271').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'3271').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '06-07'
+            sec_range = '20-30'
+
+            id = '3151'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '3151' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'3151').css('background-color')
+          if($("#"+'3151').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'3151').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '02-03'
+            sec_range = '20-30'
+
+            id = '2859'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '2859' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'2859').css('background-color')
+          if($("#"+'2859').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'2859').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '05-06'
+            sec_range = '30-40'
+
+            id = '1282'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1282' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1282').css('background-color')
+          if($("#"+'1282').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1282').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '03-04'
+            sec_range = '10-20'
+
+            id = '1273'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1273' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1273').css('background-color')
+          if($("#"+'1273').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1273').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '09-10'
+            sec_range = '40-50'
+
+            id = '1268'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1268' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1268').css('background-color')
+          if($("#"+'1268').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1268').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '07-08'
+            sec_range = '40-50'
+
+            id = '1251'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1251' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1251').css('background-color')
+          if($("#"+'1251').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1251').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '06-07'
+            sec_range = '40-50'
+
+            id = '1242'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1242' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1242').css('background-color')
+          if($("#"+'1242').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1242').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '09-10'
+            sec_range = '0-10'
+
+            id = '1231'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1231' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1231').css('background-color')
+          if($("#"+'1231').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1231').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '06-07'
+            sec_range = '40-50'
+
+            id = '1227'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1227' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1227').css('background-color')
+          if($("#"+'1227').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1227').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '08-09'
+            sec_range = '40-50'
+
+            id = '1215'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1215' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1215').css('background-color')
+          if($("#"+'1215').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1215').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '02-03'
+            sec_range = '30-40'
+
+            id = '1205'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1205' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1205').css('background-color')
+          if($("#"+'1205').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1205').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '02-03'
+            sec_range = '20-30'
+
+            id = '1199'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1199' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1199').css('background-color')
+          if($("#"+'1199').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1199').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '13-14'
+            sec_range = '50-60'
+
+            id = '1179'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1179' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1179').css('background-color')
+          if($("#"+'1179').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1179').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '13-14'
+            sec_range = '50-60'
+
+            id = '1177'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1177' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1177').css('background-color')
+          if($("#"+'1177').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1177').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '07-08'
+            sec_range = '0-10'
+
+            id = '1102'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1102' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1102').css('background-color')
+          if($("#"+'1102').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1102').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '13-14'
+            sec_range = '10-20'
+
+            id = '1100'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1100' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1100').css('background-color')
+          if($("#"+'1100').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1100').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '03-04'
+            sec_range = '30-40'
+
+            id = '1096'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1096' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1096').css('background-color')
+          if($("#"+'1096').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1096').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+           }
+                        //for videojs trigger
+            var trackedPlayer = videojs('st_video');
+            var previousTime = 0;
+            var currentTime = 0;
+            trackedPlayer.on('timeupdate', function() {
+            previousTime = currentTime;
+            currentTime = trackedPlayer.currentTime();
+            var cur_time = formatTime(currentTime).toString();
+
+            trigger( cur_time);
+                            $("#text").click(function(e){
+                            trackedPlayer.pause()
+                    setForum(cur_time)
+                 
+                    });
+            
+            });
+ 
+        
+                function setForum(cur_time)
+                {
+                     
+                        var time_split = cur_time.split(".")
+                        var minute = parseFloat(time_split[0]);
+                        var min_range = minute+"-"+(minute+parseFloat(1))
+                        if(parseInt(time_split[1]).between(parseInt(0),parseInt(9))){
+                                    sec_range = "0-10"
+                        }else if(parseFloat(time_split[1]).between(parseFloat(10),parseFloat(19))){
+                                    sec_range = "10-20"
+                        }else if(parseFloat(time_split[1]).between(parseFloat(20),parseFloat(29))){
+                                    sec_range = "20-30"
+                        }else if(parseFloat(time_split[1]).between(parseFloat(30),parseFloat(39))){
+                                    sec_range = "30-40"
+                        }else if(parseFloat(time_split[1]).between(parseFloat(40),parseFloat(49))){
+                                    sec_range = "40-50"
+                        }else {
+                                    sec_range = "50-60"
+                        }
+        
+                         var url = "http://forums.spoken-tutorial.org/new-question/?category=Scilab&tutorial=Scripts and Functions&minute_range="+min_range+"&second_range="+sec_range;
+                        $("#text").attr("href", url);
+                }
+        </script>
+    </body>
+</html>
