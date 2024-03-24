@@ -1,0 +1,382 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:06
+Welcome to the spoken tutorial on <b>Simulating a PID controller using Xcos.</b>
+
+2
+00:00:07 --> 00:00:12
+In this tutorial we will learn how to implement a <b>PID controller </b>in <b>Xcos</b>.
+
+3
+00:00:13 --> 00:00:16
+Ensure that <b>Scilab</b> is installed on your computer.
+
+4
+00:00:17 --> 00:00:26
+I am recording this tutorial on <b>Ubuntu 16.04 64-bit Operating System </b>and using <b>Scilab 6.0.0</b>
+
+5
+00:00:27 --> 00:00:31
+As a pre-requisite, watch the tutorial <b>Xcos Introduction.</b>
+
+6
+00:00:32 --> 00:00:36
+This tutorial will make you comfortable with the <b>Xcos</b> environment.
+
+7
+00:00:37 --> 00:00:42
+Also, we will use the <b>firstorder.xcos</b> file created in that tutorial.
+
+8
+00:00:43 --> 00:00:49
+Hence, it is important that you practice the tutorial before continuing so that you have the file with you.
+
+9
+00:00:50 --> 00:00:53
+Some basic knowledge of <b>PID controller</b> is necessary.
+
+10
+00:00:54 --> 00:00:58
+Assuming that you have satisfied the pre-requisites, let us begin with the tutorial.
+
+11
+00:00:59 --> 00:01:02
+First of all, we will launch <b>Scilab.</b>
+
+12
+00:01:03 --> 00:01:07
+Then go to <b>Applications </b>and select <b>Xcos</b>.
+
+13
+00:01:08 --> 00:01:14
+Or in your <b>Scilab console</b> window, type <b>Xcos </b>and press <b>Enter</b>.
+
+14
+00:01:15 --> 00:01:22
+By doing this, two windows will open.
+<ol>
+<li> <b>Palette Browser</b> and # <b>An Untitled-Xcos</b> window 
+</li>
+</ol>
+
+15
+00:01:23 --> 00:01:29
+On the <b>Untitled-Xcos</b> window, click on <b>File</b> and then click on <b>Open.</b>
+
+16
+00:01:30 --> 00:01:35
+Browse to the directory where the file <b>firstorder.xcos</b> is saved.
+
+17
+00:01:36 --> 00:01:39
+Choose that file and click on <b>Ok</b>.
+
+18
+00:01:40 --> 00:01:43
+Now, Double-click on the <b>transfer function block</b>.
+
+19
+00:01:44 --> 00:01:48
+Check that you are using the same <b>transfer function</b> as I am using.
+
+20
+00:01:49 --> 00:02:00
+For me, the numerator is 1 and denominator is <b>2 asteric s plus 1</b>
+<p>Which is 2 multiplied by s plus one.
+</p>
+
+21
+00:02:01 --> 00:02:02
+Click on <b>Ok</b>.
+
+22
+00:02:03 --> 00:02:05
+Double-click on the <b>Step block</b>.
+
+23
+00:02:06 --> 00:02:10
+Check that you are using the same <b>step input</b> parameters as I am using.
+
+24
+00:02:11 --> 00:02:19
+For me the <b>Step time</b> is 1, the <b>Initial value</b> is 0 and the <b>Final value</b> is 2.
+<p>Click on <b>OK</b>
+</p>
+
+25
+00:02:20 --> 00:02:26
+Click on <b>Simulation</b> on the menu bar and choose <b>Start</b> to simulate the file.
+
+26
+00:02:27 --> 00:02:31
+Expect a similar plot which ensures that the file has no mistakes.
+
+27
+00:02:32 --> 00:02:34
+Switch to the <b>Palette Browser.</b>
+
+28
+00:02:35 --> 00:02:38
+Click on <b>Continuous time systems</b> category.
+
+29
+00:02:39 --> 00:02:45
+Drag and drop the <b>PID</b> block, which is here, inside the <b>Xcos</b> window
+
+30
+00:02:46 --> 00:02:48
+Click on the <b>Signal Routing</b> category.
+
+31
+00:02:49 --> 00:02:54
+Drag and drop the <b>Mux</b> block, which is here, inside the <b>Xcos</b> window.
+
+32
+00:02:55 --> 00:02:59
+Click on <b>Mathematical Operations</b> category.
+
+33
+00:03:00 --> 00:03:06
+Drag and drop the <b>Summation</b> block, which is here, inside the <b>Xcos</b> window.
+
+34
+00:03:07 --> 00:03:13
+Note that this block, by default, subtracts the second input from the first input.
+
+35
+00:03:14 --> 00:03:17
+We will use this default configuration of the <b>summation</b> block.
+
+36
+00:03:18 --> 00:03:23
+Click on the line joining the <b>step input</b> block and <b>transfer function</b> block.
+
+37
+00:03:24 --> 00:03:26
+Then press the <b>Delete</b> button to delete it.
+
+38
+00:03:27 --> 00:03:30
+Drag the <b>step input</b> block away from the <b>transfer function</b> block.
+
+39
+00:03:31 --> 00:03:35
+Click on the line joining the <b>transfer function</b> block and the <b>cscope</b> block.
+
+40
+00:03:36 --> 00:03:39
+Then press the <b>Delete </b>button to delete it.
+
+41
+00:03:40 --> 00:03:45
+Drag the <b>cscope</b> and <b>clock input</b> block away from the <b>transfer function</b> block
+
+42
+00:03:46 --> 00:03:49
+Place the <b>PID</b> block before the <b>transfer function</b> block.
+
+43
+00:03:50 --> 00:03:53
+Place the <b>summation</b> block before the <b>PID</b> block.
+
+44
+00:03:54 --> 00:03:58
+Place the <b>Mux</b> block between the <b>transfer function</b> block and <b>cscope</b> block.
+
+45
+00:03:59 --> 00:04:03
+Adjust the blocks, if required, so that they all come in a line.
+
+46
+00:04:04 --> 00:04:09
+Connect the <b>step input</b> block to the first <b>input port</b> of the <b>summation</b> block.
+
+47
+00:04:10 --> 00:04:14
+Note that this is the positive <b>input port</b> of the <b>summation</b> block.
+
+48
+00:04:15 --> 00:04:20
+Connect the <b>output port</b> of <b>summation</b> block to the <b>input port</b> of <b>PID</b> block.
+
+49
+00:04:21 --> 00:04:26
+Connect the <b>output port</b> of <b>PID</b> block to the <b>input port</b> of <b>transfer function</b> block.
+
+50
+00:04:27 --> 00:04:32
+Connect the <b>output port</b> of <b>transfer function</b> block to the lower <b>input port</b> of <b>Mux</b> block.
+
+51
+00:04:33 --> 00:04:38
+Connect the <b>output port</b> of <b>Mux</b> block to the<b> input port</b> of the <b>cscope</b> block.
+
+52
+00:04:39 --> 00:04:43
+Locate the line connecting the <b>step input</b> block and the <b>summation</b> block.
+
+53
+00:04:44 --> 00:04:47
+Connect the <b>input</b> port of <b>Mux</b> to that line.
+
+54
+00:04:48 --> 00:04:53
+Use the left mouse click to create line bends while making the connection.
+
+55
+00:04:54 --> 00:04:58
+Locate the line joining the <b>transfer function</b> block and the <b>Mux</b> block.
+
+56
+00:04:59 --> 00:05:07
+Connect the second <b>input port</b> of the <b>summation</b> block to that line. Use line bends wherever necessary.
+
+57
+00:05:08 --> 00:05:13
+Double-click on the <b>PID</b> block to open its parameter setting dialog box.
+
+58
+00:05:14 --> 00:05:17
+Here you can set the <b>Proportional, Integral </b>and<b> Derivative</b> gains.
+
+59
+00:05:18 --> 00:05:27
+Please note that the <b>Integral gain</b> should be considered as 1 by <b>tau I</b>, where <b>tau I</b> is the <b>integral time</b>.
+
+60
+00:05:28 --> 00:05:33
+We will use the default settings. Click on <b>Cancel</b> to use the default settings.
+
+61
+00:05:34 --> 00:05:36
+We are now ready to run the simulation.
+
+62
+00:05:37 --> 00:05:41
+Notice that we are using the <b>step input</b> block as a <b>setpoint</b> variable.
+
+63
+00:05:42 --> 00:05:46
+The <b>PID controller </b>will generate an input to the <b>Transfer Function</b> block.
+
+64
+00:05:47 --> 00:05:52
+It will be such that the output of the <b>transfer function</b> block matches the <b>setpoint.</b>
+
+65
+00:05:53 --> 00:05:57
+Click on  <b>Start simulation</b> button available on the menu bar.
+
+66
+00:05:58 --> 00:06:06
+Expect a graphic window to open. It will have two variables plotted in a single plot.
+
+67
+00:06:07 --> 00:06:11
+The step plot is the <b>setpoint</b> which has a final value of 2.
+
+68
+00:06:12 --> 00:06:21
+The curved plot which is green in color, is the output of the <b>transfer function</b> which tries to meet the <b>setpoint</b> value of 2.
+
+69
+00:06:22 --> 00:06:27
+You can now change the <b>PID</b> settings and learn how they affect the output.
+
+70
+00:06:28 --> 00:06:32
+Pause the video here and solve the given exercises.
+
+71
+00:06:33 --> 00:06:39
+Implement a <b>Proportional Controller</b> only. That is, only <b>P</b> and not <b>PID</b>
+
+72
+00:06:40 --> 00:06:46
+Change the proportional gain such that the setpoint matches the output but without overshoots.
+
+73
+00:06:47 --> 00:06:50
+Include the output of the <b>summation</b> block in the plot.
+
+74
+00:06:51 --> 00:06:54
+You may use <b>CMSCOPE</b> to keep it separate.
+
+75
+00:06:55 --> 00:06:58
+Compare it visually with the output of the <b>PID</b> block
+
+76
+00:06:59 --> 00:07:03
+This brings us to the end of this tutorial. Let us summarize.
+
+77
+00:07:04 --> 00:07:11
+In this tutorial we learnt : To modify the <b>firstorder.xcos</b> file to implement a <b>PID</b> controller
+
+78
+00:07:12 --> 00:07:15
+Configure each block as per the simulation requirements
+
+79
+00:07:16 --> 00:07:18
+Setup the simulation parameters
+
+80
+00:07:19 --> 00:07:25
+The video at the following link, summarizes the Spoken Tutorial project.
+<p>Please download and watch it.
+</p>
+
+81
+00:07:26 --> 00:07:33
+The Spoken Tutorial Project Team conducts workshops and gives certificates.
+<p>For more details, please write to us.
+</p>
+
+82
+00:07:34 --> 00:07:36
+Do you have questions in THIS Spoken Tutorial?
+
+83
+00:07:37 --> 00:07:42
+Please visit <a class="external free" href="http://forums.spoken-tutorial.org" rel="nofollow">http://forums.spoken-tutorial.org</a>
+
+84
+00:07:43 --> 00:07:46
+Choose the minute and second where you have the question
+
+85
+00:07:47 --> 00:07:49
+Explain your question briefly
+
+86
+00:07:50 --> 00:07:52
+Someone from our team will answer them
+
+87
+00:07:53 --> 00:07:57
+The Spoken Tutorial forum is for specific questions on this tutorial
+
+88
+00:07:58 --> 00:08:02
+Please do not post unrelated and general questions on them
+
+89
+00:08:03 --> 00:08:04
+This will help reduce the clutter
+
+90
+00:08:05 --> 00:08:10
+With less clutter, we can use these discussions as instructional material
+
+91
+00:08:11 --> 00:08:22
+Spoken Tutorial Project is funded by NMEICT, MHRD, Government of India.. More information on this mission is available at the link shown.
+
+92
+00:08:23 --> 00:08:28
+This is Rupak Rokade signing off. Thanks for joining.
+

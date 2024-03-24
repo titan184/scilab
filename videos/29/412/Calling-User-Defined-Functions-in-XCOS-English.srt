@@ -1,0 +1,814 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:06
+Welcome to the spoken tutorial on <b>Calling user-defined functions in Xcos</b>.
+
+2
+00:00:07 --> 00:00:08
+In this tutorial we will learn:
+
+3
+00:00:09 --> 00:00:11
+* To write a squaring function in <b>Scilab</b>
+
+4
+00:00:12 --> 00:00:14
+* To use the <b>scifunc</b> block in <b> Xcos</b>
+
+5
+00:00:15 --> 00:00:18
+* To use MUX block to draw multiple plots
+
+6
+00:00:19 --> 00:00:23
+* To call functions having multiple inputs and outputs.
+
+7
+00:00:24 --> 00:00:31
+<b> Ubuntu</b> 12.04 is the <b>operating system</b> used with <b>Scilab version 5.3.3</b> installed.
+
+8
+00:00:32 --> 00:00:34
+You should have basic knowledge of <b>Scilab</b>,
+
+9
+00:00:35 --> 00:00:37
+basic knowledge of <b> Xcos</b>.
+
+10
+00:00:38 --> 00:00:43
+If not, for relevant tutorials, please visit <b>spoken hyphen tutorial dot org</b>.
+
+11
+00:00:44 --> 00:00:46
+Start <b>Scilab</b> on your computer.
+
+12
+00:00:47 --> 00:00:52
+In the <b>Scilab</b> console, type <b> editor</b> and press <b>Enter</b>.
+
+13
+00:00:53 --> 00:00:54
+Then type the following code:
+
+14
+00:00:55 --> 00:01:06
+<b>function space y is equal to squareit open bracket a close bracket</b>.
+
+15
+00:01:07 --> 00:01:09
+Press the <b>Enter</b> key and type:
+
+16
+00:01:10 --> 00:01:13
+<b>y</b> is equal to <b>a</b> raise to 2
+
+17
+00:01:14 --> 00:01:16
+put a semicolon in the end.
+
+18
+00:01:17 --> 00:01:23
+The function has one input variable <b> a</b>  and one output variable <b>y</b>.
+
+19
+00:01:24 --> 00:01:26
+The name of the function is <b>squareit</b>.
+
+20
+00:01:27 --> 00:01:30
+This function will do the job of squaring the variable <b>a.</b>
+
+21
+00:01:31 --> 00:01:33
+It will store the result in <b>y.</b>
+
+22
+00:01:34 --> 00:01:37
+Let us save this file in the desired directory.
+
+23
+00:01:38 --> 00:01:43
+I will save this file with file name <b> squareit</b> and extension <b>.sci</b>.
+
+24
+00:01:44 --> 00:01:49
+Here we are following the convention of saving functions in <b>.sci</b> format.
+
+25
+00:01:50 --> 00:01:52
+Switch to the <b>Scilab</b> console.
+
+26
+00:01:53 --> 00:01:56
+Now, type <b>Xcos</b> and press <b>Enter.</b>
+
+27
+00:01:57 --> 00:01:58
+Two windows will open,
+
+28
+00:01:59 --> 00:02:03
+a <b>Palette browser</b> and an <b>Untitled Xcos</b> window.
+
+29
+00:02:04 --> 00:02:05
+Now we will make the <b>Xcos</b> diagram.
+
+30
+00:02:06 --> 00:02:09
+This will access the function <b>squareit</b> created just now.
+
+31
+00:02:10 --> 00:02:13
+This can be done by using <b>scifunc</b> block.
+
+32
+00:02:14 --> 00:02:16
+Switch to the <b>Palette browser</b> window.
+
+33
+00:02:17 --> 00:02:20
+Click on the <b> User-Defined</b> function in the pallet browser.
+
+34
+00:02:21 --> 00:02:26
+Locate the block <b>scifunc_block_m</b> in this section.
+
+35
+00:02:27 --> 00:02:31
+Drag and drop it in <b>untitled Xcos</b> window.
+
+36
+00:02:32 --> 00:02:35
+I will zoom the <b>untitled Xcos</b> window for better view.
+
+37
+00:02:36 --> 00:02:39
+I will use the Zoom button as you see.
+
+38
+00:02:40 --> 00:02:43
+Now double click on the <b>scifunc</b> block to configure it.
+
+39
+00:02:44 --> 00:02:48
+A window named <b> Scilab Multiple Values Request</b> will open.
+
+40
+00:02:49 --> 00:02:55
+This window will allow you to change the number of input and output ports of the <b>scifunc</b> block.
+
+41
+00:02:56 --> 00:02:59
+Our function <b>squareit</b> has only one input and output variable.
+
+42
+00:03:00 --> 00:03:02
+Hence, we will keep the settings unchanged.
+
+43
+00:03:03 --> 00:03:04
+Click on <b>OK</b>.
+
+44
+00:03:05 --> 00:03:08
+A new <b>Scilab Input Value Request</b> window will open.
+
+45
+00:03:09 --> 00:03:13
+In the text box, type the function name along with input and output variables.
+
+46
+00:03:14 --> 00:03:17
+This function will be called by the <b>scifunc</b> block.
+
+47
+00:03:18 --> 00:03:19
+In the text box available,
+
+48
+00:03:20 --> 00:03:21
+edit the default function name.
+
+49
+00:03:22 --> 00:03:30
+Type <b>y1</b> equal to <b>squareit</b> open bracket <b>u1</b> close the bracket.
+
+50
+00:03:31 --> 00:03:36
+Note that here the input and output variables are <b>u1</b> and <b>y1</b> respectively.
+
+51
+00:03:37 --> 00:03:44
+These should be strictly in <b>u</b> and <b>y</b> form and not as per the variable names used in the actual function.
+
+52
+00:03:45 --> 00:03:46
+Cick on <b>OK.</b>
+
+53
+00:03:47 --> 00:03:50
+Another <b>Scilab Input Value Request</b> window will open.
+
+54
+00:03:51 --> 00:03:55
+Keep clicking on <b>OK</b> in the subsequent 3 windows that will appear.
+
+55
+00:03:56 --> 00:03:59
+The <b>scifunc</b> block is now configured.
+
+56
+00:04:00 --> 00:04:03
+Next we will include a <b>sinusoid</b> generator block.
+
+57
+00:04:04 --> 00:04:07
+In the <b>Palette browser</b> window, click on <b>Sources</b> section.
+
+58
+00:04:08 --> 00:04:13
+Drag and drop the <b>Sinusoid generator</b> block in <b>Untitled Xcos</b> window.
+
+59
+00:04:14 --> 00:04:19
+Place the block towards the left of the <b>scifunc</b> block, for convenience.
+
+60
+00:04:20 --> 00:04:22
+Now we need a block to plot the output variable.
+
+61
+00:04:23 --> 00:04:28
+In the <b>Palette browser</b> window, click on the <b>Sinks</b> section.
+
+62
+00:04:29 --> 00:04:33
+Drag and drop the <b>CScope</b> block in the <b>Untitled Xcos</b> window.
+
+63
+00:04:34 --> 00:04:37
+Place the block towards the right of the <b>scifunc</b> block.
+
+64
+00:04:38 --> 00:04:42
+Place it away from <b>scifunc</b> block, for convenience.
+
+65
+00:04:43 --> 00:04:46
+Notice that the <b>CScope</b> block has a red input port.
+
+66
+00:04:47 --> 00:04:48
+This is an event input.
+
+67
+00:04:49 --> 00:04:51
+we need an event generator block.
+
+68
+00:04:52 --> 00:04:56
+In the <b> Palette browser window,</b> click on <b>Sources</b> section.
+
+69
+00:04:57 --> 00:05:04
+Drag and drop the CLOCK underscore c block in the <b>Untitled Xcos</b> window.
+
+70
+00:05:05 --> 00:05:07
+Place it above the <b>CScope</b> block.
+
+71
+00:05:08 --> 00:05:12
+Notice that the <b>CScope</b> block has only one input port.
+
+72
+00:05:13 --> 00:05:17
+But we want to plot both the input and output variables in a single plot window.
+
+73
+00:05:18 --> 00:05:21
+Hence, we need a <b>multiplexer</b> block.
+
+74
+00:05:22 --> 00:05:27
+This block will multiplex two inputs and generate output on one output port.
+
+75
+00:05:28 --> 00:05:32
+In the <b>Palette browser window,</b> click on <b>Signal Routing</b> section.
+
+76
+00:05:33 --> 00:05:38
+Drag and drop the <b>MUX</b> block in the <b>Untitled Xcos</b> window.
+
+77
+00:05:39 --> 00:05:42
+Place the block between the <b>scifunc</b> block and <b>CScope</b> block.
+
+78
+00:05:43 --> 00:05:46
+Let me resize and realign the <b>Mux</b> block.
+
+79
+00:05:47 --> 00:05:50
+Now, let us connect the blocks together.
+
+80
+00:05:51 --> 00:05:56
+Connect the output port of <b>Sinusoid generator</b> block to the input port of <b>scifunc</b> block.
+
+81
+00:05:57 --> 00:06:03
+Now connect the output port of <b>scifunc</b> block to the lower input port of the <b>MUX.</b>
+
+82
+00:06:04 --> 00:06:09
+Connect the output port of <b>MUX</b> block to the input port of <b>CScope</b>  block.
+
+83
+00:06:10 --> 00:06:18
+Connect the output port of CLOCK underscore c block to the event input port of <b>CScope</b> block.
+
+84
+00:06:19 --> 00:06:21
+We also have to plot the <b>sine</b> input.
+
+85
+00:06:22 --> 00:06:25
+We have to connect the <b>Sinusoid generator</b> block to the <b>MUX.</b>
+
+86
+00:06:26 --> 00:06:29
+Click on the upper input port of the <b>MUX</b> block.
+
+87
+00:06:30 --> 00:06:38
+Then without releasing, move your mouse pointer towards the link between the <b> Sinusoid generator</b> block and <b>scifunc</b> block.
+
+88
+00:06:39 --> 00:06:43
+To bend the link, release the mouse button or click at places.
+
+89
+00:06:44 --> 00:06:48
+As you bring the pointer on the link, the link turns green.
+
+90
+00:06:49 --> 00:06:54
+Release the mouse button or click once to create a link between these two blocks.
+
+91
+00:06:55 --> 00:06:58
+Now let us see the configuration of other blocks.
+
+92
+00:06:59 --> 00:07:03
+We can change the <b>frequency, magnitude</b> and <b>phase</b> of the <b>sinusoid generator</b> block.
+
+93
+00:07:04 --> 00:07:08
+To do this, double click on the <b>Sinusoid generator</b> block.
+
+94
+00:07:09 --> 00:07:10
+The configuration window will open.
+
+95
+00:07:11 --> 00:07:17
+We will keep the <b>Magnitude</b> and <b>Frequency</b> as 1 and <b>Phase</b> as 0.
+
+96
+00:07:18 --> 00:07:20
+Click on <b>OK</b> to close the configuration window.
+
+97
+00:07:21 --> 00:07:24
+Now let us configure the <b>CScope</b> block.
+
+98
+00:07:25 --> 00:07:29
+Double click on the <b>CScope</b> block to open its configuration window.
+
+99
+00:07:30 --> 00:07:36
+Change the <b>Ymin</b> parameter to minus 2 and <b>Ymax</b> parameter to 2.
+
+100
+00:07:37 --> 00:07:40
+Change the <b>Refresh period</b> value to 10.
+
+101
+00:07:41 --> 00:07:43
+Make a mental note of this value.
+
+102
+00:07:44 --> 00:07:46
+Change the <b>Buffer size</b> value to 2 .
+
+103
+00:07:47 --> 00:07:49
+click on <b>OK</b>.
+
+104
+00:07:50 --> 00:07:53
+Now let us configure the <b>CLOCK_c</b>  block.
+
+105
+00:07:54 --> 00:07:57
+Double click on the block to open its configuration window.
+
+106
+00:07:58 --> 00:08:01
+Keep the value of <b>Period</b> as 0.1.
+
+107
+00:08:02 --> 00:08:05
+Change the <b>Initialisation Time</b> to be 0.
+
+108
+00:08:06 --> 00:08:07
+Click on OK.
+
+109
+00:08:08 --> 00:08:11
+Now let us change the <b>Simulation</b> parameters.
+
+110
+00:08:12 --> 00:08:16
+On the menu bar of the <b>Untitled Xcos</b> window click on the <b>Simulation</b> tab.
+
+111
+00:08:17 --> 00:08:21
+Now click on <b>Setup</b> from the drop down menu.
+
+112
+00:08:22 --> 00:08:27
+Change the <b>Final Integration time</b> to match the <b>Refresh period</b> of <b>CScope</b> block.
+
+113
+00:08:28 --> 00:08:31
+The value of <b>Refresh period</b> was 10.
+
+114
+00:08:32 --> 00:08:35
+Hence, put the value of <b>Final integration</b> time as 10.
+
+115
+00:08:36 --> 00:08:37
+Click on <b>OK</b>.
+
+116
+00:08:38 --> 00:08:43
+Now, click on <b>File</b> and then click on <b>Save</b> to save the <b>Xcos</b> diagram.
+
+117
+00:08:44 --> 00:08:47
+Choose a desired directory to save the <b>Xcos</b> diagram.
+
+118
+00:08:48 --> 00:08:55
+However, it is advised to save it in the folder where you have saved the <b>squareit.sci</b> file.
+
+119
+00:08:56 --> 00:08:57
+Click on <b>OK</b>.
+
+120
+00:08:58 --> 00:09:01
+Note that the <b>scifunc</b> block will call the <b> squareit</b> function.
+
+121
+00:09:02 --> 00:09:08
+This means that we should first load the <b> squareit</b> function before we execute the <b>Xcos diagram</b>.
+
+122
+00:09:09 --> 00:09:15
+Switch to the <b> Scilab editor</b> window, which has the <b>squareit.sci</b> file open.
+
+123
+00:09:16 --> 00:09:20
+Click on the <b>Execute</b> button available on the <b>menu bar</b> of the editor.
+
+124
+00:09:21 --> 00:09:23
+This will load the <b>squareit</b> function.
+
+125
+00:09:24 --> 00:09:27
+Now we can execute the <b>Xcos</b> diagram.
+
+126
+00:09:28 --> 00:09:30
+Open the <b>Xcos diagram</b> file.
+
+127
+00:09:31 --> 00:09:36
+Click on the <b>Start</b> button available on the <b>menu bar</b> of <b>Xcos</b> window.
+
+128
+00:09:37 --> 00:09:38
+A graphic window will appear.
+
+129
+00:09:39 --> 00:09:41
+This window will have two plots.
+
+130
+00:09:42 --> 00:09:46
+Input <b>sine wave</b> in black color and output <b>sine wave</b> in green color.
+
+131
+00:09:47 --> 00:09:54
+Notice that the squaring function implemented in the <b>squareit</b> function, has indeed squared the input sine wave.
+
+132
+00:09:55 --> 00:09:59
+Hence, the output <b>sine</b> wave has been shifted to the positive axis.
+
+133
+00:10:00 --> 00:10:01
+Close the <b>plot</b> window.
+
+134
+00:10:02 --> 00:10:09
+Now, let us see how to edit the <b>scifunc</b> block to <b>call</b> a function which has more than one input and output variables.
+
+135
+00:10:10 --> 00:10:12
+Switch to <b>scilab</b> editor window.
+
+136
+00:10:13 --> 00:10:18
+Edit the <b>squareit</b> function to have two input and output variables.
+
+137
+00:10:19 --> 00:10:27
+Edit the output variable as open square bracket y comma z close the square bracket .
+
+138
+00:10:28 --> 00:10:35
+Edit the input variables as open bracket <b>a</b> comma <b>b</b> close bracket.
+
+139
+00:10:36 --> 00:10:40
+We will change the function to shift the squared output by 1 unit.
+
+140
+00:10:41 --> 00:10:43
+Edit the main function line as:
+
+141
+00:10:44 --> 00:10:50
+<b>y</b> is equal to <b>b</b> plus <b>a</b> raise to two put a semicolon in the end.
+
+142
+00:10:51 --> 00:10:55
+Also generate an output whose amplitude will be half of the input.
+
+143
+00:10:56 --> 00:11:00
+Go to next line by pressing <b>Enter</b> key and type:
+
+144
+00:11:01 --> 00:11:09
+<b>z</b> is equal to 0.5 multiplied by a put a semicolon in the end.
+
+145
+00:11:10 --> 00:11:11
+Now save the file.
+
+146
+00:11:12 --> 00:11:14
+Switch to the <b>Xcos</b> window.
+
+147
+00:11:15 --> 00:11:18
+Double click on the <b>scifunc</b> block to configure it.
+
+148
+00:11:19 --> 00:11:26
+In the <b>input port size</b> field, put a semi colon after 1 comma 1 and type 1 comma one again.
+
+149
+00:11:27 --> 00:11:35
+Similarly, in the <b>output port size</b> field, put a semi colon after 1 comma 1 and type 1 comma 1 again.
+
+150
+00:11:36 --> 00:11:37
+Click on <b>OK</b>.
+
+151
+00:11:38 --> 00:11:40
+A new <b>Scilab Input Value Request</b> window will open.
+
+152
+00:11:41 --> 00:11:42
+In the text box,
+
+153
+00:11:43 --> 00:11:47
+put a comma after y1 and type y2,
+
+154
+00:11:48 --> 00:11:51
+put y1 and y2 in square brackets,
+
+155
+00:11:52 --> 00:11:56
+now put a comma after <b>u1</b> and type <b>u2</b>.
+
+156
+00:11:57 --> 00:11:58
+Click on <b>OK</b>.
+
+157
+00:11:59 --> 00:12:02
+Another <b>Scilab Input Value Request</b> window will open.
+
+158
+00:12:03 --> 00:12:07
+Keep  clicking on <b>OK</b> in the subsequent 3 windows that will appear.
+
+159
+00:12:08 --> 00:12:10
+The <b>scifunc</b> block is now  configured.
+
+160
+00:12:11 --> 00:12:13
+Let me realign the <b>scifunc</b> block.
+
+161
+00:12:14 --> 00:12:16
+Switch to the <b> Palette browser</b> window.
+
+162
+00:12:17 --> 00:12:23
+In the <b>Sources</b> section, drag and drop the <b>Constant underscore m</b> block in the <b>Xcos</b> window.
+
+163
+00:12:24 --> 00:12:27
+Place it below the <b>Sinusoid generator</b> block.
+
+164
+00:12:28 --> 00:12:35
+Connect the <b>Constant underscore m</b> block to the lower input of the <b>scifunc</b> block.
+
+165
+00:12:36 --> 00:12:38
+The default value of this block is 1.
+
+166
+00:12:39 --> 00:12:40
+Keep it unchanged.
+
+167
+00:12:41 --> 00:12:43
+Double click on the <b>MUX</b> block.
+
+168
+00:12:44 --> 00:12:46
+Change the <b>input port size</b> to 3.
+
+169
+00:12:47 --> 00:12:47
+Click on <b>OK</b>.
+
+170
+00:12:48 --> 00:12:58
+Let me resize the <b>MUX</b> block and I will connect <b>MUX</b> and <b>CSCOPE</b> block properly.
+
+171
+00:12:59 --> 00:13:06
+Connect the lower output port of the <b>scifunc</b> block to the lower input port of <b>MUX</b> block.
+
+172
+00:13:07 --> 00:13:11
+Click on <b>File</b> and choose <b>Save</b> to save the <b>xcos</b> file.
+
+173
+00:13:12 --> 00:13:17
+Switch to the <b>Scilab editor</b> which has the <b>squareit.sci</b> file open.
+
+174
+00:13:18 --> 00:13:22
+Click on the <b>Execute</b> button available on the <b>menu bar</b> of the editor.
+
+175
+00:13:23 --> 00:13:25
+This will load the <b>squareit</b> function.
+
+176
+00:13:26 --> 00:13:29
+Now we can execute the <b>Xcos</b> diagram.
+
+177
+00:13:30 --> 00:13:34
+Click on the <b>Start</b> button available on the <b>menu bar</b> of the <b>Xcos</b> window.
+
+178
+00:13:35 --> 00:13:37
+A graphic window will appear.
+
+179
+00:13:38 --> 00:13:39
+This window will have three plots.
+
+180
+00:13:40 --> 00:13:42
+Input <b>sine wave</b> in black color,
+
+181
+00:13:43 --> 00:13:44
+output  <b> sine wave</b> in green color and
+
+182
+00:13:45 --> 00:13:48
+amplitude scaled input in red colour.
+
+183
+00:13:49 --> 00:13:58
+Notice that the function has indeed squared the input <b>sine wave</b> and also shifted it by an offset of 1 unit, which is as expected.
+
+184
+00:13:59 --> 00:14:04
+We also get the amplitude scaled of the input <b>sine wave,</b> as expected.
+
+185
+00:14:05 --> 00:14:07
+Close the plot window.
+
+186
+00:14:08 --> 00:14:09
+Now let us summarize.
+
+187
+00:14:10 --> 00:14:11
+In this tutorial we learnt:
+
+188
+00:14:12 --> 00:14:14
+* To write a squaring function in <b>Scilab</b>
+
+189
+00:14:15 --> 00:14:18
+* To use the <b>scifunc</b> block in <b>Xcos </b>
+
+190
+00:14:19 --> 00:14:21
+* To use <b>MUX </b> block to draw multiple plots
+
+191
+00:14:22 --> 00:14:25
+* To call functions having multiple input and output.
+
+192
+00:14:26 --> 00:14:28
+Watch the video available at the following link.
+
+193
+00:14:29 --> 00:14:32
+It summarizes the Spoken Tutorial project.
+
+194
+00:14:33 --> 00:14:36
+If you do not have good bandwidth, you can download and watch it.
+
+195
+00:14:37 --> 00:14:39
+The spoken tutorial project Team:
+
+196
+00:14:40 --> 00:14:42
+Conducts workshops using spoken tutorials.
+
+197
+00:14:43 --> 00:14:46
+Gives certificates for those who pass an online test.
+
+198
+00:14:47 --> 00:14:52
+For more details, please write to contact@spoken-tutorial.org
+
+199
+00:14:53 --> 00:14:56
+Spoken Tutorial Project is a part of  Talk to a Teacher project.
+
+200
+00:14:57 --> 00:15:04
+It is supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+201
+00:15:05 --> 00:15:14
+More information on this mission is available at spoken-tutorial.org/NMEICT-Intro.
+
+202
+00:15:15 --> 00:15:18
+Thank you for joining. Hope you found this tutorial useful.
+
+203
+00:15:19 --> 00:15:24
+This is Anuradha Amruthkar from IIT Bombay, signing off.
+

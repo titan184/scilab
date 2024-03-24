@@ -1,0 +1,582 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:08
+Dear Friends, Welcome to the spoken tutorial on <b> Advanced Control of Continuous Time systems</b>.
+
+2
+00:00:09 --> 00:00:11
+At the end of this tutorial, you will learn how to:
+
+3
+00:00:12 --> 00:00:16
+Define a continuous time system: second and higher order
+
+4
+00:00:17 --> 00:00:19
+Plot response to <b>step</b> and sine inputs
+
+5
+00:00:20 --> 00:00:21
+Do a <b>Bode plot</b>
+
+6
+00:00:22 --> 00:00:25
+Study <b>numer</b> and <b> denom Scilab functions</b>
+
+7
+00:00:26 --> 00:00:29
+Plot <b> poles</b> and <b>zeros</b> of a system.
+
+8
+00:00:30 --> 00:00:32
+To record this tutorial, I am using
+
+9
+00:00:33 --> 00:00:35
+<b>Ubuntu 12.04</b> as the operating system with
+
+10
+00:00:36 --> 00:00:39
+<b>Scilab 5.3.3</b> version.
+
+11
+00:00:40 --> 00:00:47
+Before practicing this tutorial, a learner should have basic knowledge of <b>Scilab</b> and <b>control systems.</b>
+
+12
+00:00:48 --> 00:00:54
+For <b>Scilab,</b> please refer to the <b>Scilab tutorials</b> available on the <b>Spoken Tutorial website.</b>
+
+13
+00:00:55 --> 00:01:01
+In this tutorial, I will describe how to define <b>second-order linear system.</b>
+
+14
+00:01:02 --> 00:01:07
+So, first we have to define <b>complex domain variable 's'.</b>
+
+15
+00:01:08 --> 00:01:10
+Let us switch to the <b> Scilab console window.</b>
+
+16
+00:01:11 --> 00:01:24
+Here, type <b>s equal to poly open parenthesis zero comma open single quote s close single quote close parenthesis</b>, press <b>Enter.</b>
+
+17
+00:01:25 --> 00:01:26
+The output is<b> 's'.</b>
+
+18
+00:01:27 --> 00:01:31
+There is another way to define<b> 's' </b>as <b>continuous time complex variable.</b>
+
+19
+00:01:32 --> 00:01:34
+On the <b>console</b> window, type:
+
+20
+00:01:35 --> 00:01:40
+<b>s equal to percentage s</b>, press <b>Enter.</b>
+
+21
+00:01:41 --> 00:01:43
+Let us study the <b>syslin Scilab command.</b>
+
+22
+00:01:44 --> 00:01:50
+Use the <b>Scilab</b> function<b> ’syslin’ </b> to define the continuous time system.
+
+23
+00:01:51 --> 00:01:57
+<b> G of s is equal to 2 over 9 plus 2 s plus s square</b>.
+
+24
+00:01:58 --> 00:02:05
+Use <b>csim</b> with <b>step</b> option, to obtain <b>the step response</b> and then plot the <b>step response</b>.
+
+25
+00:02:06 --> 00:02:08
+Let us switch to the <b>Scilab console</b> window.
+
+26
+00:02:09 --> 00:02:31
+Here, type: <b>sys</b> capital <b>G</b> <b>equal to syslin open parenthesis open single quote c close single quote comma two divide by open parenthesis s square plus two asterisk s plus nine close parenthesis close parenthesis</b>
+
+27
+00:02:32 --> 00:02:37
+Here <b>c</b> is used, as we are defining a continuous time system.
+
+28
+00:02:38 --> 00:02:39
+Press <b>Enter</b>.
+
+29
+00:02:40 --> 00:02:43
+The output is linear second order system represented by
+
+30
+00:02:44 --> 00:02:48
+<b>2 over 9 plus 2 s plus s square</b>.
+
+31
+00:02:49 --> 00:02:56
+Then, type <b>t equal to zero colon zero point one colon ten semicolon</b>
+
+32
+00:02:57 --> 00:02:58
+Press <b>Enter.</b>
+
+33
+00:02:59 --> 00:03:14
+Then type  <b> y one is equal to c sim open parenthesis open single quote step close single quote comma t comma sys capital G close the parenthesis semicolon</b>
+
+34
+00:03:15 --> 00:03:16
+Press <b>Enter.</b>
+
+35
+00:03:17 --> 00:03:23
+Then type <b> plot open parenthesis t comma y one close parenthesis semicolon</b>
+
+36
+00:03:24 --> 00:03:25
+Press <b>Enter.</b>
+
+37
+00:03:26 --> 00:03:32
+The output will display the <b>step response</b> of the given second order system.
+
+38
+00:03:33 --> 00:03:38
+Let us study the <b>Second Order system response</b> for <b>sine input.</b>
+
+39
+00:03:39 --> 00:03:46
+<b>Sine inputs</b> can easily be given as inputs to a  <b>second order system to a continuous time system.</b>
+
+40
+00:03:47 --> 00:03:50
+Let us switch to the <b>Scilab console</b> window.
+
+41
+00:03:51 --> 00:03:58
+Type <b>U two is equal to sine open parenthesis t close parenthesis semicolon</b>.
+
+42
+00:03:59 --> 00:04:00
+Press <b>Enter.</b>
+
+43
+00:04:01 --> 00:04:14
+Then type: <b>y two is equal to c sim open parenthesis u two comma t comma sys capital G close the bracket semicolon</b>.
+
+44
+00:04:15 --> 00:04:16
+Press <b>Enter</b>.
+
+45
+00:04:17 --> 00:04:24
+Here we are using <b> sysG, the continuous time second order system</b>, we had defined earlier.
+
+46
+00:04:25 --> 00:04:38
+Then type: <b>plot open parenthesis t comma open square bracket u two semicolon y two close square bracket close parenthesis</b>.
+
+47
+00:04:39 --> 00:04:49
+Make sure that you place a <b>semicolon</b> between <b>u2</b> and <b>y2</b> because <b>u2</b> and <b>y2</b> are row vectors of the same size.
+
+48
+00:04:50 --> 00:04:51
+Press <b>Enter.</b>
+
+49
+00:04:52 --> 00:05:00
+This plot shows the <b>response of the system</b> to a <b>step input</b> and <b>sine input. </b>It is called the <b>response plot. </b>
+
+50
+00:05:01 --> 00:05:05
+<b>Response Plot</b> plots both the input and the output on the same graph.
+
+51
+00:05:06 --> 00:05:10
+As expected, the output is also a <b>sine wave</b> and
+
+52
+00:05:11 --> 00:05:14
+there is a <b>phase lag</b> between the input and output.
+
+53
+00:05:15 --> 00:05:22
+<b>Amplitude</b> is different for the input and the output as it is being passed through a <b>transfer</b> function.
+
+54
+00:05:23 --> 00:05:25
+This is a typical <b>under-damped</b> example.
+
+55
+00:05:26 --> 00:05:31
+Let us plot <b> bode plot of 2 over 9 plus 2 s plus s square</b>.
+
+56
+00:05:32 --> 00:05:38
+Please note, command '<b>f r e q'</b> is a <b>Scilab</b> command for <b>frequency response.</b>
+
+57
+00:05:39 --> 00:05:43
+Do not use <b>f r e q</b> as a <b>variable</b>!!
+
+58
+00:05:44 --> 00:05:46
+Open the <b> Scilab console</b> and type:
+
+59
+00:05:47 --> 00:05:59
+<b> f r is equal to open square bracket zero point zero one colon zero point one colon ten close square bracket semicolon.</b>
+
+60
+00:06:00 --> 00:06:02
+Press <b>Enter.</b>
+
+61
+00:06:03 --> 00:06:05
+The <b>frequency</b> is in <b>Hertz.</b>
+
+62
+00:06:06 --> 00:06:14
+Then type <b>bode open parenthesis sys capital G comma fr close parenthesis</b>.
+
+63
+00:06:15 --> 00:06:16
+and press <b>Enter.</b>
+
+64
+00:06:17 --> 00:06:19
+The <b>bode plot</b> is shown.
+
+65
+00:06:20 --> 00:06:22
+Let us define another system.
+
+66
+00:06:23 --> 00:06:31
+We have an <b> over-damped system p equal to s square plus nine s plus nine</b>
+
+67
+00:06:32 --> 00:06:35
+Let us plot <b>step response</b> for this system.
+
+68
+00:06:36 --> 00:06:37
+Switch to <b>Scilab console. </b>
+
+69
+00:06:38 --> 00:06:39
+Type this on your <b> console</b>:
+
+70
+00:06:40 --> 00:06:46
+<b> p is equal to s square plus nine asterisk s plus nine</b>
+
+71
+00:06:47 --> 00:06:48
+and then press <b> Enter.</b>
+
+72
+00:06:49 --> 00:06:50
+Then type this on your <b>console</b>:
+
+73
+00:06:51 --> 00:07:03
+<b>sys two is equal to syslin open parenthesis open single quote c close single quote comma nine divided by p close parenthesis</b>
+
+74
+00:07:04 --> 00:07:06
+and press <b> Enter.</b>
+
+75
+00:07:07 --> 00:07:13
+Then type: <b>t equal to zero colon zero point one colon ten semicolon </b>
+
+76
+00:07:14 --> 00:07:16
+Press <b>Enter.</b>
+
+77
+00:07:17 --> 00:07:30
+<b> y is equal to c sim open parenthesis open single quote step close single quote comma t comma sys two close parenthesis semicolon</b>.
+
+78
+00:07:31 --> 00:07:32
+Press <b>Enter</b>.
+
+79
+00:07:33 --> 00:07:38
+Then type <b>plot open parenthesis t comma y close parenthesis</b>.
+
+80
+00:07:39 --> 00:07:40
+Press <b>Enter.</b>
+
+81
+00:07:41 --> 00:07:45
+The <b>response plot for over damped system is shown.</b>
+
+82
+00:07:46 --> 00:07:48
+To find the <b>roots of p</b> type this on your <b>console - </b>
+
+83
+00:07:49 --> 00:07:53
+<b>roots of p</b> and press <b>Enter.</b>
+
+84
+00:07:54 --> 00:07:58
+These <b>roots</b> are the poles of the system <b>sys two</b>.
+
+85
+00:07:59 --> 00:08:01
+The <b>roots or poles</b> of the system are shown.
+
+86
+00:08:02 --> 00:08:10
+Please plot <b>Step response</b> for this system along similar lines, as for <b>over damped system.</b>
+
+87
+00:08:11 --> 00:08:19
+<b>G of s is equal to 2 over 9 plus 6 s plus s square</b> which is a <b>critically damped system</b>
+
+88
+00:08:20 --> 00:08:27
+Then <b>G of s is equal to two over 9 plus s square</b> which is an <b>undamped system</b>
+
+89
+00:08:28 --> 00:08:35
+<b>G of s is equal to 2 over 9 minus 6 s plus s square</b> which is an <b>unstable system</b>
+
+90
+00:08:36 --> 00:08:44
+Check <b>response to sinusoidal inputs</b> for all the cases and <b>plot bode plot</b> too.
+
+91
+00:08:45 --> 00:08:47
+Switch to <b> Scilab console.</b>
+
+92
+00:08:48 --> 00:08:54
+For a general <b>transfer function</b>, the numerator and denominator can be specified separately.
+
+93
+00:08:55 --> 00:08:56
+Let me show you how.
+
+94
+00:08:57 --> 00:08:58
+Type on  <b>console</b>:
+
+95
+00:08:59 --> 00:09:18
+<b> sys three is equal to syslin open parenthesis open single quote c close single quote comma s plus six comma s square plus six asterisk s plus nineteen close parenthesis</b>.
+
+96
+00:09:19 --> 00:09:20
+Press <b>Enter</b>.
+
+97
+00:09:21 --> 00:09:23
+Another way of defining a system is to type:
+
+98
+00:09:24 --> 00:09:39
+<b>g is equal to open parenthesis s plus six close parenthesis divided by open parenthesis s square plus six asterisk s plus nineteen close parenthesis</b>
+
+99
+00:09:40 --> 00:09:41
+Press <b>Enter.</b>
+
+100
+00:09:42 --> 00:09:43
+Then type this on your <b>console</b>:
+
+101
+00:09:44 --> 00:09:54
+<b>sys four is equal to syslin open parenthesis open single quote c close single quote comma g close parenthesis</b>.
+
+102
+00:09:55 --> 00:09:57
+Press <b>Enter.</b>
+
+103
+00:09:58 --> 00:10:00
+Both ways, we get the same output;
+
+104
+00:10:01 --> 00:10:06
+<b>six plus s over 19 plus six s plus s square</b>.
+
+105
+00:10:07 --> 00:10:09
+The variable <b>’sys’ is of type ’rational’.</b>
+
+106
+00:10:10 --> 00:10:15
+Its numerator and denominator can be extracted by various ways.
+
+107
+00:10:16 --> 00:10:21
+<b>Sys of two, numer of sys or numer of g</b> gives the numerator.
+
+108
+00:10:22 --> 00:10:29
+The denominator can be calculated using <b>sys(3) or denom of sys functions.</b>
+
+109
+00:10:30 --> 00:10:36
+The <b>poles</b> and <b>zeros</b> of the system can be plotted using <b>p l z r</b> function.
+
+110
+00:10:37 --> 00:10:40
+The syntax is <b>p l z r of sys</b>.
+
+111
+00:10:41 --> 00:10:45
+The <b>plot</b> shows 'x for poles' and 'circles for zeros'.
+
+112
+00:10:46 --> 00:10:47
+Switch to Scilab console.
+
+113
+00:10:48 --> 00:10:49
+Type this on your Scilab console:
+
+114
+00:10:50 --> 00:10:54
+<b>sys three open parenthesis two close parenthesis</b>.
+
+115
+00:10:55 --> 00:11:02
+Press Enter.This gives the numerator of the rational function <b>sys three</b> that is '6 + s'.
+
+116
+00:11:03 --> 00:11:04
+Otherwise, you can type:
+
+117
+00:11:05 --> 00:11:10
+<b>numer open parenthesis sys three close parenthesis</b>.
+
+118
+00:11:11 --> 00:11:12
+Press Enter.
+
+119
+00:11:13 --> 00:11:16
+The numerator of <b>system three</b> is shown.
+
+120
+00:11:17 --> 00:11:18
+To get the denominator, type:
+
+121
+00:11:19 --> 00:11:25
+<b>sys three open parenthesis three close parenthesis</b>. Press Enter.
+
+122
+00:11:26 --> 00:11:29
+The denominator of the function is shown.
+
+123
+00:11:30 --> 00:11:35
+You can also type <b>denom open parenthesis sys three close parenthesis</b>.
+
+124
+00:11:36 --> 00:11:37
+Press Enter.
+
+125
+00:11:38 --> 00:11:43
+Then type <b>p l z r open parenthesis sys three close parenthesis</b>.
+
+126
+00:11:44 --> 00:11:46
+Press Enter.
+
+127
+00:11:47 --> 00:11:49
+The output graph plots the <b>poles</b> and <b>zeros</b>.
+
+128
+00:11:50 --> 00:11:57
+It shows 'cross and circle' for 'poles and zeros' of the system respectively.
+
+129
+00:11:58 --> 00:12:00
+It is plotted on the complex plane.
+
+130
+00:12:01 --> 00:12:02
+In this tutorial, we have learnt how to:
+
+131
+00:12:03 --> 00:12:07
+Define a system by its transfer function.
+
+132
+00:12:08 --> 00:12:10
+Plot step and sinusoidal responses.
+
+133
+00:12:11 --> 00:12:14
+Extract poles and zeros of a transfer function.
+
+134
+00:12:15 --> 00:12:18
+Watch the video available at the following link.
+
+135
+00:12:19 --> 00:12:21
+It summarizes the Spoken Tutorial project.
+
+136
+00:12:22 --> 00:12:26
+If you do not have good bandwidth, you can download and watch it.
+
+137
+00:12:27 --> 00:12:28
+The spoken tutorial project Team:
+
+138
+00:12:29 --> 00:12:31
+Conducts workshops using spoken tutorials.
+
+139
+00:12:32 --> 00:12:35
+Gives certificates to those who pass an online test.
+
+140
+00:12:36 --> 00:12:42
+For more details, please write to contact@spoken-tutorial.org.
+
+141
+00:12:43 --> 00:12:46
+Spoken Tutorial Project is a part of the Talk to a Teacher project.
+
+142
+00:12:47 --> 00:12:54
+It is supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+143
+00:12:55 --> 00:13:05
+More information on this mission is available at spoken-tutorial.org/NMEICT-Intro.
+
+144
+00:13:06 --> 00:13:07
+This is Ashwini Patil, signing off.
+
+145
+00:13:08 --> 00:13:13
+Thank you for joining. Good Bye.
+
