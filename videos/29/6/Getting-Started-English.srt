@@ -1,0 +1,578 @@
+<b>Narration</b>
+
+1
+00:00:02 --> 00:00:06
+Welcome to the spoken tutorial on <b>Getting Started</b> with Scilab.
+
+2
+00:00:07 --> 00:00:08
+In this tutorial we are going to learn:
+
+3
+00:00:09 --> 00:00:11
+* The use of Scilab as a calculator.
+
+4
+00:00:12 --> 00:00:14
+* How to store values in a variable.
+
+5
+00:00:15 --> 00:00:20
+* How to perform various mathematical operations using these variables.
+
+6
+00:00:21 --> 00:00:28
+* How to create a file, to store commands executed during the session, in the current working directory.
+
+7
+00:00:29 --> 00:00:30
+* How to define complex numbers.
+
+8
+00:00:31 --> 00:00:37
+* How to perform exponential, logarithmic and trigonometric operations on numbers.
+
+9
+00:00:38 --> 00:00:43
+The prerequisite for this tutorial is- Scilab should be installed on your computer.
+
+10
+00:00:44 --> 00:00:50
+I am using <b>Scilab 5.2.0</b> and <b>Mac OS/X</b>  for demonstration.
+
+11
+00:00:51 --> 00:00:54
+Here is the Flow chart for the tutorial.
+
+12
+00:00:55 --> 00:01:00
+Click on the <b>Scilab shortcut icon</b> on your Desktop and Start Scilab.
+
+13
+00:01:01 --> 00:01:06
+This is the Scilab console window. Notice that the cursor is on the command prompt.
+
+14
+00:01:07 --> 00:01:15
+I suggest that you practice this tutorial in Scilab simultaneously while pausing the video at regular intervals of time.
+
+15
+00:01:16 --> 00:01:18
+Scilab can be used as a calculator.
+
+16
+00:01:19 --> 00:01:24
+Let us see some of the basic operations that it can do.
+
+17
+00:01:25 --> 00:01:35
+Type 42 plus 4 multiplied by 4 minus 64 divided by 4 and press Enter.
+
+18
+00:01:36 --> 00:01:38
+The output is 42, as expected.
+
+19
+00:01:39 --> 00:01:44
+Note that the answer 42 is stored in the default variable "a n s".
+
+20
+00:01:45 --> 00:01:48
+We can also create named variables: Type,
+
+21
+00:01:49 --> 00:01:59
+a equals 12, b=21 , c=33 and press Enter.
+
+22
+00:02:00 --> 00:02:07
+This stores the values 12, 21 and 33 in the variables a, b and c respectively.
+
+23
+00:02:08 --> 00:02:12
+I will clear the scilab console using the <b>clc</b> command here.
+
+24
+00:02:13 --> 00:02:18
+Now we will perform some mathematical operations using these variables.
+
+25
+00:02:19 --> 00:02:20
+For example,
+
+26
+00:02:21 --> 00:02:26
+a+b+c gives the result 66;
+
+27
+00:02:27 --> 00:02:28
+also
+
+28
+00:02:29 --> 00:02:34
+a times into bracket
+
+29
+00:02:35 --> 00:02:40
+b plus c  gives the result 648.
+
+30
+00:02:41 --> 00:02:57
+We can also assign the answer to another variable say 'd' by typing d = bracket a+b close the bracket multiplied by c gives the answer
+
+31
+00:02:58 --> 00:03:00
+d = 1089.
+
+32
+00:03:01 --> 00:03:08
+We can check the values in the variables by typing the names of the variables separated by commas on the command line as
+
+33
+00:03:09 --> 00:03:15
+a,b,c,d and press Enter.
+
+34
+00:03:16 --> 00:03:20
+I will clear the console here using the <b>clc</b> command.
+
+35
+00:03:21 --> 00:03:28
+To take the power, use the “raised to” symbol which is located on the number key 6 of your keyboard.
+
+36
+00:03:29 --> 00:03:33
+Press 'Shift key' and number key 6 to use this symbol.
+
+37
+00:03:34 --> 00:03:42
+for example, 7 square can be found by 7 raised to 2 and press Enter.
+
+38
+00:03:43 --> 00:03:54
+For finding the square root of a number, say, 17, we use : <b>sqrt</b> of 17.
+
+39
+00:03:55 --> 00:04:05
+This is same as 17 raised to the power of zero point five.
+
+40
+00:04:06 --> 00:04:09
+By convention, only the positive value comes as output.
+
+41
+00:04:10 --> 00:04:14
+More generally, to find 34 to the power of (2 by 5), type:
+
+42
+00:04:15 --> 00:04:24
+34 raised to bracket  2 divided by 5  close the bracket and press Enter.
+
+43
+00:04:25 --> 00:04:27
+Negative powers can also be used.
+
+44
+00:04:28 --> 00:04:32
+Clear the cansole using <b>clc</b> command.
+
+45
+00:04:33 --> 00:04:39
+So far, you  have seen how to do some simple calculations and how to create variables in Scilab.
+
+46
+00:04:40 --> 00:04:42
+Now let us start with the new command.
+
+47
+00:04:43 --> 00:04:48
+This will help remember commands which were previously issued along with the outputs.
+
+48
+00:04:49 --> 00:04:54
+First, type the command <b>pwd</b> and press Enter.
+
+49
+00:04:55 --> 00:04:57
+This is the current working directory (on my computer).
+
+50
+00:04:58 --> 00:05:00
+It might be different on your computer.
+
+51
+00:05:01 --> 00:05:14
+The current working directory can be changed by clicking the changed current directory icon, located on the toolbar of the scilab console window as you see.
+
+52
+00:05:15 --> 00:05:19
+Now issue the diary command by typing:
+
+53
+00:05:20 --> 00:05:39
+<b>diary bracket, open inverted commas,   myrecord.txt  close inverted commas, close the bracket</b> and press <b>Enter</b>.
+
+54
+00:05:40 --> 00:05:47
+This command will create a file with the name "myrecord.txt" in the current working directory.
+
+55
+00:05:48 --> 00:05:52
+A transcript of the Scilab session from now onwards will be saved in this file.
+
+56
+00:05:53 --> 00:05:59
+Its usefulness will be demonstrated at a later stage in this tutorial.
+
+57
+00:06:00 --> 00:06:06
+Please pause the tutorial now and attempt exercise number one given with the video.
+
+58
+00:06:07 --> 00:06:12
+Now, let us see how Scilab handles complex numbers.
+
+59
+00:06:13 --> 00:06:17
+The imaginary unit <b>i</b> is defined in Scilab as <b>percent i</b>:
+
+60
+00:06:18 --> 00:06:28
+For example,Five point two multiplied percent i gives 5.2i;
+
+61
+00:06:29 --> 00:06:57
+also bracket  10 plus 5 into percent i whole multiply by 2 times percent i gives the result -10. + 20.i
+
+62
+00:06:58 --> 00:07:03
+Now clear the console here.
+
+63
+00:07:04 --> 00:07:08
+Let us see some other predefined numerical constants available in Scilab.
+
+64
+00:07:09 --> 00:07:12
+As with i, their names also start with the percent sign:
+
+65
+00:07:13 --> 00:07:17
+For example, <b>percent pi</b> (%pi).
+
+66
+00:07:18 --> 00:07:20
+The value of <b>pi</b> is as expected.
+
+67
+00:07:21 --> 00:07:26
+Now, we will demonstrate the use of <b>pi</b> using a few built-in trigonometric functions as follows.
+
+68
+00:07:27 --> 00:07:36
+For the functions <b>sine of percent pi by 2</b> the result is 1.
+
+69
+00:07:37 --> 00:07:49
+And for <b>cos of percent pi by 2</b> the result is 6.123D-17.
+
+70
+00:07:50 --> 00:07:53
+Please note that the angles are measured in radians and
+
+71
+00:07:54 --> 00:07:58
+notice that the second answer is zero for all practical purposes.
+
+72
+00:07:59 --> 00:08:02
+<b>%eps</b> is related to number known as "machine epsilon",
+
+73
+00:08:03 --> 00:08:07
+It is the minimum digit resolution that Scilab can give.
+
+74
+00:08:08 --> 00:08:18
+Type <b>%eps</b> on your console to find its value on your computer.
+
+75
+00:08:19 --> 00:08:23
+On my computer it gives 2.220D-16.
+
+76
+00:08:24 --> 00:08:27
+This shows the floating point precision used by Scilab .
+
+77
+00:08:28 --> 00:08:40
+This number is a notation for 2.22 times 10^(-16). Clear the console here.
+
+78
+00:08:41 --> 00:09:05
+If one wants to write 0.000456, one can write it as 4.56d-4 or 4.56e-4.
+
+79
+00:09:06 --> 00:09:15
+While scilab variables and functions are case-sensitive, here we can use small d or capital D,  small e or capital E.
+
+80
+00:09:16 --> 00:09:21
+The base of the natural logarithm is another important predefined numerical constant:
+
+81
+00:09:22 --> 00:09:29
+<b>percent e</b> (%e) gives the result as expected.
+
+82
+00:09:30 --> 00:09:34
+We can achieve the same result with the function "e x p".
+
+83
+00:09:35 --> 00:09:43
+For example: exp bracket 1 close the bracket and press Enter.
+
+84
+00:09:44 --> 00:09:46
+You can see both the answers are same.
+
+85
+00:09:47 --> 00:09:54
+Clear the console using the <b>clc</b> command here.
+
+86
+00:09:55 --> 00:09:55
+similarly,
+
+87
+00:09:56 --> 00:10:03
+%e square gives the following answer
+
+88
+00:10:04 --> 00:10:17
+which can also be achieved by typing exp of 2 .
+
+89
+00:10:18 --> 00:10:22
+The command <b>log</b> means the natural logarithm of a number, that is, to the base e.
+
+90
+00:10:23 --> 00:10:28
+Use log 10 for taking the logarithm with respect to base 10.
+
+91
+00:10:29 --> 00:10:46
+For example, log10 bracket 1e minus 23 close bracket  and press Enter, this gives the expected answer -23.
+
+92
+00:10:47 --> 00:10:50
+We get complex numbers when taking logarithm of negative .
+
+93
+00:10:51 --> 00:11:00
+For complex numbers you can check this for yourself type : log of -1 or log of %i on your scilab console.
+
+94
+00:11:01 --> 00:11:08
+Now recall that we invoked a recording of all the typed commands into the file myrecord.txt through the diary command.
+
+95
+00:11:09 --> 00:11:12
+Now, let's see how to close that file and view it.
+
+96
+00:11:13 --> 00:11:15
+For closing the file, type
+
+97
+00:11:16 --> 00:11:20
+<b>diary of zero</b>.
+
+98
+00:11:21 --> 00:11:25
+This command will close and save the file myrecord.txt.
+
+99
+00:11:26 --> 00:11:33
+Also recall that this file was created in current working directory, which in my case is desktop.
+
+100
+00:11:34 --> 00:11:45
+Let us open this file. To do so, click on the <b>Open-a-file</b> shortcut icon on your scilab console window toolbar.
+
+101
+00:11:46 --> 00:11:50
+I will change the file format to <b>All Files</b>.
+
+102
+00:11:51 --> 00:11:58
+Select the file myrecord.txt and click on Open.
+
+103
+00:11:59 --> 00:12:09
+Note that all transactions, both commands and the corresponding answers given by Scilab, have been saved into this file.
+
+104
+00:12:10 --> 00:12:14
+I will close this file.
+
+105
+00:12:15 --> 00:12:20
+Click <b>Yes</b>.
+
+106
+00:12:21 --> 00:12:28
+We know that while a program is being developed, one experiments a lot with the code before arriving at suitable code.
+
+107
+00:12:29 --> 00:12:34
+Diary command helps to keep track of all the transactions.
+
+108
+00:12:35 --> 00:12:41
+If you recall that we had closed the file my record.txt using the command <b>diary of zero</b>
+
+109
+00:12:42 --> 00:12:47
+please note that no transactions can be saved after executing this command.
+
+110
+00:12:48 --> 00:12:53
+If we need to save the session once again, we need to issue the diary command again.
+
+111
+00:12:54 --> 00:13:02
+If the file contains some useful information, then one should use some other file name in the diary command.
+
+112
+00:13:03 --> 00:13:08
+Because use of same file name will overwrite the existing file.
+
+113
+00:13:09 --> 00:13:14
+Pause the video here and solve the second exercise given with the video.
+
+114
+00:13:15 --> 00:13:20
+You may have noticed that the solution for the problem was not exactly zero.
+
+115
+00:13:21 --> 00:13:26
+For more information on how to deal with this, type “help clean”.
+
+116
+00:13:27 --> 00:13:36
+In general, if you need help about a particular command, then the 'help' or help with an argument command can be used.
+
+117
+00:13:37 --> 00:13:52
+For example, type “help chdir” on the scilab console and press Enter.
+
+118
+00:13:53 --> 00:14:00
+I will increase the size of the <b>Help Browser</b>.
+
+119
+00:14:01 --> 00:14:09
+<b>Help chdir</b> gives detailed information on how to change the current working directory.
+
+120
+00:14:10 --> 00:14:19
+Another option is to click on the Help Browser icon on the toolbar of the scilab console window as you see.
+
+121
+00:14:20 --> 00:14:30
+Let me close the Help Browser and coming back to the slides.
+
+122
+00:14:31 --> 00:14:35
+The up - down arrow keys can be used to see the previously executed commands.
+
+123
+00:14:36 --> 00:14:44
+While using the up - down arrows, you can stop at any command and press Enter to execute it.
+
+124
+00:14:45 --> 00:14:47
+You can edit the commands if necessary.
+
+125
+00:14:48 --> 00:14:58
+In fact,  you are looking for a previous command you typed, which started with the letter 'e', then type e, and then use up arrow key.
+
+126
+00:14:59 --> 00:15:06
+Use tab key to auto-complete the command. It gives us all the available options to choose.
+
+127
+00:15:07 --> 00:15:09
+In this tutorial we have learnt :
+
+128
+00:15:10 --> 00:15:11
+* Use of Scilab as a calculator .
+
+129
+00:15:12 --> 00:15:15
+* Store the result in the default variable ans.
+
+130
+00:15:16 --> 00:15:19
+* Assign values to the variable using the equality sign.
+
+131
+00:15:20 --> 00:15:27
+* Check values in variables by typing the name of the variable separated by commas on the console.
+
+132
+00:15:28 --> 00:15:33
+* Check the current working directory using pwd command.
+
+133
+00:15:34 --> 00:15:39
+* Use diary command to save all commands typed on the console into a file.
+
+134
+00:15:40 --> 00:15:48
+* Define complex numbers, natural exponents and π using %i, %e and %pi respectively.
+
+135
+00:15:49 --> 00:15:53
+* Use help command for detailed information about any command.
+
+136
+00:15:54 --> 00:15:58
+This brings us to the end of this spoken tutorial on Getting Started with Scilab.
+
+137
+00:15:59 --> 00:16:05
+There are many other functions in Scilab which will be covered in other spoken tutorials.
+
+138
+00:16:06 --> 00:16:13
+This spoken tutorial has been: created by the Free and Open Source Software in Science and Engineering Education(FOSSEE).
+
+139
+00:16:14 --> 00:16:21
+More information on the FOSSEE project could be obtained from <a class="external free" href="http://fossee.in" rel="nofollow">http://fossee.in</a> or <a class="external free" href="http://scilab.in" rel="nofollow">http://scilab.in</a> website.
+
+140
+00:16:22 --> 00:16:28
+Supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+141
+00:16:29 --> 00:16:42
+For More information on this, please visit spoken hyphen tutorial dot org slash NMEICT hyphen intro.
+
+142
+00:16:43 --> 00:16:46
+I hope you find this spoken tutorial useful for learning.
+
+143
+00:16:47 --> 00:16:47
+Thank you.
+
+144
+00:16:48 --> 00:16:53
+This is Anuradha Amrutkar from IIT Bombay, signing off.
+

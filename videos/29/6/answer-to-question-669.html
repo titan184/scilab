@@ -1,0 +1,251 @@
+<html>
+<head>
+<title>
+	 
+      Spoken Tutorial Forums
+      
+</title>
+        <link rel="stylesheet" href="../../../includes/css/bootstrap_forum.min.css" type="text/css" media="screen" charset="utf-8" />
+         <link rel="stylesheet" href="../../../includes/css/slick.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="../../../includes/css/main_forum.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="../../../includes/css/nice-bar.css" type="text/css" media="screen" charset="utf-8" />
+      <link rel="stylesheet" href="../../../includes/css/theme.blue.css" type="text/css" media="screen" charset="utf-8" />
+</head>
+<body>
+	 <div id="page-wrapper">
+        <div id="header-wrapper">
+            <div id="header-inner">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+                            <div class="navbar-brand">
+                                <img id="logo" src="../../../includes/images/logo.png">
+                                Spoken Tutorial Forums
+                                </div>
+                        </div>
+                        </div> <!-- /.container -->
+                </nav>
+            </div> <!-- /#header-inner -->
+        </div>
+        <div id="content-wrapper">
+            <div id="content-inner" class="container">
+                <div id="content" class="col-lg-12 col-md-12 col-sm-12">
+                    
+                    <div class="row">
+    <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="question ">
+        <div class="title ">
+           scilab code question
+        </div>
+        
+        <div id="questionNicPanel"></div>
+        <div class="body">
+            <p>function foo(a)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a=a+1<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b=return(a)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c=52<br>endfunction<br>foo(42);</p><p>assert_checkequal(43,b)</p><p>the above code is right out of the help file for return: so foo is returning the value of a as b. And the above does work.&nbsp; However, when I modify the next to last line as follows:</p><p>x=foo(42), I'm assigning b into x, at least that's what I thought. Instead I get</p><p>Wrong number of output arguments. as an error.&nbsp; This would have worked in C or C++, so what am I missing here?&nbsp; Also in the help file there is a mention to the use of the following syntax:</p><p>\r\n    <br></p><div class="refsection">\r\n      <table>\r\n        <tbody><tr>\r\n          <td valign="top"><p>the syntax <code class="scilabcode"><font face="Courier New"><span class="scilabfkeyword">function</span> \r\n              <span class="scilabinputoutputargs">b</span><span class="scilaboperator">=</span><span class="scilabfunctionid">foo</span><span class="scilabopenclose">()</span></font></code> \r\n              is recommended.\r\n&nbsp;Supposedly to eliminate the&nbsp;return.&nbsp;&nbsp;&nbsp;</p><p>So suppose I modified the previous code to:</p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function x=foo(a)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a=a+1<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //b=return(a)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c=52<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; endfunction\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to get rid of the return&nbsp;         </p></td>\r\n        </tr>\r\n      </tbody></table>\r\n    </div><p>\r\n  \r\n\r\nHow do I know what gets assigned to x unless there is a return(a). After all there is an a and a c in the function. &nbsp;And the code doesn't work anyway.&nbsp; The mention of this form of function declaration is minimal, to say the least, and to further exacerbate the matter the help utility does not show anything when I search for function. I did accidentally find some information on debugging, which saved me from making a post about where the debugger is.</p>
+        </div>
+        <br>
+        
+        <span class="category">
+            <small>
+                <a>
+                    Scilab
+                </a>   
+            </small>
+        </span>
+        
+        <span class="tutorial">
+            <small>
+            <a>
+                    Getting-Started
+             </a>       
+            </small>
+        </span>
+        
+        <span class="minute_range ">
+            <small>
+            <a>
+                    16-17 min
+             </a>       
+            </small>
+        </span>
+        
+        <span class="second_range ">
+            <small>
+                    <a>
+                    50-60 sec
+                    </a>
+            </small>
+        </span>
+       
+        
+        <span class="meta">
+            <small>
+                <i>
+                    16-06-18, 3:03 a.m.
+                </i>
+            </small>
+            
+            <span class="user">
+                maxcy
+            </span>
+        </span>
+    </div> <!-- /.question -->
+    </div>
+</div> 
+
+<h4><u>Answers:</u></h4>
+<div id="answerPanelWrapper" style="display:none;">
+    <div id="answerNicPanel" style="display:none;"></div>
+</div>
+
+<div id="commentPanelWrapper" style="display:none;">
+    <div id="commentNicPanel" style="display:none;"></div>
+</div>
+
+<div class="row">
+    <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="answer " id="answer854">
+            
+            <div class="body" id="body854">
+                how to solve it&nbsp;<div><p>function foo(a)<br>a=a+1<br>b=return(a)<br>c=52<br>endfunction<br>foo(42);</p><p>assert_checkequal(43,b)</p><p>kindly reply <a href="http://www.sscguide.in/jht-result/" title="" target="_blank">here</a></p></div>
+            </div>
+            
+            <span class="meta">
+                <small>
+                    <i>
+                        16-06-18, 11:24 p.m.
+                    </i>
+                </small>
+                
+                <span class="user">
+                    nehajain91
+                </span>
+            </span>
+        </div> <!-- /.answer -->
+        
+        <div class="row">
+            <div class="comments pull-right col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                <!-- displaying comments -->
+                
+                <div class="comment" id="comment267">
+                    <div class="body" id="cbody267">
+                        
+                    </div>
+                    
+                    <span class="meta">
+                        <small>
+                            <i>
+                                16-06-18, 11:25 p.m.
+                            </i>
+                        </small>
+                        
+                        <span class="user">
+                            nehajain91
+                        </span>
+                    </span>
+                </div> <!-- /.comment -->
+                
+                
+                
+                <!-- form to add comment -->
+      
+            </div> <!-- comments -->
+        </div> <!-- /.row -->
+        <br> <hr>
+    </div> <!-- /.answer-wrapper -->
+</div> <!-- /.row -->
+
+<div class="row">
+    <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="answer " id="answer855">
+            
+            <div class="body" id="body855">
+                <a href="http://www.sscguide.in/jht-result/" title="hello" target="">hello</a>
+            </div>
+            
+            <span class="meta">
+                <small>
+                    <i>
+                        16-06-18, 11:25 p.m.
+                    </i>
+                </small>
+                
+                <span class="user">
+                    nehajain91
+                </span>
+            </span>
+        </div> <!-- /.answer -->
+        
+        <div class="row">
+            <div class="comments pull-right col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                <!-- displaying comments -->
+                
+                
+                
+                <!-- form to add comment -->
+      
+            </div> <!-- comments -->
+        </div> <!-- /.row -->
+        <br> <hr>
+    </div> <!-- /.answer-wrapper -->
+</div> <!-- /.row -->
+
+<div class="row">
+    <div class="answer-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="answer " id="answer856">
+            
+            <div class="body" id="body856">
+                I do not know for what specific reason you would want to use functions in that manner but read the "note" in the end of the help for "return". The note reads "<i>Note: the usage of this feature can complexify the code. Instead, the syntax function b=foo() is recommended.</i>" In other words the return() in scilab's function is not the same as the "return" in C/C++. So do not compare.<div><br></div><div>The best way to return a variable in scilab is to define it in the function definition and then call the function along with the output variable. The number of output variables called must be equal to the number of output variables defined.</div>
+            </div>
+            
+            <span class="meta">
+                <small>
+                    <i>
+                        18-06-18, 2:59 p.m.
+                    </i>
+                </small>
+                
+                <span class="user">
+                    rupakrokade
+                </span>
+            </span>
+        </div> <!-- /.answer -->
+        
+        <div class="row">
+            <div class="comments pull-right col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                <!-- displaying comments -->
+                
+                
+                
+                <!-- form to add comment -->
+      
+            </div> <!-- comments -->
+        </div> <!-- /.row -->
+        <br> <hr>
+    </div> <!-- /.answer-wrapper -->
+</div> <!-- /.row -->
+
+
+            <a href="http://forums.spoken-tutorial.org/question/669/scilab code question.replace(' ','-')/ " target="_blank">Click here to reply/comment online</a>
+                    
+                </div> <!-- /#content -->
+            </div> <!-- /#content-inner -->
+        </div>
+        <div id="footer-wrapper" class="container">
+            <div id="footer-inner" class="col-lg-12 col-md-12 col-sm-12">
+                <div class="cc">
+                    <a class="cc-logo" rel="license">
+                        <img src="../../../includes/images/cc-logo-88x31.png" alt="CC logo"> 
+                    </a> Spoken Tutorial Forum by <a href="http://www.iitb.ac.in" target="_blank">IIT Bombay</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+                </div> 
+            </div> <!-- /#footer-inner -->
+        </div> <!-- /#footer-wrapper -->
+    </div> 
+</body>
+</html>

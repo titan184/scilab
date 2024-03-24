@@ -1,0 +1,2632 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>
+            Getting Started - English | spoken-tutorial.org
+        </title>
+        <link rel="shortcut icon" href="../../../includes/images/favicon.ico">
+        <link rel="stylesheet" href="../../../includes/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="../../../includes/css/font-awesome.min.css" type="text/css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="../../../includes/css/main.css" type="text/css" media="screen" charset="utf-8">
+        <link href="../../../includes/css/video-js.min.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            .video-js {
+                padding-top: 56.25%
+            }
+            .vjs-fullscreen {
+                padding-top: 0px;
+            }
+            .playlist-container{
+                background: #1a1a1a;
+                margin-bottom: 20px;
+            }
+            .description, .order {
+                font-size: 13px;
+            }
+            .forward {
+                float: right;
+            }
+            .playlist ul {
+                 height: 330px;
+                 overflow-y: scroll;
+                 margin-bottom: 0px;
+            }
+            .playlist, .playlist-container, .video-container{
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .playlist ul{
+                list-style:none;
+                padding-left: 0px;
+            }
+            .playlist ul .playlist-item{
+                clear: both;
+                overflow: hidden;
+            }
+            .playlist ul .playlist-item.active{
+                background: #3a3a3a;
+            }
+            .playlist ul .playlist-item a{
+                color: white;
+                display: block;
+                overflow: hidden;
+                padding: 15px 10px;
+            }
+            .playlist ul .playlist-item.active a{
+                color: orange;
+            }
+            .playlist ul .playlist-item:hover{
+                background: gray;
+            }
+            .playlist ul .playlist-item .thumb, .playlist ul .playlist-item .thumb .order{
+                padding-right: 10px;
+            }
+            .playlist-info{
+                color: white;
+                padding: 10px;
+                background: black;
+            }
+            .playlist-controls{
+                background: black;
+                border-top: 1px solid #3a3a3a;
+                padding: 10px 0;
+            }
+            .playlist-controls a{
+                color: white;
+            }
+            .playlist-controls span{
+                margin: 0 10px;
+            }
+            #content-wrapper #content-inner div.container{
+                padding-left: 0px;
+            }
+            p.list-group-item-text {
+                margin-top: 7px;
+            }
+            .list-zipfiles {
+                overflow-x: hidden;
+                max-height: 150px;
+            }
+            .review-data pre {
+                margin-bottom: 0px;
+            }
+            .video-js .vjs-tech{
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+            }
+        .vjs-tt-cue {
+            font-size: 16px;
+        }
+        .video-js .vjs-text-track {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .custom-jumbotron {
+            background-color: white !important;
+            border: none;
+            padding: 0px !important;
+        }
+        .custom-jumbotron p {
+            padding-left: 20px;
+        }
+        .custom-jumbotron h3 {
+            margin-top: 10px;
+        }
+        .video-visits {
+            text-align: right;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .container.playlist-container.col-lg-12.col-md-12.col-sm-12 {
+            margin-bottom: 10px;
+        }
+        .col-lg-5.col-md-5.col-sm-5.no-padding-right.right-bar {
+            margin-top: 5px;
+        }
+        .video-info{
+            display: none;
+        }
+        .breadcrumb {
+            background: white;
+            margin: 0px;
+        }
+        .list-group-item{
+            border-top: none;
+            padding-top: 0px;
+        }
+        .list-group-item:first-child {
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .hline {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .video-share {
+            margin-bottom: 10px;
+        }
+        .inner-shadow {
+            padding: 15px;
+            /*-webkit-box-shadow: 0px 0px 10px 0px rgba(84, 70, 70, 0.87);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(84, 70, 70, 0.87);
+            box-shadow: 0px 0px 10px 0px rgba(84, 70, 70, 0.87);*/
+            border: 1px solid #ddd;
+        }
+        .inner-sidebar {
+            padding-left: 15px;
+            padding-top: 5px;
+        }
+        .inner-content-body {
+            margin-top: 5px;
+        }
+        .video-info-show-more, .list-group-item-container, .panel {
+            margin-bottom: 14px;
+        }
+        a.list-group-item .list-group-item-heading {
+            color: #337AB7;
+        }
+        .panel-body-heading {
+            font-size: 16px;
+            margin-bottom: 0px;
+            color: #337AB7;
+        }
+        .panel-body .hline {
+            margin-bottom: 8px;
+        }
+        .forum-questions h4 {
+            font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+            font-size: 18px;
+            font-weight: bold;
+        }
+       .forum-questions .question {
+         padding-left: 5px;
+         padding-right: 5px;
+             padding-top: 5px;
+            clear: both;
+        }
+        .forum-questions .question a {
+            font-weight: bold;
+        }
+        .forum-questions .question p {
+            font-weight: normal;
+            padding: 5px;
+            font-size: 13px !important;
+            font-family: Verdana, Arial, Helvetica, sans-serif !important;
+            color: rgb(85, 85, 85) !important;
+            line-height: 18px !important;
+        }
+        .forum-questions .question p span, .forum-questions .question p div {
+            font-size: 13px !important;
+            font-family: Verdana, Arial, Helvetica, sans-serif !important;
+            color: rgb(85, 85, 85) !important;
+            line-height: 18px !important;
+        }
+        .hline-inner {
+            clear: both;
+        }
+        small {
+            padding: 3px 5px;
+            margin: 0 5px 0 0;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -o-border-radius: 3px;
+            border-radius: 3px;
+            background: #424242;
+            color: #ffffff;
+            width: 100px;
+            overflow: hidden;
+        }
+        small.timing {
+            background: #a26dc8;
+        }
+        .forum-post {
+            color: #4F8811;
+        }
+
+    .ScrollStyle
+    {
+        max-height: 370px;
+         min-height: 370px;
+        overflow:scroll;
+
+        float: left;
+        background: white;
+    }
+
+            .video-js.vjs-fullscreen .vjs-tt-cue { font-size: 22px; }
+        </style>
+        <script src="../../../includes/js/video.js"></script>
+    </head>
+    <body>
+        <div id="page-wrapper">
+            <!-- header begin -->
+            <div id="header-wrapper">
+                <nav class="navbar yamm navbar-default navbar-fixed-top" role="navigation">
+                    <div id="header-inner">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                                    <span class="sr-only">Toggle Navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a href="">
+                                    <img width="110px" src="../../../includes/images/logo.png">
+                                    Spoken <span class="title">Tutorial</span>
+                                </a>
+                            </div>
+                        </div> <!-- /.container-fluid -->
+                    </div> <!-- /#header-inner -->
+                </nav>
+            </div> <!-- /#header-wrapper -->
+            <!-- header end -->
+
+
+
+
+            <div id="content-wrapper">
+                <div id="content-inner" class="container">
+                    <div id="content" class="col-lg-12 col-md-12 col-sm-12">
+                     <b><h4 class="page-title">Getting Started - English</h4></b>
+                        <row>
+                            <div class='container playlist-container col-lg-12 col-md-12 col-sm-12'>
+                                <div class="video-container col-lg-8 col-md-8 col-sm-8">
+                                    <video id="st_video" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" data-setup="{}">
+                                        <source src="./Getting-Started-English.webm" type="video/webm" />
+                                        <track kind="captions" src="./Getting-Started-English.srt" srclang="en" label="English" />
+                                    </video>
+                                </div>
+                                <div class="container">
+                                    <div id="content">
+                                        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                                            <li style="width:190px" class="active" ><a href="#forums" data-toggle="tab">Questions posted on Forums</a></li>
+                                            <li style="width:180px;" ><a style= "min-height: 60px;padding-top: 12px;" href="#tutorials" data-toggle="tab">Scilab Tutorials - English </a></li>
+                                            <div id="my-tab-content" class="tab-content">
+                                                <div class="tab-pane active" id="forums" >
+                                                    <div id="forums_Q" class='ScrollStyle' style="width: 32%; " >
+ 
+                                                        
+                                                        <h4 style="font-family: Menlo;font-size: 16px; padding-left: 8px; ">Questions posted on ST Forums: </h4>
+                                                        <ul class="forum-questions" id="forum_Q" style="padding : 6px ">
+     
+                                                        
+
+                                                        <li class="question" id="3285">
+                                                        <a href="../../29/6/answer-to-question-3285.html" target="_blank" class="3285">How to launch scilab?</a>
+                                                        <p>I have downloaded scilab-6.1.0.bin.linux-x86_64.tar.gz file. How do I launch scilab on Ubuntu 18.04?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">00-01M</small>
+                                                            <small class="timing">50-60S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 15, 2024, 1:27 p.m.</span>
+                                                                
+                                                                    <small>hbammkanti</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="3267">
+                                                        <a href="../../29/6/answer-to-question-3267.html" target="_blank" class="3267">Cannot find Open option</a>
+                                                        <p>I am using Scilab 6.1.0 on Ubuntu 16.04. I am unable to find 'Open' option as shown in the video.
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">11-12M</small>
+                                                            <small class="timing">50-60S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 17, 2024, 2:59 a.m.</span>
+                                                                
+                                                                    <small>hbammkanti</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="3266">
+                                                        <a href="../../29/6/answer-to-question-3266.html" target="_blank" class="3266">Cannot find file format option</a>
+                                                        <p>I am using Scilab 6.1.0 on Ubuntu 18.04, I am unable to find 'File format' option as shown in the video.
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">11-12M</small>
+                                                            <small class="timing">40-50S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 17, 2024, 2:03 a.m.</span>
+                                                                
+                                                                    <small>hbammkanti</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="3265">
+                                                        <a href="../../29/6/answer-to-question-3265.html" target="_blank" class="3265">Why in video 5.2i but on my interface 0+5.2i</a>
+                                                        <p>I am using Scilab 6.1.0 on Ubuntu 16.04. In video it shows the output as&nbsp; '5.2i' but on my interface it displays '0+5.2i'
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">06-07M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 14, 2024, 12:05 a.m.</span>
+                                                                
+                                                                    <small>hbammkanti</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="3110">
+                                                        <a href="../../29/6/answer-to-question-3110.html" target="_blank" class="3110">Regarding a question in assignment.</a>
+                                                        <p>how to get tan inverse of 1?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">12-13M</small>
+                                                            <small class="timing">20-30S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 5:26 a.m.</span>
+                                                                
+                                                                    <small>Mohit_Surwade</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="2898">
+                                                        <a href="../../29/6/answer-to-question-2898.html" target="_blank" class="2898">Assingment</a>
+                                                        <p>pls tell me the command to find 256 under root to the power 4
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">03-04M</small>
+                                                            <small class="timing">50-60S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 9, 2024, 11:54 p.m.</span>
+                                                                
+                                                                    <small>yashwant07</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="2835">
+                                                        <a href="../../29/6/answer-to-question-2835.html" target="_blank" class="2835">Change of directory</a>
+                                                        <p>I download Scilab 6.1 and on the tool bar I didn't find the change directory icon.Where should I find it?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">02-03M</small>
+                                                            <small class="timing">0-10S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 11, 2024, 4:52 a.m.</span>
+                                                                
+                                                                    <small>patel.yogeshwari7@gmail.com</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1247">
+                                                        <a href="../../29/6/answer-to-question-1247.html" target="_blank" class="1247">matlab file project in scilab</a>
+                                                        <p>can we run matlab project file in scilab.
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">04-05M</small>
+                                                            <small class="timing">0-10S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 20, 2024, 12:32 p.m.</span>
+                                                                
+                                                                    <small>rahul0805</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1194">
+                                                        <a href="../../29/6/answer-to-question-1194.html" target="_blank" class="1194">can we create model in scilab like matlab?</a>
+                                                        <p>how to install the softwere?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">01-02M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 9:10 a.m.</span>
+                                                                
+                                                                    <small>janak123</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1173">
+                                                        <a href="../../29/6/answer-to-question-1173.html" target="_blank" class="1173">Is scilab case sensitive or case insensitive?</a>
+                                                        <p>In starting tutorial video the instructor mentioned scilab is case sensitive, but its observed that for variables it is case sensitive and for keywords it is case insensitive....am i correct
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">08-09M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 4:09 p.m.</span>
+                                                                
+                                                                    <small>omsrisairam</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1171">
+                                                        <a href="../../29/6/answer-to-question-1171.html" target="_blank" class="1171">getting started</a>
+                                                        <p>how to solve tan inverse of 1 ?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">07-08M</small>
+                                                            <small class="timing">40-50S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 1:32 p.m.</span>
+                                                                
+                                                                    <small>ajinkya_parit</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1169">
+                                                        <a href="../../29/6/answer-to-question-1169.html" target="_blank" class="1169">Assignment</a>
+                                                        <p>How to solve tan\u22121 (1)
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">10-11M</small>
+                                                            <small class="timing">30-40S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 1:18 p.m.</span>
+                                                                
+                                                                    <small>kiranpatil.23</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1165">
+                                                        <a href="../../29/6/answer-to-question-1165.html" target="_blank" class="1165">Euler&#39;s identity realated doubt</a>
+                                                        <p>--&gt;exp(%pi*%i)+1&nbsp;ans&nbsp; =&nbsp;&nbsp; &nbsp; 1.225D-16i&nbsp;&nbsp;&nbsp;--&gt;cos(%pi) + %i*sin(%pi)+1&nbsp;ans&nbsp; =&nbsp;&nbsp; &nbsp; 1.225D-16i&nbsp;&nbsp;&nbsp;--&gt;clean(exp(%pi*%i)+1)&nbsp;ans&nbsp; =&nbsp;&nbsp; &nbsp; 0&nbsp;&nbsp;&nbsp;--&gt;clean(cos(%pi) + %i*sin(%pi)+1)&nbsp;ans&nbsp; =&nbsp;&nbsp; &nbsp; 0&nbsp;&nbsp;&nbsp;how 0 is coming after using clean() function . can you give explanation for it.
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">15-16M</small>
+                                                            <small class="timing">50-60S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 2:54 p.m.</span>
+                                                                
+                                                                    <small>surya3</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1164">
+                                                        <a href="../../29/6/answer-to-question-1164.html" target="_blank" class="1164">Regarding editing of text file</a>
+                                                        <p>Dear Sir,Kindly let me know how can I edit my text file created by diary (' ') command after closing the same file by diary (0). Thanks
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">04-05M</small>
+                                                            <small class="timing">0-10S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 5:06 p.m.</span>
+                                                                
+                                                                    <small>sachinmatale</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1162">
+                                                        <a href="../../29/6/answer-to-question-1162.html" target="_blank" class="1162">euler&#39;s identity equation</a>
+                                                        <p>I am unable to solve euler's identity equation
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">13-14M</small>
+                                                            <small class="timing">20-30S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 7:23 p.m.</span>
+                                                                
+                                                                    <small>Jaydeep_Patel</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1161">
+                                                        <a href="../../29/6/answer-to-question-1161.html" target="_blank" class="1161">Assignment Question</a>
+                                                        <p>tan\u22121\r\n(1)
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">16-17M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 4:27 p.m.</span>
+                                                                
+                                                                    <small>Priyasarita</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1154">
+                                                        <a href="../../29/6/answer-to-question-1154.html" target="_blank" class="1154">assignment question</a>
+                                                        <p>how to solve tan\u22121\r\n(1)?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">16-17M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 8:33 a.m.</span>
+                                                                
+                                                                    <small>prasadprabhu1983</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1153">
+                                                        <a href="../../29/6/answer-to-question-1153.html" target="_blank" class="1153">rename existing diary name</a>
+                                                        <p>gd morning sir. how to rename the existing diary 
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">05-06M</small>
+                                                            <small class="timing">20-30S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 3:59 p.m.</span>
+                                                                
+                                                                    <small>hirdeshvarshney</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1152">
+                                                        <a href="../../29/6/answer-to-question-1152.html" target="_blank" class="1152">Exercise 2 </a>
+                                                        <p>Ca you please help, I am not getting the answer as Zero%e^(%pi*%i)+1&nbsp;ans&nbsp; =&nbsp;&nbsp; &nbsp; 1.225D-16i
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">12-13M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 11:43 a.m.</span>
+                                                                
+                                                                    <small>MMP</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1148">
+                                                        <a href="../../29/6/answer-to-question-1148.html" target="_blank" class="1148">Exercise 1</a>
+                                                        <p>The answer for the cos pi...... question is?Ram, SASTRA university
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">12-13M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 1:33 p.m.</span>
+                                                                
+                                                                    <small>Ramprasad_88</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1145">
+                                                        <a href="../../29/6/answer-to-question-1145.html" target="_blank" class="1145">Getting Started</a>
+                                                        <p>Dear sirThe question No 2&nbsp;A* C -C *A&nbsp; cannot do as the matrices sizes of A*C and C*A are different
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">06-07M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 6:53 a.m.</span>
+                                                                
+                                                                    <small>Narasimha.Murthy</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1140">
+                                                        <a href="../../29/6/answer-to-question-1140.html" target="_blank" class="1140">Executing Command in a script</a>
+                                                        <p>How to store and execute the commands in a file? What is the default extension given to scilab command file?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">16-17M</small>
+                                                            <small class="timing">50-60S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 2:32 p.m.</span>
+                                                                
+                                                                    <small>poornimanaik</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1135">
+                                                        <a href="../../29/6/answer-to-question-1135.html" target="_blank" class="1135">Diary Command Regarding</a>
+                                                        <p>After type --&gt; diary(0)no files in files list (in all files folder)&nbsp;can you help me to get file folder ????Thank youRegards&nbsp;Natesh C P(1472 - KSSEM - Remote Center, Bengaluru, Karnataka)
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">15-16M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 2:11 p.m.</span>
+                                                                
+                                                                    <small>nateshcp</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1133">
+                                                        <a href="../../29/6/answer-to-question-1133.html" target="_blank" class="1133">Appending commands to a file</a>
+                                                        <p>How to append commands to an existing file using diary() command after issuing diary(0) command?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">10-11M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 7:56 p.m.</span>
+                                                                
+                                                                    <small>poornimanaik</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1128">
+                                                        <a href="../../29/6/answer-to-question-1128.html" target="_blank" class="1128">Regarding Basic natural exponents</a>
+                                                        <p>Good Morning Sir,Im a beginner for SciLab. Can u please explain the use of %e command in detail please.Thank You.
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">09-10M</small>
+                                                            <small class="timing">30-40S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 12:01 p.m.</span>
+                                                                
+                                                                    <small>bushra2803</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1120">
+                                                        <a href="../../29/6/answer-to-question-1120.html" target="_blank" class="1120">Clearation of varaible value</a>
+                                                        <p>Mam, how to clear the values of variables like a,b,c that have been assigned earlier and how to reassign with a new value
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">03-04M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 20, 2024, 5:27 a.m.</span>
+                                                                
+                                                                    <small>bala_srb2000</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1093">
+                                                        <a href="../../29/6/answer-to-question-1093.html" target="_blank" class="1093">What is the answer for exp(%pi*%i)</a>
+                                                        <p>What is the answer for exp(%pi*%i). Answer must be -1. But I am getting as&nbsp;- 1. + 1.225D-16i. Why is it so?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">14-15M</small>
+                                                            <small class="timing">20-30S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 4:49 p.m.</span>
+                                                                
+                                                                    <small>kavithamamcet</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1090">
+                                                        <a href="../../29/6/answer-to-question-1090.html" target="_blank" class="1090">e^(%pi*%i)+1 ans  =   2</a>
+                                                        <p>Why answer is not zero?
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">12-13M</small>
+                                                            <small class="timing">0-10S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 11:55 a.m.</span>
+                                                                
+                                                                    <small>akhtarnadaf</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="1089">
+                                                        <a href="../../29/6/answer-to-question-1089.html" target="_blank" class="1089">Is there any way to prevent overwriting of existing file using diary command?</a>
+                                                        <p>Respected sir,This is coordinator from 1322 Charotar University of Science and Technology Gujarat. My question is can we open any file using diary command in append mode? so that existing record will not get overwrite.&nbsp;
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">11-12M</small>
+                                                            <small class="timing">20-30S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 6:42 a.m.</span>
+                                                                
+                                                                    <small>kamleshmakvana</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="835">
+                                                        <a href="../../29/6/answer-to-question-835.html" target="_blank" class="835">e^(%pi*%i) +1 =0</a>
+                                                        <p>Sir/ madam,&nbsp;The answer of the above mentioned question is 0 but it is coming something else to me.
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">07-08M</small>
+                                                            <small class="timing">0-10S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 2:30 p.m.</span>
+                                                                
+                                                                    <small>Timespace</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="696">
+                                                        <a href="../../29/6/answer-to-question-696.html" target="_blank" class="696">regarding e^(i*pi)+1</a>
+                                                        <p>e^(%pi*%i)+1&nbsp;ans&nbsp; =&nbsp; &nbsp;2.&nbsp;&nbsp;i am getting the answer as 2 but correct answer is 0.Please help and thanks in advance.
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">13-14M</small>
+                                                            <small class="timing">10-20S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 6:52 p.m.</span>
+                                                                
+                                                                    <small>RAJDEEP_JAGDALE</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="669">
+                                                        <a href="../../29/6/answer-to-question-669.html" target="_blank" class="669">scilab code question</a>
+                                                        <p>function foo(a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a=a+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b=return(a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c=52endfunctionfoo(42);assert_checkequal(43,b)the above code is right out of the help file for return: so foo is returning the value of a as b. And the above does work.&nbsp; However, when I modify the next to last line as follows:x=foo(42), I'm assigning b into x, at least that's what I thought. Instead I getWrong number of output arguments. as an error.&nbsp; This would have worked in C or C++, so what am I missing here?&nbsp; Also in the help file there is a mention to the use of the following syntax:\r\n    \r\n      \r\n        \r\n          the syntax function \r\n              b=foo() \r\n              is recommended.\r\n&nbsp;Supposedly to eliminate the&nbsp;return.&nbsp;&nbsp;&nbsp;So suppose I modified the previous code to:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function x=foo(a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a=a+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //b=return(a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c=52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; endfunction\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to get rid of the return&nbsp;         \r\n        \r\n      \r\n    \r\n  \r\n\r\nHow do I know what gets assigned to x unless there is a return(a). After all there is an a and a c in the function. &nbsp;And the code doesn't work anyway.&nbsp; The mention of this form of function declaration is minimal, to say the least, and to further exacerbate the matter the help utility does not show anything when I search for function. I did accidentally find some information on debugging, which saved me from making a post about where the debugger is.
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">16-17M</small>
+                                                            <small class="timing">50-60S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 20, 2024, 5:57 p.m.</span>
+                                                                
+                                                                    <small>maxcy</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+
+                                                        <li class="question" id="150">
+                                                        <a href="../../29/6/answer-to-question-150.html" target="_blank" class="150">Interfacing Arduino with Scilab/Xcos</a>
+                                                        <p>Hello sirIm a electrical student. Im thinking of doing a project based on&nbsp;interfacing Arduino&nbsp;with&nbsp;Scilab/Xcos which is further used in MPPT control of PV system. Since im using arduino for the first time, i need your help in choosing right arduino among different types and also instructions on interfacing arduino with Scilab/Xcos.
+                                                        <div class="timing pull-left">
+                                                            <small class="timing">02-03M</small>
+                                                            <small class="timing">0-10S</small>
+                                                        </div>
+                                                            <div class="user pull-right">
+                                                                <span>March 19, 2024, 6:21 p.m.</span>
+                                                                
+                                                                    <small>MeghaPujamath</small>
+                                                                    
+                                                            </div>
+                                                            </p>
+                                                            <hr class="hline-inner" style="margin-top: 18px;margin-bottom: 4px;" />
+                                                            </li>
+      
+                                                            
+                                                            </ul>
+                                                            
+                                                    </div>
+
+                                                </div>
+                                                <div class="tab-pane " id="tutorials" >
+                                                    <div class='playlist col-lg-4 col-md-4 col-sm-4'>
+                                                        <div class='playlist-controls'>
+                                                            <span class='backward'></span>
+                                                            <span class='forward'></span>
+                                                        </div>
+                                                        <ul>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1271/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>1</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Introduction to Scilab and its benefits
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1272/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>2</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Self learning of Scilab through Spoken Tutorials
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1273/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>3</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            The amazing resource of Scilab Textbook Companion
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1274/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>4</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Scilab Lab migration, Toolboxes and Forums
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/5/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>5</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Installing
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item active" data="6">
+                                                        <a href="../../29/6/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'><i class="fa fa-play"></i></span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Getting Started
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/30/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>7</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Vector Operations
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/15/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>8</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Matrix Operations
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/24/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>9</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Conditional Branching
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/25/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>10</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Iteration
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/29/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>11</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Scripts and Functions
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/27/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>12</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Plotting 2D graphs
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/381/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>13</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Xcos Introduction
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/394/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>14</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            File handling
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/395/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>15</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            User Defined Input and Output
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/396/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>16</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Integration
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/397/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>17</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Solving Non linear Equations
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/398/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>18</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Linear equations Gaussian Methods
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/399/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>19</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Linear equations Iterative Methods
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/400/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>20</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Interpolation
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/401/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>21</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            ODE Euler methods
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/402/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>22</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            ODE Applications
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/403/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>23</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Optimization Using Karmarkar Function
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/405/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>24</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Digital Signal Processing
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/410/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>25</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Control systems
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/411/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>26</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Discrete systems
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/412/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>27</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Calling User Defined Functions in XCOS
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/981/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>28</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Simulating a PID controller using XCOS
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1464/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>29</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Developing Scilab Toolbox for calling external C libraries
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1476/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>30</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Developing Scilab Toolbox for calling Python and its functions
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1752/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>31</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Interactive Simulation in Xcos using slider
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1753/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>32</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            User-defined variables in Xcos
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1754/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>33</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Loading and saving data in Xcos
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1755/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>34</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Conditional operations in Xcos
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        <li class="playlist-item">
+                                                        <a href="../../29/1756/show-video-English.html">
+                                                        <div class='pull-left thumb'>
+                                                            <span class='order'>35</span>
+                                                            <img src="../../../includes/images/thumb-even.png" width=70 >
+                                                        </div>
+                                                        <div class='description'>
+                                                            Super Blocks in Xcos
+                                                        </div>
+                                                        </a>
+                                                        </li>
+                                                        
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <script type="text/javascript">
+                                    jQuery(document).ready(function ($) {
+                                    $("#tabs").tab();
+                                    });
+                                    </script> 
+                                </div>
+                            </div>
+                        </row>
+                        <row>
+                            <div class="col-lg-7 col-md-7 col-sm-7 no-padding-left">
+                                <ol class="breadcrumb">
+                                    
+                                        
+                                            <li><a href="../Scilab-Instruction-Sheet-English.pdf" target="_blank">Instruction Sheet</a></li>
+                                        
+                                    
+
+                                    
+                                        
+                                            <li><a href="../Scilab-Installation-Sheet-English.pdf" target="_blank">Installation Sheet</a></li>
+                                        
+                                    
+                                </ol>
+                                <pre class="custom-jumbotron"><b>Outline:<br /></b> Getting Started
+
+*Expressions: Show mathematical expressions with numbers
+*Variables
+*Diary command
+*Define symbolic constants.
+*Basic functions
+*suppressing output(;)
+*help,clc
+
+</pre>
+                            </div>
+                            <div class="col-lg-5 col-md-5 col-sm-5 no-padding-right">
+                                <div class="list-group">
+                                    
+                                        <div  class="list-group-item">
+                                            <a href="./resources/Getting-Started-Assignment.pdf" target="_blank" class="list-group-item">
+                                                <h4 class="list-group-item-heading"><i class="fa fa-2 fa-globe"></i> Assignment</h4>
+                                            </a>
+                                            <p class="list-group-item-text">
+                                                <span style="text-align: left">Status: <i class="fa fa-1 fa-check-circle review-accepted" title="Accepted"></i></span>
+                                            </p>
+                                        </div>
+                                    
+                                    
+                                    
+                                    <!-- 
+                                        <div  class="list-group-item">
+                                            <a href="./resources/Getting-Started-Slides.zip" target="_blank" class="list-group-item">
+                                                <h4 class="list-group-item-heading"><i class="fa fa-2 fa-globe"></i> Slides</h4>
+                                                
+                                                    
+                                                        
+                                                            <ul class="list-zipfiles">
+                                                                
+                                                                    <li>gettig-started/</li>
+                                                                
+                                                                    <li>gettig-started/Newgettingstarted.tex</li>
+                                                                
+                                                                    <li>gettig-started/Newgettingstarted.pdf</li>
+                                                                
+                                                            </ul>
+                                                        
+                                                    
+                                                
+                                            </a>
+                                            <p class="list-group-item-text">
+                                                <span style="text-align: left">Status: <i class="fa fa-1 fa-check-circle review-accepted" title="Accepted"></i></span>
+                                            </p>
+                                        </div>
+                                     -->
+
+                                </div>
+                            </div>
+                        </row>
+                    </div>
+                </div><!-- /#content-inner .container -->
+            </div><!-- /#content-wrapper -->
+
+
+
+
+
+            <div id="footer-wrapper">
+                <div class="container-inner sans-serif">
+                    <div class="container">
+                        <div class="col-lg-8 col-md-8 col-sm-8  footer-links">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <ul class="list-unstyled">
+                                    <li><a href="http://fossee.in/" target="_blank">FOSSEE Project</a></li>
+                                    <li><a href="http://www.scilab.in/" target="_blank">Scilab Project</a></li>
+                                    <li><a href="http://www.oscad.in/" target="_blank">Oscad</a></li>
+                                    <li><a href="http://python.fossee.in/" target="_blank">Python</a></li>
+                                    <li><a href="http://cfd.fossee.in/" target="_blank">CFD</a></li>
+                                    <li><a href="http://or.fossee.in/" target="_blank">OR-Project</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <ul class="list-unstyled">
+                                    <li><a href="http://aakashlabs.org/" target="_blank">Aakash Labs</a></li>
+                                    <li><a href="http://www.co-learn.in/" target="_blank">Co-learn</a></li>
+                                    <li><a href="http://www.sakshat.ac.in/" target="_blank">Education Mission</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <ul class="list-unstyled">
+                                    <li><a href="http://process.spoken-tutorial.org/index.php/Software-Training#About_SELF_Workshops" target="_blank">Software Training</a></li>
+                                    <li><a href="http://process.spoken-tutorial.org/" target="_blank">Creation</a></li>
+                                    <li><a href="https://spoken-tutorial.org/articles/" target="_blank">News</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <ul class="list-unstyled">
+                                    <li><a href="https://spoken-tutorial.org/about" target="_blank">About</a></li>
+                                    <!-- <li><a href="http://localhost:8000/tutorial-search/#" target="_blank">Partners</a></li> -->
+                                    <li><a href="https://spoken-tutorial.org/software-training/" target="_blank">Training</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 license fill">
+                            <div class="fill">
+                                <footer>
+                                    Developed at IIT Bombay <br>
+                                    This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" class="ext" target="_blank">Creative Commons</a>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /#page-wrapper -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="../../../includes/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../includes/js/bootstrap.min.js"></script>
+        
+        <script>
+            // set video player volume by 20%
+            var myPlayer = videojs('st_video');
+            myPlayer.volume(0.2);
+            currentVideo = $('.playlist-item.active');
+            nextVideo = currentVideo.next('li');
+            prevVideo = currentVideo.prev('li');
+            var tmpHtml = currentVideo.attr('data') + '/' + $('.video-count').html()
+            $('.video-count').html(tmpHtml)
+            if(nextVideo.length){
+                //console.log(nextVideo.children('a').attr('href'));
+                $('.forward').html('<a href="'+nextVideo.children('a').attr('href')+'"><i class="fa fa-1 fa-fast-forward"></i></a>');
+            } else {
+                $('.forward').html('<i class="fa fa-1 fa-fast-forward"></i>');
+            }
+            if(prevVideo.length){
+                //console.log(prevVideo.children('a').attr('href'));
+                $('.backward').html('<a href="'+prevVideo.children('a').attr('href')+'"><i class="fa fa-1 fa-fast-backward"></i></a>');
+            } else {
+                $('.backward').html('<i class="fa fa-1 fa-fast-backward"></i>');
+            }
+        </script>
+        <script type="text/javascript">
+
+            var player,
+    tag = document.createElement('script'),
+    firstScriptTag = document.getElementsByTagName('script')[0];
+    var flag= false;
+  
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    function onPlaybackQualityChange(event) {
+        console.log(event);
+    }
+
+    Number.prototype.between = function (min, max) {
+        return this >= min && this <= max;
+    };
+
+            var ik_player;
+            //this function is called by the API
+            function onYouTubeIframeAPIReady() {
+                //creates the player object
+                ik_player = new YT.Player('player');
+                //Holds a reference to the YouTube player
+                //subscribe to events
+                ik_player.addEventListener("onReady",       "onReady");
+                ik_player.addEventListener("onStateChange", "onStateChange");
+            }
+
+             function formatTime(time){
+        time = Math.round(time);
+        var minutes = Math.floor(time / 60),
+        seconds = time - minutes * 60;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        return minutes + "." + seconds;
+        }
+
+    function onReady(event) {
+        function logDuration() {
+
+         window.setTimeout(logDuration,1000);
+         var cur_time = formatTime(ik_player.getCurrentTime()).toString();
+         var duration=  formatTime(ik_player.getDuration()).toString();
+
+        if(parseFloat(cur_time) == parseFloat(duration.toString())){
+         $('.ScrollStyle').find('.question').css("background-color", "white");
+        }else{
+        trigger(cur_time, duration);
+        }
+       
+            
+
+        return cur_time
+        }
+        logDuration();
+        $("#text").click(function(e){
+                        ik_player.pauseVideo()
+                setForum(logDuration())
+           
+        });
+
+
+    //var title = $('#text').html("Post your Question on the Forum");
+       // $("#text").click(function(e){
+     // e.preventDefault();
+         // alert(logDuration());
+            //title.html('new title'+logDuration());
+       // });
+        }
+
+      function trigger(cur_time, duration){
+      //$("#playerHolder").text("dura"+duration);
+        
+            min_range = '00-01'
+            sec_range = '50-60'
+
+            id = '3285'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '3285' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'3285').css('background-color')
+          if($("#"+'3285').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'3285').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '11-12'
+            sec_range = '50-60'
+
+            id = '3267'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '3267' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'3267').css('background-color')
+          if($("#"+'3267').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'3267').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '11-12'
+            sec_range = '40-50'
+
+            id = '3266'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '3266' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'3266').css('background-color')
+          if($("#"+'3266').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'3266').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '06-07'
+            sec_range = '10-20'
+
+            id = '3265'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '3265' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'3265').css('background-color')
+          if($("#"+'3265').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'3265').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '12-13'
+            sec_range = '20-30'
+
+            id = '3110'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '3110' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'3110').css('background-color')
+          if($("#"+'3110').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'3110').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '03-04'
+            sec_range = '50-60'
+
+            id = '2898'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '2898' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'2898').css('background-color')
+          if($("#"+'2898').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'2898').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '02-03'
+            sec_range = '0-10'
+
+            id = '2835'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '2835' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'2835').css('background-color')
+          if($("#"+'2835').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'2835').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '04-05'
+            sec_range = '0-10'
+
+            id = '1247'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1247' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1247').css('background-color')
+          if($("#"+'1247').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1247').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '01-02'
+            sec_range = '10-20'
+
+            id = '1194'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1194' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1194').css('background-color')
+          if($("#"+'1194').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1194').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '08-09'
+            sec_range = '10-20'
+
+            id = '1173'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1173' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1173').css('background-color')
+          if($("#"+'1173').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1173').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '07-08'
+            sec_range = '40-50'
+
+            id = '1171'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1171' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1171').css('background-color')
+          if($("#"+'1171').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1171').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '10-11'
+            sec_range = '30-40'
+
+            id = '1169'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1169' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1169').css('background-color')
+          if($("#"+'1169').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1169').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '15-16'
+            sec_range = '50-60'
+
+            id = '1165'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1165' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1165').css('background-color')
+          if($("#"+'1165').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1165').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '04-05'
+            sec_range = '0-10'
+
+            id = '1164'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1164' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1164').css('background-color')
+          if($("#"+'1164').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1164').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '13-14'
+            sec_range = '20-30'
+
+            id = '1162'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1162' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1162').css('background-color')
+          if($("#"+'1162').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1162').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '16-17'
+            sec_range = '10-20'
+
+            id = '1161'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1161' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1161').css('background-color')
+          if($("#"+'1161').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1161').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '16-17'
+            sec_range = '10-20'
+
+            id = '1154'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1154' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1154').css('background-color')
+          if($("#"+'1154').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1154').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '05-06'
+            sec_range = '20-30'
+
+            id = '1153'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1153' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1153').css('background-color')
+          if($("#"+'1153').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1153').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '12-13'
+            sec_range = '10-20'
+
+            id = '1152'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1152' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1152').css('background-color')
+          if($("#"+'1152').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1152').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '12-13'
+            sec_range = '10-20'
+
+            id = '1148'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1148' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1148').css('background-color')
+          if($("#"+'1148').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1148').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '06-07'
+            sec_range = '10-20'
+
+            id = '1145'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1145' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1145').css('background-color')
+          if($("#"+'1145').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1145').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '16-17'
+            sec_range = '50-60'
+
+            id = '1140'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1140' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1140').css('background-color')
+          if($("#"+'1140').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1140').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '15-16'
+            sec_range = '10-20'
+
+            id = '1135'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1135' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1135').css('background-color')
+          if($("#"+'1135').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1135').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '10-11'
+            sec_range = '10-20'
+
+            id = '1133'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1133' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1133').css('background-color')
+          if($("#"+'1133').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1133').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '09-10'
+            sec_range = '30-40'
+
+            id = '1128'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1128' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1128').css('background-color')
+          if($("#"+'1128').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1128').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '03-04'
+            sec_range = '10-20'
+
+            id = '1120'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1120' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1120').css('background-color')
+          if($("#"+'1120').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1120').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '14-15'
+            sec_range = '20-30'
+
+            id = '1093'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1093' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1093').css('background-color')
+          if($("#"+'1093').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1093').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '12-13'
+            sec_range = '0-10'
+
+            id = '1090'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1090' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1090').css('background-color')
+          if($("#"+'1090').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1090').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '11-12'
+            sec_range = '20-30'
+
+            id = '1089'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '1089' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'1089').css('background-color')
+          if($("#"+'1089').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'1089').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '07-08'
+            sec_range = '0-10'
+
+            id = '835'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '835' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'835').css('background-color')
+          if($("#"+'835').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'835').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '13-14'
+            sec_range = '10-20'
+
+            id = '696'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '696' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'696').css('background-color')
+          if($("#"+'696').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'696').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '16-17'
+            sec_range = '50-60'
+
+            id = '669'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '669' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'669').css('background-color')
+          if($("#"+'669').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'669').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+            min_range = '02-03'
+            sec_range = '0-10'
+
+            id = '150'
+
+            min_split = min_range.split("-")
+            sec_split = sec_range.split("-")
+            lower = min_split[0]+"."+sec_split[0];
+            upper = min_split[1]+"."+sec_split[1];
+            var div = document.getElementById( '150' );
+          
+            if((parseFloat(cur_time)).between(parseFloat(lower.toString()),parseFloat(upper.toString()))) 
+            {
+        
+          bgColor = $("#"+'150').css('background-color')
+          if($("#"+'150').css("background-color")=="rgb(205, 205, 205)"){
+         //alert("outt2")
+          }else{
+          var el = document.getElementById('forums_Q');
+          el.scrollTop = 0;
+       
+          }
+       
+          $("#"+'150').prependTo("#forum_Q");
+          div.style.backgroundColor = "#cdcdcd";
+           
+           }else{
+              div.style.backgroundColor = "#ffffff";
+           }
+           
+           }
+                        //for videojs trigger
+            var trackedPlayer = videojs('st_video');
+            var previousTime = 0;
+            var currentTime = 0;
+            trackedPlayer.on('timeupdate', function() {
+            previousTime = currentTime;
+            currentTime = trackedPlayer.currentTime();
+            var cur_time = formatTime(currentTime).toString();
+
+            trigger( cur_time);
+                            $("#text").click(function(e){
+                            trackedPlayer.pause()
+                    setForum(cur_time)
+                 
+                    });
+            
+            });
+ 
+        
+                function setForum(cur_time)
+                {
+                     
+                        var time_split = cur_time.split(".")
+                        var minute = parseFloat(time_split[0]);
+                        var min_range = minute+"-"+(minute+parseFloat(1))
+                        if(parseInt(time_split[1]).between(parseInt(0),parseInt(9))){
+                                    sec_range = "0-10"
+                        }else if(parseFloat(time_split[1]).between(parseFloat(10),parseFloat(19))){
+                                    sec_range = "10-20"
+                        }else if(parseFloat(time_split[1]).between(parseFloat(20),parseFloat(29))){
+                                    sec_range = "20-30"
+                        }else if(parseFloat(time_split[1]).between(parseFloat(30),parseFloat(39))){
+                                    sec_range = "30-40"
+                        }else if(parseFloat(time_split[1]).between(parseFloat(40),parseFloat(49))){
+                                    sec_range = "40-50"
+                        }else {
+                                    sec_range = "50-60"
+                        }
+        
+                         var url = "http://forums.spoken-tutorial.org/new-question/?category=Scilab&tutorial=Getting Started&minute_range="+min_range+"&second_range="+sec_range;
+                        $("#text").attr("href", url);
+                }
+        </script>
+    </body>
+</html>

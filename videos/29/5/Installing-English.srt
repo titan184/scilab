@@ -1,0 +1,262 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:06
+Welcome to the spoken tutorial on <b>Installation of Scilab on Windows operating system</b>.
+
+2
+00:00:07 --> 00:00:12
+I will install <b>Scilab</b> version 5.2 on <b>windows operating system</b>.
+
+3
+00:00:13 --> 00:00:19
+This procedure is applicable to all versions of Scilab and other versions of windows operating system.
+
+4
+00:00:20 --> 00:00:24
+You can download scilab from the scilab.org website.
+
+5
+00:00:25 --> 00:00:30
+Go to the Products, select <b>Download</b> and click.
+
+6
+00:00:31 --> 00:00:40
+Scroll down, click on <b>scilab 5.2</b> under the <b>Windows</b> section .
+
+7
+00:00:41 --> 00:00:44
+This will open a dialog to download the exe file.
+
+8
+00:00:45 --> 00:00:49
+Click on Save File, the downloading will start.
+
+9
+00:00:50 --> 00:00:53
+It will take few minutes. I will minimize this.
+
+10
+00:00:54 --> 00:00:57
+Minimize the browser.
+
+11
+00:00:58 --> 00:01:02
+The direct link to download page is as shown.
+
+12
+00:01:03 --> 00:01:09
+Before starting the installation process please make sure that your computer is connected to the internet.
+
+13
+00:01:10 --> 00:01:15
+It is required to download and install <b>Intel Math Kernal Library</b> .
+
+14
+00:01:16 --> 00:01:17
+I will minimize this.
+
+15
+00:01:18 --> 00:01:24
+Double click on the <b>scilab Setup</b> file to start the installation procedure.
+
+16
+00:01:25 --> 00:01:27
+Click <b>Run</b>.
+
+17
+00:01:28 --> 00:01:32
+<b>Select set up language</b> as <b>English</b>, click <b>OK</b>.
+
+18
+00:01:33 --> 00:01:36
+This will start the <b>Scilab Setup Wizard</b>.
+
+19
+00:01:37 --> 00:01:38
+Click Next to continue.
+
+20
+00:01:39 --> 00:01:41
+Accept the license agreement, click Next.
+
+21
+00:01:42 --> 00:01:46
+Select a destination folder to install scilab on your computer.
+
+22
+00:01:47 --> 00:01:49
+Click Next.  Go for <b>Full Installation</b>.
+
+23
+00:01:50 --> 00:01:51
+Click Next.
+
+24
+00:01:52 --> 00:01:54
+Next. Next.
+
+25
+00:01:55 --> 00:01:57
+Click Install to start the installation.
+
+26
+00:01:58 --> 00:02:02
+Click OK to give the internet connection permission.
+
+27
+00:02:03 --> 00:02:10
+This will start downloading of Intel Math Kernal Library for Scilab.
+
+28
+00:02:11 --> 00:02:19
+This will take few minutes.
+
+29
+00:02:20 --> 00:02:27
+Downloading of Intel Math Kernal Library has completed and the installation procedure for scilab has started.
+
+30
+00:02:28 --> 00:02:45
+This will take few minutes.
+
+31
+00:02:46 --> 00:02:50
+Installation of scilab has completed. Click "Finish".
+
+32
+00:02:51 --> 00:02:59
+This will Launch Scilab 5.2 on your computer.
+
+33
+00:03:00 --> 00:03:02
+I will close this.
+
+34
+00:03:03 --> 00:03:07
+We have several other spoken tutorial on Scilab at this time.
+
+35
+00:03:08 --> 00:03:11
+These are listed below.
+
+36
+00:03:12 --> 00:03:17
+Scilab Effort in India is co-ordinated through the website scilab.in
+
+37
+00:03:18 --> 00:03:20
+There are some interesting projects going on.
+
+38
+00:03:21 --> 00:03:27
+One of them is the Textbook project that codes worked out examples of standard textbooks using scilab.
+
+39
+00:03:28 --> 00:03:34
+The Links project allows users to link known scilab documents and to rank them.
+
+40
+00:03:35 --> 00:03:37
+We also help organize Scilab Workshops.
+
+41
+00:03:38 --> 00:03:43
+We have two mailing lists, one for announce and one for discuss.
+
+42
+00:03:44 --> 00:03:46
+We invite your participation in all our activities.
+
+43
+00:03:47 --> 00:03:49
+Back to spoken tutorials.
+
+44
+00:03:50 --> 00:03:53
+The spoken part will be available in various Indian Languages.
+
+45
+00:03:54 --> 00:03:57
+These are available at spoken-tutorial.org website.
+
+46
+00:03:58 --> 00:04:02
+These tutorials form a part of Level 0 training in Scilab.
+
+47
+00:04:03 --> 00:04:06
+These tutorials are available absolutely free of cost.
+
+48
+00:04:07 --> 00:04:10
+We wish to cover many FOSS systems through this route.
+
+49
+00:04:11 --> 00:04:13
+We welcome your feedback on these.
+
+50
+00:04:14 --> 00:04:16
+We also welcome your participation
+
+51
+00:04:17 --> 00:04:19
+In writing the outline for the software.
+
+52
+00:04:20 --> 00:04:21
+To write the original scripts.
+
+53
+00:04:22 --> 00:04:24
+To record the spoken tutorial.
+
+54
+00:04:25 --> 00:04:27
+To translate the script into various Indian Languages.
+
+55
+00:04:28 --> 00:04:32
+To dub the audio in Indian Languages using the script.
+
+56
+00:04:33 --> 00:04:35
+To review and give your feedback on all of the above.
+
+57
+00:04:36 --> 00:04:41
+We welcome you to conduct workshops using these spoken tutorials.
+
+58
+00:04:42 --> 00:04:46
+We also invite you to conduct efficacy studies on Spoken tutorials.
+
+59
+00:04:47 --> 00:04:54
+We are also looking for experts who can give technology support for audio, video, automatic translation, etc.
+
+60
+00:04:55 --> 00:04:57
+We have funding for all these activities.
+
+61
+00:04:58 --> 00:05:06
+Spoken Tutorials are part of the Talk to a Teacher project, supported by the National Mission on Education through ICT, MHRD government of India.
+
+62
+00:05:07 --> 00:05:10
+More information on this Mission is available at the following link.
+
+63
+00:05:11 --> 00:05:12
+Thanks for joining us.
+
+64
+00:05:13 --> 00:05:15
+This is Anuradha Amrutkar signing off.
+
+65
+00:05:16 --> 00:05:21
+Goodbye.
+
