@@ -1,0 +1,502 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:11
+Dear Friends, Welcome to the spoken tutorial on <b>Solving System of Linear Equations using Gauss Elimination and Gauss-Jordan Methods</b>.
+
+2
+00:00:12 --> 00:00:14
+At the end of this tutorial, you will learn how to:
+
+3
+00:00:15 --> 00:00:19
+Solve system of linear equations using <b>Scilab</b>
+
+4
+00:00:20 --> 00:00:24
+Develop <b>Scilab</b> code to solve linear equations.
+
+5
+00:00:25 --> 00:00:26
+To record this tutorial, I am using
+
+6
+00:00:27 --> 00:00:30
+<b>Ubuntu 12.04</b> as the operating system
+
+7
+00:00:31 --> 00:00:35
+with <b>Scilab 5.3.3</b> version.
+
+8
+00:00:36 --> 00:00:39
+To practice this tutorial, a learner should have basic knowledge of <b>Scilab</b>
+
+9
+00:00:40 --> 00:00:44
+and should know how to solve <b>Linear Equations.</b>
+
+10
+00:00:45 --> 00:00:51
+To learn <b>Scilab</b>, please refer to the relevant tutorials available on the <b>Spoken Tutorial</b> website.
+
+11
+00:00:52 --> 00:00:54
+A system of <b>linear equations</b> is a
+
+12
+00:00:55 --> 00:00:59
+finite collection of <b>linear equations</b> of the same set of  <b>variables</b>.
+
+13
+00:01:00 --> 00:01:03
+Let us study  <b>Gauss elimination method</b>.
+
+14
+00:01:04 --> 00:01:05
+Given a system of equations
+
+15
+00:01:06 --> 00:01:07
+<b>A x equal to b</b>
+
+16
+00:01:08 --> 00:01:09
+with <b>m</b> equations and
+
+17
+00:01:10 --> 00:01:11
+<b>n</b> unknowns.
+
+18
+00:01:12 --> 00:01:15
+We write the coefficients of the <b>variables a one</b> to <b>a n</b>
+
+19
+00:01:16 --> 00:01:21
+along with the <b>constants b one</b> to  <b>b m </b> of the system of equations
+
+20
+00:01:22 --> 00:01:26
+in one <b>matrix</b> called the <b>augmented matrix</b>.
+
+21
+00:01:27 --> 00:01:32
+How do we convert the <b>augmented matrix</b> to an <b>upper triangular form matrix?</b>
+
+22
+00:01:33 --> 00:01:39
+We do so by performing row wise manipulation of the <b>matrix.</b>
+
+23
+00:01:40 --> 00:01:44
+Let us solve this system of equations using <b>Gaussian elimination method</b>.
+
+24
+00:01:45 --> 00:01:51
+Before we solve the system, let us go through the code for <b>Gaussian elimination method.</b>
+
+25
+00:01:52 --> 00:01:57
+The first line of the code is <b>format e comma twenty.</b>
+
+26
+00:01:58 --> 00:02:03
+This defines how many digits should be displayed in the answer.
+
+27
+00:02:04 --> 00:02:11
+The letter 'e' within single quotes denotes that the answer should be displayed in <b>scientific notation</b>.
+
+28
+00:02:12 --> 00:02:16
+The number <b>twenty</b> is the number of digits that should be displayed.
+
+29
+00:02:17 --> 00:02:25
+The command <b>funcprot</b> is used to let <b>Scilab</b> know what to do when variables are redefined.
+
+30
+00:02:26 --> 00:02:32
+The argument <b>zero</b> specifies that <b>Scilab</b> need not do anything if the variables are redefined.
+
+31
+00:02:33 --> 00:02:39
+Other arguments are used to issue warnings or errors if the variables are redefined.
+
+32
+00:02:40 --> 00:02:42
+Next we use the <b>input</b> function.
+
+33
+00:02:43 --> 00:02:50
+It will display a message to the user and get the values of <b>A</b> and <b>b</b> matrices.
+
+34
+00:02:51 --> 00:02:54
+The message should be placed within <b>double quotes.</b>
+
+35
+00:02:55 --> 00:03:01
+The matrices that the user enters, will be stored in the variables <b>A</b> and <b>b.</b>
+
+36
+00:03:02 --> 00:03:10
+Here <b>A</b> is the <b>coefficient matrix</b> and <b>b</b> is the right-hand-side matrix or the <b>constants matrix.</b>
+
+37
+00:03:11 --> 00:03:14
+Then we define the function <b>naive gaussian elimination.</b>
+
+38
+00:03:15 --> 00:03:21
+And we state that <b>A</b> and <b>b</b> are the <b>arguments</b> of the function <b>naive gaussian elimination.</b>
+
+39
+00:03:22 --> 00:03:26
+We store the output in variable <b>x.</b>
+
+40
+00:03:27 --> 00:03:33
+Then we find the size of matrices  <b>A</b> and <b>b</b> using the <b> size</b> command.
+
+41
+00:03:34 --> 00:03:41
+Since they are two dimensional matrices, we use <b>n</b> and <b>n one</b> to store the size of matrix <b>A.</b>
+
+42
+00:03:42 --> 00:03:47
+Similarly we can use <b>m one</b> and <b>p</b> for matrix <b>b.</b>
+
+43
+00:03:48 --> 00:03:52
+Then we have to determine if the matrices are compatible with each other and
+
+44
+00:03:53 --> 00:03:56
+if <b>A</b> is a <b>square matrix.</b>
+
+45
+00:03:57 --> 00:04:04
+If <b>n</b> and <b>n one</b> are not equal then we display a message that <b>Matrix A must be square.</b>
+
+46
+00:04:05 --> 00:04:09
+If <b>n</b> and <b>m one</b> are not equal, we display a message
+
+47
+00:04:10 --> 00:04:14
+<b>incompatible dimension of A and b.</b>
+
+48
+00:04:15 --> 00:04:22
+If the matrices are compatible, we place matrices <b>A</b> and <b>b</b> in one matrix, <b>C.</b>
+
+49
+00:04:23 --> 00:04:27
+This matrix <b>C</b> is called <b>augmented matrix. </b>
+
+50
+00:04:28 --> 00:04:31
+The next block of code performs <b>forward elimination.</b>
+
+51
+00:04:32 --> 00:04:38
+This code converts the <b>augmented matrix to upper triangular matrix</b> form.
+
+52
+00:04:39 --> 00:04:41
+Finally, we perform <b>back substitution.</b>
+
+53
+00:04:42 --> 00:04:51
+Once the <b>upper triangular matrix</b> is obtained, we take the last row and find the value of the variable in that row.
+
+54
+00:04:52 --> 00:04:58
+Then once one variable is solved, we take this variable to solve the other variables.
+
+55
+00:04:59 --> 00:05:02
+Thus the system of <b>linear equations</b> is solved.
+
+56
+00:05:03 --> 00:05:05
+Let us save and execute the file.
+
+57
+00:05:06 --> 00:05:09
+Switch to <b>Scilab console</b> to solve the example.
+
+58
+00:05:10 --> 00:05:16
+On the <b>console,</b> we have a prompt to enter the value of the <b>coefficient matrix.</b>
+
+59
+00:05:17 --> 00:05:19
+So we enter the values of <b>matrix A.</b>
+
+60
+00:05:20 --> 00:05:32
+Type: <b>square bracket three point four one space one point two three space minus one point zero nine semi colon </b>
+
+61
+00:05:33 --> 00:05:40
+<b>two point seven one space two point one four space one point two nine semi colon </b>
+
+62
+00:05:41 --> 00:05:52
+<b>one point eight nine space minus one point nine one space minus one point eight nine close square bracket.</b>
+
+63
+00:05:53 --> 00:05:56
+Press <b>Enter</b>.  The next prompt is for <b>matrix b.</b>
+
+64
+00:05:57 --> 00:06:09
+So we type  <b>open square bracket four point seven two semi colon three point one semi colon two point nine one close square bracket.</b>
+
+65
+00:06:10 --> 00:06:12
+Press <b>Enter</b>.
+
+66
+00:06:13 --> 00:06:15
+Then we call the function by typing
+
+67
+00:06:16 --> 00:06:23
+<b>naive gaussian elimination open parenthesis A comma b close parenthesis </b>
+
+68
+00:06:24 --> 00:06:25
+Press <b>Enter</b>.
+
+69
+00:06:26 --> 00:06:31
+The solution to the system of linear equations is shown on <b>Scilab console.</b>
+
+70
+00:06:32 --> 00:06:35
+Next we shall study the <b>Gauss-Jordan method.</b>
+
+71
+00:06:36 --> 00:06:37
+In <b>Gauss–Jordan Method</b>,
+
+72
+00:06:38 --> 00:06:41
+the first step is to form the <b>augmented matrix.</b>
+
+73
+00:06:42 --> 00:06:49
+To do this, place the coefficient <b>matrix A</b> and the right hand side <b>matrix b</b> together in one <b>matrix.</b>
+
+74
+00:06:50 --> 00:06:55
+Then we perform <b>row operations</b> to convert <b>matrix A </b>to diagonal form.
+
+75
+00:06:56 --> 00:07:04
+In diagonal form, only the elements <b>a i i </b> are non-zero. Rest of the elements are zero.
+
+76
+00:07:05 --> 00:07:13
+Then we divide the diagonal element and corresponding element of right hand side element, by the diagonal element.
+
+77
+00:07:14 --> 00:07:18
+We do this to get <b>diagonal element</b> equal to one.
+
+78
+00:07:19 --> 00:07:26
+The resulting value of the elements of each row of the right hand side matrix gives the value of each variable.
+
+79
+00:07:27 --> 00:07:32
+Let us solve this example using <b>Gauss-Jordan Method.</b>
+
+80
+00:07:33 --> 00:07:35
+Let us look at the code first.
+
+81
+00:07:36 --> 00:07:43
+The first line of the code uses <b>format function</b> to specify the format of the displayed answers.
+
+82
+00:07:44 --> 00:07:48
+The parameter e specifies the answer should be in <b>scientific notation.</b>
+
+83
+00:07:49 --> 00:07:54
+<b>Twenty (20)</b> denotes that only <b>twenty digits</b> should be displayed.
+
+84
+00:07:55 --> 00:07:59
+Then we get the <b>A</b> and <b>b matrix</b> using the <b>input</b> function.
+
+85
+00:08:00 --> 00:08:10
+We define the function <b>Gauss Jordan Elimination</b> with input arguments <b>A</b> and <b>b</b> and output argument x.
+
+86
+00:08:11 --> 00:08:16
+We get the size of <b>matrix A</b> and store it in <b>m</b> and <b>n</b>.
+
+87
+00:08:17 --> 00:08:22
+Similarly, we get the size of <b>matrix b</b> and store it in <b>r</b> and <b>s</b>.
+
+88
+00:08:23 --> 00:08:32
+If the sizes of <b>A</b> and <b>b</b> are not compatible, we display an error on the <b>console</b> using <b>error function.</b>
+
+89
+00:08:33 --> 00:08:37
+Then we perform <b>row operations</b> to get diagonal form of the <b>matrix.</b>
+
+90
+00:08:38 --> 00:08:44
+Here <b>pivot</b> refers to the first non-zero element of a <b>column.</b>
+
+91
+00:08:45 --> 00:08:51
+Then we create a <b>matrix</b> of <b>zeros</b> called <b>x</b> with <b>m</b> rows and <b>s columns.</b>
+
+92
+00:08:52 --> 00:08:53
+Once we have the diagonal form,
+
+93
+00:08:54 --> 00:09:03
+we divide the right hand side part of <b>augmented matrix</b>  by the corresponding <b>diagonal element</b> to get the value of each variable.
+
+94
+00:09:04 --> 00:09:07
+We store the value of each variable in <b>x.</b>
+
+95
+00:09:08 --> 00:09:10
+Then we return the value of <b>x.</b>
+
+96
+00:09:11 --> 00:09:12
+Finally, we <b>end</b> the function.
+
+97
+00:09:13 --> 00:09:17
+Now let us save and execute the function.
+
+98
+00:09:18 --> 00:09:21
+The prompt requires us to enter the value of <b>matrix A.</b>
+
+99
+00:09:22 --> 00:09:30
+So we type <b>open square bracket zero point seven comma one seven two five semi colon</b>
+
+100
+00:09:31 --> 00:09:40
+<b>zero point four three five two comma minus five point four three three close square bracket.</b>
+
+101
+00:09:41 --> 00:09:42
+Press <b>Enter</b>.
+
+102
+00:09:43 --> 00:09:44
+The next prompt is for <b>vector b. </b>
+
+103
+00:09:45 --> 00:09:50
+So we type <b>open square bracket one seven three nine semi colon</b>
+
+104
+00:09:51 --> 00:09:54
+<b>three point two seven one close square bracket</b>.
+
+105
+00:09:55 --> 00:09:57
+Press <b>Enter</b>.
+
+106
+00:09:58 --> 00:10:00
+Then we call the function by typing
+
+107
+00:10:01 --> 00:10:07
+<b>Gauss Jordan Elimination open parenthesis A comma b close parenthesis </b>
+
+108
+00:10:08 --> 00:10:09
+Press <b>Enter</b>.
+
+109
+00:10:10 --> 00:10:14
+The values of <b>x one</b> and <b>x two</b> are shown on the <b>console. </b>
+
+110
+00:10:15 --> 00:10:17
+Let us summarize this tutorial.
+
+111
+00:10:18 --> 00:10:20
+In this tutorial, we have learnt to:
+
+112
+00:10:21 --> 00:10:24
+Develop <b>Scilab</b> code for solving system of <b>linear equations</b>.
+
+113
+00:10:25 --> 00:10:31
+Find the value of the unknown variables of a system of <b>linear equations</b>.
+
+114
+00:10:32 --> 00:10:34
+Watch the video available at the link shown below.
+
+115
+00:10:35 --> 00:10:37
+It summarizes the Spoken Tutorial project.
+
+116
+00:10:38 --> 00:10:42
+If you do not have good bandwidth, you can download and watch it.
+
+117
+00:10:43 --> 00:10:44
+The spoken tutorial project Team:
+
+118
+00:10:45 --> 00:10:47
+Conducts workshops using spoken tutorials.
+
+119
+00:10:48 --> 00:10:51
+Gives certificates to those who pass an online test.
+
+120
+00:10:52 --> 00:10:58
+For more details, please write to conatct@spoken-tutorial.org.
+
+121
+00:10:59 --> 00:11:02
+Spoken Tutorial Project is a part of the Talk to a Teacher project.
+
+122
+00:11:03 --> 00:11:09
+It is supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+123
+00:11:10 --> 00:11:20
+More information on this mission is available at  <a class="external free" href="http://spoken-tutorial.org/NMEICT-Intro" rel="nofollow">http://spoken-tutorial.org/NMEICT-Intro</a>.
+
+124
+00:11:21 --> 00:11:22
+This is Ashwini Patil, signing off.
+
+125
+00:11:23 --> 00:11:28
+Thank you for joining.
+

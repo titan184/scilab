@@ -1,0 +1,490 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:09
+Dear Friends, Welcome to the Spoken Tutorial on <b>Solving System of Linear Equations using Iterative Methods</b>.
+
+2
+00:00:10 --> 00:00:13
+At the end of this tutorial, you will learn how to:
+
+3
+00:00:14 --> 00:00:17
+Solve system of <b>linear equations</b> using <b>iterative methods</b>
+
+4
+00:00:18 --> 00:00:21
+Develop <b>Scilab code</b> to solve <b>linear equations</b>.
+
+5
+00:00:22 --> 00:00:24
+To record this tutorial, I am using
+
+6
+00:00:25 --> 00:00:27
+<b>Ubuntu 12.04</b> as the operating system
+
+7
+00:00:28 --> 00:00:32
+and <b>Scilab 5.3.3</b> version.
+
+8
+00:00:33 --> 00:00:37
+Before practicing this tutorial, a learner should have basic knowledge of
+
+9
+00:00:38 --> 00:00:41
+<b>Scilab</b>, and <b>solving linear equations</b>.
+
+10
+00:00:42 --> 00:00:49
+For <b>Scilab,</b> please refer to the relevant tutorials available on the <b>Spoken Tutorial</b> website.
+
+11
+00:00:50 --> 00:00:55
+The first <b>iterative method</b> we will be studying is <b>Jacobi method.</b>
+
+12
+00:00:56 --> 00:01:01
+Given a <b>system of linear equations, with n equations and n unknowns</b>,
+
+13
+00:01:02 --> 00:01:23
+we rewrite the equations such that <b> x of i k plus one is equal to b i minus summation of a i j x j k from j equal to one to n divided by a i i</b> where <b> i</b> is from <b>one to n</b>.
+
+14
+00:01:24 --> 00:01:26
+We assume values for each <b>x of i</b>.
+
+15
+00:01:27 --> 00:01:33
+Then we substitute the values in the equations obtained in the previous step.
+
+16
+00:01:34 --> 00:01:38
+We continue the iteration until the solution converges.
+
+17
+00:01:39 --> 00:01:43
+Let us solve this example using <b>Jacobi Method</b>.
+
+18
+00:01:44 --> 00:01:47
+Let us look at the code for <b>Jacobi Method.</b>
+
+19
+00:01:48 --> 00:01:55
+We use <b>format</b> method to specify the format of the displayed answers on the <b>Scilab console.</b>
+
+20
+00:01:56 --> 00:02:00
+Here <b>e</b> denotes the answer should be in <b>scientific notation.</b>
+
+21
+00:02:01 --> 00:02:05
+And <b>twenty</b> specifies the number of digits to be displayed.
+
+22
+00:02:06 --> 00:02:09
+Then we use <b>input</b> function to get the values for
+
+23
+00:02:10 --> 00:02:11
+<b>the matrices coefficient matrix,</b>
+
+24
+00:02:12 --> 00:02:13
+<b>right hand side matrix,</b>
+
+25
+00:02:14 --> 00:02:16
+<b>initial values matrix,</b>
+
+26
+00:02:17 --> 00:02:18
+<b>maximum number of iteration and</b>
+
+27
+00:02:19 --> 00:02:21
+<b>convergence tolerance</b>.
+
+28
+00:02:22 --> 00:02:28
+Then we use <b>size</b> function to check if <b>A matrix</b> is a <b>square matrix.</b>
+
+29
+00:02:29 --> 00:02:33
+If it isn't, we use <b>error</b> function to display an error.
+
+30
+00:02:34 --> 00:02:39
+We then check if <b>matrix A</b> is <b>diagonally dominant.</b>
+
+31
+00:02:40 --> 00:02:44
+The first half calculates the sum of each row of the <b>matrix.</b>
+
+32
+00:02:45 --> 00:02:53
+Then it checks if twice the product of the <b>diagonal element</b>  is greater than the sum of the elements of that row.
+
+33
+00:02:54 --> 00:03:00
+If it isn't, an error is displayed using <b>error</b> function.
+
+34
+00:03:01 --> 00:03:06
+Then we define the function <b>Jacobi Iteration</b> with input arguments
+
+35
+00:03:07 --> 00:03:08
+<b>A, b , x zero,</b>
+
+36
+00:03:09 --> 00:03:13
+<b>maximum iteration</b> and <b>tolerance level</b>.
+
+37
+00:03:14 --> 00:03:18
+Here <b>x zero</b> is the <b>initial values matrix.</b>
+
+38
+00:03:19 --> 00:03:27
+We check if the size of <b>A matrix</b> and <b>initial values matrix</b> are compatible with each other.
+
+39
+00:03:28 --> 00:03:37
+We calculate the value for <b>x k p one</b> and then check if the <b>relative error</b> is lesser than <b>tolerance level.</b>
+
+40
+00:03:38 --> 00:03:44
+If it is lesser than <b>tolerance level</b>, we <b>break</b> the iteration and the solution is returned.
+
+41
+00:03:45 --> 00:03:47
+Finally we <b>end</b> the function.
+
+42
+00:03:48 --> 00:03:50
+Let us save and execute the function.
+
+43
+00:03:51 --> 00:03:53
+Switch to <b>Scilab console.</b>
+
+44
+00:03:54 --> 00:03:56
+Let us enter the values at each prompt.
+
+45
+00:03:57 --> 00:04:07
+The <b>coefficient matrix A is open square bracket two space one semi colon five space seven close square bracket </b>
+
+46
+00:04:08 --> 00:04:09
+Press <b>Enter. </b>
+
+47
+00:04:10 --> 00:04:16
+Then we type <b>open square bracket eleven semicolon thirteen close square bracket</b>
+
+48
+00:04:17 --> 00:04:19
+Press <b>Enter.</b>
+
+49
+00:04:20 --> 00:04:27
+The <b>initial values matrix is open square bracket one semi colon one close square bracket</b>
+
+50
+00:04:28 --> 00:04:29
+Press <b>Enter.</b>
+
+51
+00:04:30 --> 00:04:33
+The <b>maximum number of iterations</b> is twenty five.
+
+52
+00:04:34 --> 00:04:35
+Press <b>Enter. </b>
+
+53
+00:04:36 --> 00:04:43
+Let the <b>convergence tolerance level be zero point zero zero zero zero one </b>
+
+54
+00:04:44 --> 00:04:45
+Press <b>Enter.</b>
+
+55
+00:04:46 --> 00:04:47
+We call the function by typing
+
+56
+00:04:48 --> 00:05:03
+<b>Jacobi Iteration open parenthesis A comma b comma x zero comma M a x I t e r comma t o l close parenthesis</b>
+
+57
+00:05:04 --> 00:05:05
+Press <b>Enter. </b>
+
+58
+00:05:06 --> 00:05:10
+The values for <b>x one</b> and <b>x two</b> are shown on the <b>console.</b>
+
+59
+00:05:11 --> 00:05:13
+The number of iterations are also shown.
+
+60
+00:05:14 --> 00:05:18
+Let us now study <b>Gauss Seidel method. </b>
+
+61
+00:05:19 --> 00:05:25
+'Given a <b>system of linear equations</b> with <b>n equations</b> and <b> n unknowns </b>
+
+62
+00:05:26 --> 00:05:28
+we rewrite the equations for each unknown
+
+63
+00:05:29 --> 00:05:36
+by subtracting the other variables and their coefficients from the corresponding right hand side element.
+
+64
+00:05:37 --> 00:05:44
+Then we divide this by the <b>coefficient a i i of the</b> unknown variable' for that variable.
+
+65
+00:05:45 --> 00:05:48
+This is done for every given equation.
+
+66
+00:05:49 --> 00:06:02
+In <b>Jacobi method,</b> for the computation of <b>x of i k plus one,</b> every element of <b>x of i k</b> is used except <b>x of i k plus one </b>.
+
+67
+00:06:03 --> 00:06:11
+In <b>Gauss Seidel method,</b> we over write the value of <b>x of i k</b> with <b>x of i k plus one</b>.
+
+68
+00:06:12 --> 00:06:16
+Let us solve this example using <b>Gauss Seidel Method</b>.
+
+69
+00:06:17 --> 00:06:20
+Let us look at the code for <b>Gauss Seidel Method</b>.
+
+70
+00:06:21 --> 00:06:28
+The first line specifies the <b>format</b> of the displayed answer on the <b>console</b> using <b>format</b> function.
+
+71
+00:06:29 --> 00:06:31
+Then we use <b>input</b> function to get the values of
+
+72
+00:06:32 --> 00:06:33
+<b>coefficient matrix, </b>
+
+73
+00:06:34 --> 00:06:35
+<b>right hand side matrix,</b>
+
+74
+00:06:36 --> 00:06:37
+<b>initial values of the variables matrix, </b>
+
+75
+00:06:38 --> 00:06:39
+<b>maximum number of iterations</b>  and
+
+76
+00:06:40 --> 00:06:42
+<b>tolerance level</b>.
+
+77
+00:06:43 --> 00:06:57
+Then we define the function <b>Gauss Seidel</b> with input arguments <b>A comma b comma x zero comma max iterations</b> and <b>tolerance level</b> and output argument <b>solution</b>.
+
+78
+00:06:58 --> 00:07:09
+We check if <b>matrix A is square</b> and the sizes of <b>initial vector and matrix A</b> are compatible using <b>size</b> and <b>length</b> function.
+
+79
+00:07:10 --> 00:07:12
+Then we start the iterations.
+
+80
+00:07:13 --> 00:07:18
+We equate the <b>initial values vector x zero to x k. </b>
+
+81
+00:07:19 --> 00:07:27
+We create a <b>matrix of zeros</b> with the same size of <b> x k</b>  and call it <b>x k p one.</b>
+
+82
+00:07:28 --> 00:07:37
+We solve for each equation to get the value of the <b>unknown variable</b> for that equation using <b>x k p one. </b>
+
+83
+00:07:38 --> 00:07:43
+At each iteration, the value of <b>x k p one</b> gets updated.
+
+84
+00:07:44 --> 00:07:49
+Also, we check if <b>relative error</b> is lesser than specified <b>tolerance level.</b>
+
+85
+00:07:50 --> 00:07:53
+If it is, we <b>break</b> the iteration.
+
+86
+00:07:54 --> 00:07:58
+Then equate <b>x k p one</b> to the <b> variable solution.</b>
+
+87
+00:07:59 --> 00:08:01
+Finally, we <b>end</b> the function.
+
+88
+00:08:02 --> 00:08:05
+Let us save and execute the function.
+
+89
+00:08:06 --> 00:08:08
+Switch to <b>Scilab console</b>.
+
+90
+00:08:09 --> 00:08:11
+For the first prompt, we type <b>matrix A.</b>
+
+91
+00:08:12 --> 00:08:20
+Type <b>open square bracket two space one semi colon five space seven close square bracket</b>
+
+92
+00:08:21 --> 00:08:23
+Press <b>Enter</b>. For the next prompt,
+
+93
+00:08:24 --> 00:08:30
+type <b>open square bracket eleven semi colon thirteen close square bracket</b>
+
+94
+00:08:31 --> 00:08:32
+Press <b>Enter. </b>
+
+95
+00:08:33 --> 00:08:37
+We provide the values of <b>initial value vector</b>  by typing
+
+96
+00:08:38 --> 00:08:42
+<b>open square bracket one semicolon one close square bracket</b> .
+
+97
+00:08:43 --> 00:08:44
+Press <b>Enter.</b>
+
+98
+00:08:45 --> 00:08:49
+Then we specify the <b> maximum number of iterations</b> to be twenty five.
+
+99
+00:08:50 --> 00:08:51
+Press <b>Enter.</b>
+
+100
+00:08:52 --> 00:08:57
+Let us define '<i>tolerance level</i> to be zero point zero zero zero zero one.
+
+101
+00:08:58 --> 00:09:00
+Press <b>Enter</b>.
+
+102
+00:09:01 --> 00:09:03
+Finally we call the function by typing
+
+103
+00:09:04 --> 00:09:23
+<b>G a u s s S e i d e l open parenthesis A comma b comma x zero comma M a x I t e r comma t o l close parenthesis</b>
+
+104
+00:09:24 --> 00:09:25
+Press <b>Enter</b>.
+
+105
+00:09:26 --> 00:09:29
+The values of <b>x one</b> and <b>x two</b> are displayed.
+
+106
+00:09:30 --> 00:09:36
+The number of iterations to solve the same problem are lesser than <b>Jacobi method.</b>
+
+107
+00:09:37 --> 00:09:42
+Solve this problem on your own using <b>Jacobi</b> and <b>Gauss Seidel methods</b>.
+
+108
+00:09:43 --> 00:09:46
+In this tutorial, we have learnt to:
+
+109
+00:09:47 --> 00:09:51
+Develop <b>Scilab code</b> for solving system of linear equations.
+
+110
+00:09:52 --> 00:09:57
+Find the value of the <b>unknown variables</b> of a system of <b>linear equations</b>.
+
+111
+00:09:58 --> 00:10:00
+Watch the video available at the following link.
+
+112
+00:10:01 --> 00:10:03
+It summarizes the Spoken Tutorial project.
+
+113
+00:10:04 --> 00:10:08
+If you do not have good bandwidth, you can download and watch it.
+
+114
+00:10:09 --> 00:10:10
+The spoken tutorial project Team
+
+115
+00:10:11 --> 00:10:14
+conducts workshops using spoken tutorials,
+
+116
+00:10:15 --> 00:10:17
+gives certificates to those who pass an online test.
+
+117
+00:10:18 --> 00:10:24
+For more details, please write to contact@spoken-tutorial.org .
+
+118
+00:10:25 --> 00:10:29
+Spoken Tutorial Project is a part of the Talk to a Teacher project.
+
+119
+00:10:30 --> 00:10:36
+It is supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+120
+00:10:37 --> 00:10:48
+More information on this mission is available at  <a class="external free" href="http://spoken-tutorial.org/NMEICT-Intro" rel="nofollow">http://spoken-tutorial.org/NMEICT-Intro</a>.
+
+121
+00:10:49 --> 00:10:50
+This is Ashwini Patil. signing off.
+
+122
+00:10:51 --> 00:10:56
+Thank you for joining.
+

@@ -1,0 +1,410 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:08
+Dear Friends,  Welcome to the Spoken Tutorial on <b>Solving ODEs using Euler Methods</b>.
+
+2
+00:00:09 --> 00:00:11
+At the end of this tutorial, you will learn how to:
+
+3
+00:00:12 --> 00:00:17
+Solve <b>ODEs</b> using <b>Euler</b> and <b>Modified Euler methods</b> in <b>Scilab</b>
+
+4
+00:00:18 --> 00:00:21
+Develop <b>Scilab</b> code to solve <b>ODEs</b>.
+
+5
+00:00:22 --> 00:00:24
+To record this tutorial, I am using
+
+6
+00:00:25 --> 00:00:27
+<b>Ubuntu 12.04</b> as the operating system
+
+7
+00:00:28 --> 00:00:31
+and <b>Scilab 5.3.3</b> version.
+
+8
+00:00:32 --> 00:00:33
+To practice this tutorial, a learner
+
+9
+00:00:34 --> 00:00:36
+should have basic knowledge of <b>Scilab</b>
+
+10
+00:00:37 --> 00:00:39
+and should know how to solve <b>ODEs.</b>
+
+11
+00:00:40 --> 00:00:47
+To learn <b>Scilab,</b> please refer to the relevant tutorials available on the <b>Spoken Tutorial</b> website.
+
+12
+00:00:48 --> 00:00:54
+In <b>Euler method,</b> we get an accurately approximate solution of the <b>ODE.</b>
+
+13
+00:00:55 --> 00:01:02
+It is used to solve initial value problems where initial values of the <b>differential equation</b> are given.
+
+14
+00:01:03 --> 00:01:07
+It can be used to solve <b>continuous functions.</b>
+
+15
+00:01:08 --> 00:01:11
+Let us solve an example using <b>Euler method.</b>
+
+16
+00:01:12 --> 00:01:14
+We are given an initial value problem -
+
+17
+00:01:15 --> 00:01:19
+<b>y dash is equal to minus two t minus y.</b>
+
+18
+00:01:20 --> 00:01:24
+The initial value of y is given as <b>minus one</b>(-1)
+
+19
+00:01:25 --> 00:01:28
+and the <b>step length</b> is given as <b>zero point one</b>(0.1).
+
+20
+00:01:29 --> 00:01:35
+We have to find the value of <b>y</b> at time <b>t equal to zero point five.</b>
+
+21
+00:01:36 --> 00:01:38
+Let us look at the code for <b>Euler method.</b>
+
+22
+00:01:39 --> 00:01:46
+Open <b>Euler underscore o d e dot sci</b> on <b>Scilab editor.</b>
+
+23
+00:01:47 --> 00:01:57
+We define the function <b>Euler underscore o d e</b> with arguments <b>f, t init, y init, h</b> and <b>N</b>
+
+24
+00:01:58 --> 00:02:00
+'where: <b>f</b> denotes the function to be solved,
+
+25
+00:02:01 --> 00:02:04
+<b>t init</b> is the initial value of time <b>t</b>,
+
+26
+00:02:05 --> 00:02:08
+<b>y init</b>  is the initial value of <b>y</b>,
+
+27
+00:02:09 --> 00:02:13
+<b>h</b> is the <b>step length</b> and <b>n</b> is the number of <b>iterations.</b>
+
+28
+00:02:14 --> 00:02:20
+Then we initialize the values of <b>t</b> and <b>y</b> to vectors of <b>zeros.</b>
+
+29
+00:02:21 --> 00:02:28
+We place the initial values of <b>t</b> and <b>y</b> in <b>t of one</b> and <b>y of one</b> respectively.
+
+30
+00:02:29 --> 00:02:32
+Then we <b>iterate</b> from <b>one to N</b> to find the value of <b>y</b>.
+
+31
+00:02:33 --> 00:02:38
+Here we apply <b>Euler method</b> to find the value of <b>y. </b>
+
+32
+00:02:39 --> 00:02:41
+Finally we <b>end</b> the <b>function.</b>
+
+33
+00:02:42 --> 00:02:48
+<b>Save and execute</b> the file <b>Euler underscore o d e dot sci</b>.
+
+34
+00:02:49 --> 00:02:53
+Switch to <b>Scilab console</b> to solve the example problem.
+
+35
+00:02:54 --> 00:02:55
+We define the <b> function </b> by typing
+
+36
+00:02:56 --> 00:03:25
+<b>d e f f open parenthesis open single quote open square bracket y dot close square bracket equal to f of t comma y close single quote comma open single quote y dot equal to open parenthesis minus two asterisk t close parenthesis minus y close single quote close parenthesis </b>
+
+37
+00:03:26 --> 00:03:27
+Press <b>Enter. </b>
+
+38
+00:03:28 --> 00:03:30
+Then type: <b>t init is equal to zero. </b>
+
+39
+00:03:31 --> 00:03:32
+Press <b>Enter.</b>
+
+40
+00:03:33 --> 00:03:37
+Type: <b>y init is equal to minus one.</b>
+
+41
+00:03:38 --> 00:03:39
+Press <b>Enter </b>.
+
+42
+00:03:40 --> 00:03:43
+Type: <b>step length h is equal to zero point one.</b>
+
+43
+00:03:44 --> 00:03:45
+Press <b>Enter</b>.
+
+44
+00:03:46 --> 00:03:52
+The <b>step length</b> is zero point one and we have to find the value of <b>y</b> at <b>zero point five.</b>
+
+45
+00:03:53 --> 00:03:58
+So, the number of <b>iterations</b> should be <b>five.</b>
+
+46
+00:03:59 --> 00:04:04
+At each <b>iteration,</b>  the value of <b>t</b> will be increased by <b>zero point one.</b>
+
+47
+00:04:05 --> 00:04:08
+So type capital <b>N is equal to five</b> (N=5)
+
+48
+00:04:09 --> 00:04:10
+and press <b>Enter.</b>
+
+49
+00:04:11 --> 00:04:13
+To <b>call</b> the <b>function,</b> type:
+
+50
+00:04:14 --> 00:04:32
+<b>open square bracket t comma y close square bracket equal to Euler underscore o d e open parenthesis f comma t init comma y init comma h comma capital N close parenthesis </b>
+
+51
+00:04:33 --> 00:04:34
+Press <b>Enter.</b>
+
+52
+00:04:35 --> 00:04:40
+The value of <b>y at t equal to zero point five</b> is shown.
+
+53
+00:04:41 --> 00:04:44
+Now let us look at <b>Modified Euler method. </b>
+
+54
+00:04:45 --> 00:04:50
+It is a <b>second order method</b> and is a <b>stable two step method. </b>
+
+55
+00:04:51 --> 00:04:55
+We find the <b>average</b> of the <b>function</b> at the beginning and end of <b>time step.</b>
+
+56
+00:04:56 --> 00:05:01
+Let us solve this example using <b>Modified Euler method.</b>
+
+57
+00:05:02 --> 00:05:07
+We are given a <b>function y dash is equal to t plus y plus t y. </b>
+
+58
+00:05:08 --> 00:05:11
+The initial value of <b>y</b> is <b>one</b>
+
+59
+00:05:12 --> 00:05:15
+and the <b>step length</b> is <b>zero point zero one.</b>
+
+60
+00:05:16 --> 00:05:24
+We have to find the value of <b>y</b>  at <b>time t equal to zero point one </b> using <b>Modified Euler's method.</b>
+
+61
+00:05:25 --> 00:05:30
+Let us look at the code for <b>Modified Euler method</b> on <b>Scilab Editor</b>.
+
+62
+00:05:31 --> 00:05:38
+We define the <b>function</b> with <b>arguments f, t init, y init, h</b> and <b>n</b>
+
+63
+00:05:39 --> 00:05:41
+where: <b>f</b> is the <b>function</b> to be solved,
+
+64
+00:05:42 --> 00:05:44
+<b>t init</b> is the intial <b>time</b> value,
+
+65
+00:05:45 --> 00:05:48
+<b>y init</b> is the inital value of  <b>y</b>,
+
+66
+00:05:49 --> 00:05:50
+<b>h</b> is the <b>step length</b> and
+
+67
+00:05:51 --> 00:05:53
+<b>N</b> is the number of <b>iterations.</b>
+
+68
+00:05:54 --> 00:05:57
+Then we initialize the <b>arrays</b> for <b>y</b> and <b>t.</b>
+
+69
+00:05:58 --> 00:06:06
+We place the initial values of <b>t</b> and <b>y</b> in <b>t of one</b> and <b>y of one</b> respectively.
+
+70
+00:06:07 --> 00:06:10
+We implement <b>Modified Euler Method</b> here.
+
+71
+00:06:11 --> 00:06:16
+Here we find the average value of <b>y</b> at the beginning and end of <b>time step.</b>
+
+72
+00:06:17 --> 00:06:22
+<b>Save and execute</b> the file <b>Modi Euler underscore o d e dot sci.</b>
+
+73
+00:06:23 --> 00:06:25
+Switch to <b>Scilab console.</b>
+
+74
+00:06:26 --> 00:06:29
+Clear the screen by typing <b>c l c.</b>
+
+75
+00:06:30 --> 00:06:31
+Press <b>Enter.</b>
+
+76
+00:06:32 --> 00:07:00
+Define the <b>function</b> by typing <b>d e f f open parenthesis open single quote open square bracket y dot close square bracket equal to f of t comma y close single quote comma open single quote y dot equal to t plus y plus t asterisk y close single quote close parenthesis</b>
+
+77
+00:07:01 --> 00:07:02
+Press <b>Enter.</b>
+
+78
+00:07:03 --> 00:07:07
+Then type: <b>t init equal to zero</b>,  press Enter.
+
+79
+00:07:08 --> 00:07:11
+Type: <b>y init equal to one</b> and press <b>Enter.</b>
+
+80
+00:07:12 --> 00:07:18
+Then type: <b>h equal to zero point zero one</b> press <b>Enter.</b>
+
+81
+00:07:19 --> 00:07:21
+Type: capital <b>N equal to ten</b>
+
+82
+00:07:22 --> 00:07:33
+since the number of <b>iterations</b> should be <b>ten</b> to <b>time t equal to zero point one</b> with <b>step length</b> of <b>zero point zero one.</b>
+
+83
+00:07:34 --> 00:07:35
+Press <b>Enter.</b>
+
+84
+00:07:36 --> 00:07:40
+Then call the <b>function Modi Euler underscore o d e</b> by typing:
+
+85
+00:07:41 --> 00:08:02
+<b>open square bracket t comma y close square bracket equal to Modi Euler underscore o d e open parenthesis f comma t init comma y init comma h comma capital N close parenthesis</b>
+
+86
+00:08:03 --> 00:08:04
+Press <b>Enter. </b>
+
+87
+00:08:05 --> 00:08:09
+The value of <b>y at t equal to zero point one</b> is shown.
+
+88
+00:08:10 --> 00:08:13
+Let us summarize this tutorial.
+
+89
+00:08:14 --> 00:08:20
+In this tutorial we have learnt to develop Scilab code for <b>Euler</b> and <b>modified Euler methods.</b>
+
+90
+00:08:21 --> 00:08:27
+We have also learnt to solve <b>ODEs</b> using these methods in <b>Scilab.</b>
+
+91
+00:08:28 --> 00:08:31
+Watch the video available at the  link shown below.
+
+92
+00:08:32 --> 00:08:34
+It summarizes the Spoken Tutorial project.
+
+93
+00:08:35 --> 00:08:39
+If you do not have good bandwidth, you can download and watch it.
+
+94
+00:08:40 --> 00:08:41
+The spoken tutorial project Team:
+
+95
+00:08:42 --> 00:08:44
+Conducts workshops using spoken tutorials.
+
+96
+00:08:45 --> 00:08:48
+Gives certificates to those who pass an online test.
+
+97
+00:08:49 --> 00:08:54
+For more details, please write to contact@spoken-tutorial.org.
+
+98
+00:08:55 --> 00:08:59
+Spoken Tutorial Project is a part of the Talk to a Teacher project.
+
+99
+00:09:00 --> 00:09:06
+It is supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+100
+00:09:07 --> 00:09:12
+More information on this mission is available at the link shown below.
+
+101
+00:09:13 --> 00:09:14
+This is Ashwini Patil, signing off.
+
+102
+00:09:15 --> 00:09:20
+Thank you for joining.
+

@@ -1,0 +1,410 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:05
+Dear Friends, Welcome to the Spoken Tutorial on <b>Numerical Interpolation</b>.
+
+2
+00:00:06 --> 00:00:09
+At the end of this tutorial, you will learn how to:
+
+3
+00:00:10 --> 00:00:15
+Develop <b>Scilab code</b> for different <b>Numerical Interpolation algorithms</b>
+
+4
+00:00:16 --> 00:00:20
+Calculate new value of <b>function</b> from given <b>data points</b>.
+
+5
+00:00:21 --> 00:00:23
+To record this tutorial, I am using
+
+6
+00:00:24 --> 00:00:26
+<b>Ubuntu 12.04</b> as the operating system
+
+7
+00:00:27 --> 00:00:30
+and <b>Scilab 5.3.3</b> version.
+
+8
+00:00:31 --> 00:00:33
+To practice this tutorial, a learner should have
+
+9
+00:00:34 --> 00:00:35
+basic knowledge of <b>Scilab</b>
+
+10
+00:00:36 --> 00:00:39
+and should know <b>Numerical Interpolation</b>.
+
+11
+00:00:40 --> 00:00:46
+To learn <b>Scilab,</b> please refer to the relevant tutorials available on the <b>Spoken Tutorial</b> website.
+
+12
+00:00:47 --> 00:00:50
+<b>Numerical interpolation</b> is a method of
+
+13
+00:00:51 --> 00:00:52
+constructing new <b>data points</b>
+
+14
+00:00:53 --> 00:00:58
+within the range of a  <b>discrete set</b> of known <b>data points.</b>
+
+15
+00:00:59 --> 00:01:04
+We can solve <b>interpolation</b> problems using <b>numerical methods.</b>
+
+16
+00:01:05 --> 00:01:06
+In <b>Lagrange interpolation,</b>
+
+17
+00:01:07 --> 00:01:11
+We pass a <b>polynomial</b> of <b>degree N – 1</b> through <b>N</b> points.
+
+18
+00:01:12 --> 00:01:21
+Then, we find the unique <b>N order polynomial y of x</b> which <b>interpolates</b> the <b>data</b> samples.
+
+19
+00:01:22 --> 00:01:28
+We are given the <b>natural logarithm</b>  values for nine, nine point five and eleven.
+
+20
+00:01:29 --> 00:01:34
+We have to find the value of <b>natural logarithm</b> of nine point two.
+
+21
+00:01:35 --> 00:01:40
+Let us solve this problem using <b>Lagrange interpolation method.</b>
+
+22
+00:01:41 --> 00:01:45
+Let us look at the code for  <b>Lagrange interpolation.</b>
+
+23
+00:01:46 --> 00:01:52
+We define the function <b>Lagrange</b> with <b>arguments x zero, x, f and n.</b>
+
+24
+00:01:53 --> 00:01:56
+<b>X zero</b> is the unknown <b>interpolation point.</b>
+
+25
+00:01:57 --> 00:02:00
+<b>x</b> is the <b>vector</b> containing the <b>data points.</b>
+
+26
+00:02:01 --> 00:02:07
+<b>f</b> is the <b>vector</b> containing the values of the <b>function</b> at corresponding <b>data points.</b>
+
+27
+00:02:08 --> 00:02:13
+And <b>n</b> is the <b>order</b> of the <b>interpolating polynomial.</b>
+
+28
+00:02:14 --> 00:02:18
+We use <b>n</b> to initialize <b>m</b> and <b>vector N.</b>
+
+29
+00:02:19 --> 00:02:24
+The order of the <b>interpolating polynomial</b> determines the number of <b>nodes</b> created.
+
+30
+00:02:25 --> 00:02:28
+Then, we apply <b>Lagrange interpolation formula</b>
+
+31
+00:02:29 --> 00:02:34
+to find the value of the <b>numerator</b> and <b>denominator.</b>
+
+32
+00:02:35 --> 00:02:40
+Then we divide the <b>numerator</b> and <b>denominator</b> to get the value of <b>L.</b>
+
+33
+00:02:41 --> 00:02:47
+We use <b>L</b> to find the value of the function <b>y</b> at the given data point.
+
+34
+00:02:48 --> 00:02:52
+Finally we display the value of <b>L</b> and <b>f of x</b> f(x).
+
+35
+00:02:53 --> 00:02:56
+Let us <b>Save and execute</b> the file.
+
+36
+00:02:57 --> 00:03:01
+Switch to <b>Scilab console</b> to solve the example problem.
+
+37
+00:03:02 --> 00:03:04
+Let us define the <b>data points vector.</b>
+
+38
+00:03:05 --> 00:03:06
+On the <b>console</b>, type:
+
+39
+00:03:07 --> 00:03:17
+<b> x equal to open square bracket nine point zero comma nine point five comma eleven point zero close square bracket.</b>
+
+40
+00:03:18 --> 00:03:20
+Press <b>Enter</b>.
+
+41
+00:03:21 --> 00:03:38
+Then type: <b>f equal to open square bracket two point one nine seven two comma two point two five one three comma two point three nine seven nine close square bracket</b>
+
+42
+00:03:39 --> 00:03:40
+Press <b>Enter </b>.
+
+43
+00:03:41 --> 00:03:45
+Then type <b>x zero equal to nine point two</b>
+
+44
+00:03:46 --> 00:03:47
+Press <b>Enter</b>.
+
+45
+00:03:48 --> 00:03:52
+Let us use a <b>quadratic polynomial interpolating polynomial.</b>
+
+46
+00:03:53 --> 00:03:57
+Type <b>n equal to two</b>.
+
+47
+00:03:58 --> 00:03:59
+Press <b>Enter</b>.
+
+48
+00:04:00 --> 00:04:01
+To call the <b>function,</b> type:
+
+49
+00:04:02 --> 00:04:13
+<b>y equal to Lagrange open parenthesis x zero comma x comma f comma n close parenthesis</b>
+
+50
+00:04:14 --> 00:04:15
+Press <b>Enter. </b>
+
+51
+00:04:16 --> 00:04:21
+The value of the function <b>y at x equal to nine point two</b> is displayed.
+
+52
+00:04:22 --> 00:04:25
+Let us look at <b>Newton's Divided Difference Method.</b>
+
+53
+00:04:26 --> 00:04:31
+In this method, <b>Divided Differences recursive method</b> is used.
+
+54
+00:04:32 --> 00:04:37
+It uses lesser number of <b>computation</b> than <b>Lagrange method.</b>
+
+55
+00:04:38 --> 00:04:46
+In spite of this, the same <b>interpolating polynomial,</b> as in <b>Lagrange method,</b> is generated.
+
+56
+00:04:47 --> 00:04:51
+Let us solve this example using <b>Divided Difference method.</b>
+
+57
+00:04:52 --> 00:04:53
+We are given  the <b>data points</b> and
+
+58
+00:04:54 --> 00:04:59
+the corresponding values of the <b>function</b> at those <b>data points.</b>
+
+59
+00:05:00 --> 00:05:04
+We have to find the value of the <b>function</b> at <b>x equal to three.</b>
+
+60
+00:05:05 --> 00:05:10
+Let us look at the code for <b>Newton Divided Difference method. </b>
+
+61
+00:05:11 --> 00:05:17
+Open the file <b>Newton underscore Divided dot sci</b> on <b>Scilab Editor.</b>
+
+62
+00:05:18 --> 00:05:28
+We define the <b>function Newton underscore Divided</b> with <b>arguments x, f</b> and <b>x zero.</b>
+
+63
+00:05:29 --> 00:05:32
+<b>x</b> is a <b>vector</b> containing the <b>data points,</b>
+
+64
+00:05:33 --> 00:05:35
+<b>f</b> is the corresponding <b>function value</b> and
+
+65
+00:05:36 --> 00:05:40
+<b>x zero</b> is the unknown <b>interpolation point.</b>
+
+66
+00:05:41 --> 00:05:45
+We find the <b>length</b> of <b>vector</b> and then equate it to <b>n.</b>
+
+67
+00:05:46 --> 00:05:50
+The first value of <b>vector</b> is equated to <b>a of one</b> a(1).
+
+68
+00:05:51 --> 00:05:56
+Then we apply <b>divided difference algorithm</b> and compute the <b>divided difference table.</b>
+
+69
+00:05:57 --> 00:06:02
+Then we find the <b>coefficient list</b> of the <b>Newton polynomial</b>.
+
+70
+00:06:03 --> 00:06:09
+We <b>sum</b> the <b>coefficient list</b> to find the value of the <b>function</b>  at given <b>data point.</b>
+
+71
+00:06:10 --> 00:06:15
+<b>Save and execute</b> the file <b>Newton underscore Divided dot sci.</b>
+
+72
+00:06:16 --> 00:06:18
+Switch to <b>Scilab console</b>.
+
+73
+00:06:19 --> 00:06:21
+Clear the screen by typing <b>c l c</b>.
+
+74
+00:06:22 --> 00:06:23
+Press <b>Enter.</b>
+
+75
+00:06:24 --> 00:06:26
+Let us enter the <b>data points vector</b>.
+
+76
+00:06:27 --> 00:06:38
+Type: <b>x equal to open square bracket two comma two point five comma three point two five comma four close square bracket</b>
+
+77
+00:06:39 --> 00:06:40
+Press <b>Enter.</b>
+
+78
+00:06:41 --> 00:06:43
+Then type values of the <b>function</b>
+
+79
+00:06:44 --> 00:07:00
+<b>f equal to open square bracket zero point five comma zero point four comma zero point three zero seven seven comma zero point two five close square bracket</b>
+
+80
+00:07:01 --> 00:07:02
+Press <b>Enter. </b>
+
+81
+00:07:03 --> 00:07:05
+Type <b>x zero equal to three</b>
+
+82
+00:07:06 --> 00:07:07
+Press <b>Enter.</b>
+
+83
+00:07:08 --> 00:07:10
+Then call the <b>function</b> by typing
+
+84
+00:07:11 --> 00:07:22
+<b>I P equal to Newton underscore Divided open parenthesis x comma f comma x zero close parenthesis</b>
+
+85
+00:07:23 --> 00:07:24
+Press <b>Enter.</b>
+
+86
+00:07:25 --> 00:07:29
+The value of <b>y at x equal to three</b> is shown.
+
+87
+00:07:30 --> 00:07:32
+Let us summarize this tutorial.
+
+88
+00:07:33 --> 00:07:39
+In this tutorial, we have learnt to develop <b>Scilab</b> code for <b>interpolation methods.</b>
+
+89
+00:07:40 --> 00:07:45
+We have also learnt to find the value of a <b>function</b> at new <b>data point.</b>
+
+90
+00:07:46 --> 00:07:53
+Solve this problem on your own using <b>Lagrange method and Newton's Divided Difference method.</b>
+
+91
+00:07:54 --> 00:07:56
+Watch the video available at the  link shown below.
+
+92
+00:07:57 --> 00:07:59
+It summarizes the Spoken Tutorial project.
+
+93
+00:08:00 --> 00:08:04
+If you do not have good bandwidth, you can download and watch it.
+
+94
+00:08:05 --> 00:08:06
+The spoken tutorial project Team:
+
+95
+00:08:07 --> 00:08:09
+Conducts workshops using spoken tutorials
+
+96
+00:08:10 --> 00:08:13
+Gives certificates to those who pass an online test.
+
+97
+00:08:14 --> 00:08:21
+For more details, please write to contact@spoken-tutorial.org
+
+98
+00:08:22 --> 00:08:25
+Spoken Tutorial Project is a part of the Talk to a Teacher project.
+
+99
+00:08:26 --> 00:08:32
+It is supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+100
+00:08:33 --> 00:08:37
+More information on this mission is available at  <a class="external free" href="http://spoken-tutorial.org/NMEICT-Intro" rel="nofollow">http://spoken-tutorial.org/NMEICT-Intro</a>.
+
+101
+00:08:38 --> 00:08:40
+This is Ashwini Patil, signing off.
+
+102
+00:08:41 --> 00:08:46
+Thank you for joining.
+

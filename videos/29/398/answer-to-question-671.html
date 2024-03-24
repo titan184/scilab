@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>
+	 
+      Spoken Tutorial Forums
+      
+</title>
+        <link rel="stylesheet" href="../../../includes/css/bootstrap_forum.min.css" type="text/css" media="screen" charset="utf-8" />
+         <link rel="stylesheet" href="../../../includes/css/slick.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="../../../includes/css/main_forum.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="../../../includes/css/nice-bar.css" type="text/css" media="screen" charset="utf-8" />
+      <link rel="stylesheet" href="../../../includes/css/theme.blue.css" type="text/css" media="screen" charset="utf-8" />
+</head>
+<body>
+	 <div id="page-wrapper">
+        <div id="header-wrapper">
+            <div id="header-inner">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+                            <div class="navbar-brand">
+                                <img id="logo" src="../../../includes/images/logo.png">
+                                Spoken Tutorial Forums
+                                </div>
+                        </div>
+                        </div> <!-- /.container -->
+                </nav>
+            </div> <!-- /#header-inner -->
+        </div>
+        <div id="content-wrapper">
+            <div id="content-inner" class="container">
+                <div id="content" class="col-lg-12 col-md-12 col-sm-12">
+                    
+                    <div class="row">
+    <div class="question-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="question ">
+        <div class="title ">
+           tutorial 15 not working
+        </div>
+        
+        <div id="questionNicPanel"></div>
+        <div class="body">
+            <span lang="EN"><p>http://spoken-tutorial.org/watch/Scilab/Linear%2Bequations%2BGaussian%2BMethods/English/</p>\r\n<p>In this tutorial the first loop in the code makes an UT array. Or, at least it's supposed to.</p>\r\n<p>Looking at this code using the debugger with breaks set at 32 and 34 I get the following results for the loop indexes: k=1, j=2, i=2 for the first iteration of the code.</p>\r\n<p>Line 32 shows the factor, line 34 shows the code to zero out the following columns below the index element.</p>\r\n<p>At line 32: factor = A(2,1)/A(1,1) is evaluated at the given index values which is OK. A(1,1) to normalize the row and A(2,1) to get rid of the first col in the following row. That's OK.</p>\r\n<p>At line 34 we get A(i,j)=A(i,j)-factor*A(k,j) which resolves to</p>\r\n<p>A(2,2)=A(2,2)-factor*A(1,2) using the i, j, k values. Not good!</p>\r\n<p>This code should resolve to </p>\r\n<p>A(2,1)=A(2,1) - factor * A(1,1)</p>\r\n<p> to set A(2,1) to zero, the rest of the loop changes the other elements in this row by the same factor. So this loop is screwed up. If I change the code so A(2,1) is used where it should, the element is now zero, but the code shows an index error when I run it. So I'll have to monkey around with the code to make the UT array, but there is definitely a problem with this example! </p>\r\n<p>And the last loop back substitutes to get the solution: I hope the last loop works as I have not tried it yet!</p>\r\n<p>I modified the original code to make debugging simpler: I hard wired in the A and b arrays, and deleted the back substitution section, so I can focus only on the UT matrix code.</p></span>
+        </div>
+        <br>
+        
+        <span class="category">
+            <small>
+                <a>
+                    Scilab
+                </a>   
+            </small>
+        </span>
+        
+        <span class="tutorial">
+            <small>
+            <a>
+                    Linear-equations-Gaussian-Methods
+             </a>       
+            </small>
+        </span>
+        
+        <span class="minute_range ">
+            <small>
+            <a>
+                    11-12 min
+             </a>       
+            </small>
+        </span>
+        
+        <span class="second_range ">
+            <small>
+                    <a>
+                    50-60 sec
+                    </a>
+            </small>
+        </span>
+       
+        
+        <span class="meta">
+            <small>
+                <i>
+                    23-06-18, 3:32 a.m.
+                </i>
+            </small>
+            
+            <span class="user">
+                maxcy
+            </span>
+        </span>
+    </div> <!-- /.question -->
+    </div>
+</div> 
+
+            <p style=" text-align: center; padding: 40px"> No answers yet</p>
+        
+            <a href="http://forums.spoken-tutorial.org/question/671/tutorial 15 not working.replace(' ','-')/ " target="_blank">Click here to reply/comment online</a>
+                    
+                </div> <!-- /#content -->
+            </div> <!-- /#content-inner -->
+        </div>
+        <div id="footer-wrapper" class="container">
+            <div id="footer-inner" class="col-lg-12 col-md-12 col-sm-12">
+                <div class="cc">
+                    <a class="cc-logo" rel="license">
+                        <img src="../../../includes/images/cc-logo-88x31.png" alt="CC logo"> 
+                    </a> Spoken Tutorial Forum by <a href="http://www.iitb.ac.in" target="_blank">IIT Bombay</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+                </div> 
+            </div> <!-- /#footer-inner -->
+        </div> <!-- /#footer-wrapper -->
+    </div> 
+</body>
+</html>
