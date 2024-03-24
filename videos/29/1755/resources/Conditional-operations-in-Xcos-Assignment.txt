@@ -1,0 +1,10 @@
+	Spoken Tutorial, IIT Bombay 
+	https://spoken-tutorial.org 
+
+	        Xcos        
+    Conditional Operations in Xcos- Assignment
+
+Create a Xcos Simulation file to:
+1. Plot a straight line with slope 5.
+2. Apply a conditional operator which will output 1 if the value is divisible by 9.
+3. Halt the simulation when the condition evaluates to True.

@@ -1,0 +1,10 @@
+	Spoken Tutorial, IIT Bombay 
+	https://spoken-tutorial.org 
+
+	        Xcos        
+ Loading and Saving data in Xcos- Assignment
+
+Create two Xcos simulations for plotting a straight line with slope 3 :-
+1. Use the first simulation to push the values to the workspace and save them as a binary encoded file.
+2. Using the saved data values, plot the straight line in another simulation file.
+
