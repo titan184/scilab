@@ -1,0 +1,9 @@
+			Spoken Tutorial, IIT Bombay 
+			https://spoken-tutorial.org 
+
+				Scilab
+		Interactive Simulation in Xcos using slider - Assignment
+
+
+1. Modify the Xcos diagram to have an autoscale feature (scale graph at runtime) in the graph.
+2. Hint: Explore the use of SCALE underscore CSCOPE to have the autoscale feature.

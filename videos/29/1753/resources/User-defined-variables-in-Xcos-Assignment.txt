@@ -1,0 +1,8 @@
+			Spoken Tutorial, IIT Bombay 
+			https://spoken-tutorial.org 
+
+			          Scilab
+		User-defined variables in Xcos-Assignment
+
+1. Change the value of  variable ‘a’ to 5 using the Console window and context menu.
+2. Check the output in the graphic window.
