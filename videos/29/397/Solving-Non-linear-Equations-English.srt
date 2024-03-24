@@ -1,0 +1,398 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:09
+Dear Friends, Welcome to the spoken tutorial on  <b> “Solving Nonlinear Equations using Numerical Methods” </b>
+
+2
+00:00:10 --> 00:00:12
+At the end of this tutorial, you will learn how to:
+
+3
+00:00:13 --> 00:00:17
+Solve <b>nonlinear equations</b> using numerical methods
+
+4
+00:00:18 --> 00:00:19
+The methods we will be studying are
+
+5
+00:00:20 --> 00:00:21
+<b>Bisection method and </b>
+
+6
+00:00:22 --> 00:00:22
+<b>Secant method</b>
+
+7
+00:00:23 --> 00:00:29
+We will also develop <b>Scilab</b> code to solve <b>nonlinear equations.</b>
+
+8
+00:00:30 --> 00:00:31
+To record this tutorial, I am using
+
+9
+00:00:32 --> 00:00:35
+<b>Ubuntu 12.04 </b>as the operating system and
+
+10
+00:00:36 --> 00:00:39
+<b>Scilab 5.3.3</b> version
+
+11
+00:00:40 --> 00:00:42
+Before practising this tutorial, a learner should have
+
+12
+00:00:43 --> 00:00:45
+basic knowledge of <b>Scilab</b> and
+
+13
+00:00:46 --> 00:00:47
+<b>nonlinear equations</b>
+
+14
+00:00:48 --> 00:00:54
+For <b>Scilab</b>, please refer to the <b>Scilab</b> tutorials available on the <b>Spoken Tutorial</b> website.
+
+15
+00:00:55 --> 00:01:03
+For a given <b>function f</b>, we have to find the value of <b>x</b> for which <b>f of x</b> is equal to zero.
+
+16
+00:01:04 --> 00:01:10
+This solution <b>x</b>  is called <b>root of equation </b> or <b> zero of function f.</b>
+
+17
+00:01:11 --> 00:01:15
+This process is called <b> root finding</b> or <b>zero finding.</b>
+
+18
+00:01:16 --> 00:01:19
+We begin by studying <b>Bisection Method. </b>
+
+19
+00:01:20 --> 00:01:24
+In <b>bisection method</b> we calculate the <b>initial bracket</b> of the <b>root.</b>
+
+20
+00:01:25 --> 00:01:30
+Then we iterate through the <b>bracket</b> and halve its length.
+
+21
+00:01:31 --> 00:01:35
+We repeat this process until we find the solution of the equation.
+
+22
+00:01:36 --> 00:01:40
+Let us solve this function using <b>Bisection method.</b>
+
+23
+00:01:41 --> 00:01:41
+Given
+
+24
+00:01:42 --> 00:01:53
+<b>function f equal to two sin x minus e to the power of x divided by four minus one in the interval minus five and minus three</b>
+
+25
+00:01:54 --> 00:01:59
+<b>Open Bisection dot sci on Scilab editor. </b>
+
+26
+00:02:00 --> 00:02:02
+Let us look at the code for <b>Bisection method.</b>
+
+27
+00:02:03 --> 00:02:09
+We define the function <b>Bisection</b> with input arguments <b>a b f</b> and <b>Tol.</b>
+
+28
+00:02:10 --> 00:02:13
+Here <b>a</b> is the lower limit of the <b>interval</b>
+
+29
+00:02:14 --> 00:02:15
+<b>b</b> is the upper limit of the <b>interval</b>
+
+30
+00:02:16 --> 00:02:18
+<b>f</b> is the function to be solved
+
+31
+00:02:19 --> 00:02:21
+and <b>Tol</b> is the <b>tolerance level</b>
+
+32
+00:02:22 --> 00:02:27
+We specify the maximum number of iterations to be equal to hundred.
+
+33
+00:02:28 --> 00:02:36
+We find the midpoint of the interval and iterate till the value calculated is within the specified <b>tolerance range.</b>
+
+34
+00:02:37 --> 00:02:39
+Let us solve the problem using this code.
+
+35
+00:02:40 --> 00:02:42
+Save and execute the file.
+
+36
+00:02:43 --> 00:02:46
+Switch to <b>Scilab console</b>
+
+37
+00:02:47 --> 00:02:49
+Let us define the <b>interval.</b>
+
+38
+00:02:50 --> 00:02:51
+Let <b>a</b> be equal to minus five.
+
+39
+00:02:52 --> 00:02:53
+Press <b>Enter.</b>
+
+40
+00:02:54 --> 00:02:55
+Let <b>b</b> be equal to minus three.
+
+41
+00:02:56 --> 00:02:57
+Press <b>Enter. </b>
+
+42
+00:02:58 --> 00:03:00
+Define the function using <b>deff function.</b>
+
+43
+00:03:01 --> 00:03:01
+We type
+
+44
+00:03:02 --> 00:03:40
+<b>deff open paranthesis open single quote open square bracket y close square bracket equal to f of x close single quote comma open single quote y equal to two asterisk sin of x minus open paranthesis open paranthesis percentage e to the power of x close paranthesis divided by four close paranthesis minus one close single quote close paranthesis</b>
+
+45
+00:03:41 --> 00:03:45
+To know more about <b>deff function</b> type <b>help deff</b>
+
+46
+00:03:46 --> 00:03:47
+Press <b>Enter.</b>
+
+47
+00:03:48 --> 00:03:52
+Let <b>tol</b> be equal to 10 to the power of minus five.
+
+48
+00:03:53 --> 00:03:55
+Press <b>Enter.</b>
+
+49
+00:03:56 --> 00:03:57
+To solve the problem, type
+
+50
+00:03:58 --> 00:04:06
+<b>Bisection open paranthesis a comma b comma f comma tol close paranthesis</b>
+
+51
+00:04:07 --> 00:04:08
+Press <b>Enter.</b>
+
+52
+00:04:09 --> 00:04:13
+The root of the function is shown on the console.
+
+53
+00:04:14 --> 00:04:16
+Let us study <b>Secant method.</b>
+
+54
+00:04:17 --> 00:04:26
+In <b>Secant method,</b> the derivative is approximated by finite difference using two successive iteration values.
+
+55
+00:04:27 --> 00:04:29
+Let us solve this example using <b>Secant method. </b>
+
+56
+00:04:30 --> 00:04:35
+The function is <b>f equal to x square minus six. </b>
+
+57
+00:04:36 --> 00:04:43
+The two <b>starting guesses</b> are , <b>p zero</b> equal to two and <b>p one</b> equal to three.
+
+58
+00:04:44 --> 00:04:49
+Before we solve the problem, let us look at the code for <b>Secant method. </b>
+
+59
+00:04:50 --> 00:04:53
+Open <b>Secant dot sci</b> on <b>Scilab editor.</b>
+
+60
+00:04:54 --> 00:05:00
+We define the function <b>secant</b> with input arguments <b>a, b and f.</b>
+
+61
+00:05:01 --> 00:05:03
+<b>a</b> is first starting guess for the root
+
+62
+00:05:04 --> 00:05:06
+<b>b</b> is the second starting guess and
+
+63
+00:05:07 --> 00:05:09
+<b>f</b> is the function to be solved.
+
+64
+00:05:10 --> 00:05:14
+We find the difference between the value at the current point and the previous point.
+
+65
+00:05:15 --> 00:05:20
+We apply <b>Secant method </b> and find the value of the root.
+
+66
+00:05:21 --> 00:05:23
+Finally we end the function.
+
+67
+00:05:24 --> 00:05:26
+Let me save and execute the code.
+
+68
+00:05:27 --> 00:05:29
+Switch to <b>Scilab console.</b>
+
+69
+00:05:30 --> 00:05:31
+Type <b>clc. </b>
+
+70
+00:05:32 --> 00:05:33
+Press <b>Enter</b>
+
+71
+00:05:34 --> 00:05:37
+Let me define the initial guesses for this example.
+
+72
+00:05:38 --> 00:05:39
+Type  <b>a</b> equal to 2
+
+73
+00:05:40 --> 00:05:41
+Press <b>Enter. </b>
+
+74
+00:05:42 --> 00:05:43
+Then type  <b>b</b> equal to 3
+
+75
+00:05:44 --> 00:05:45
+Press <b> Enter.</b>
+
+76
+00:05:46 --> 00:05:48
+We define the function using <b>deff function. </b>
+
+77
+00:05:49 --> 00:06:14
+Type <b>deff open paranthesis open single quote open square bracket y close square bracket equal to g of x close single quote comma open single quote y equal to open paranthesis x to the power of two close paranthesis minus six close single quote close paranthesis </b>
+
+78
+00:06:15 --> 00:06:17
+Press <b>Enter</b>
+
+79
+00:06:18 --> 00:06:19
+We call the function by typing
+
+80
+00:06:20 --> 00:06:26
+<b>Secant open paranthesis a comma b comma g close paranthesis.</b>
+
+81
+00:06:27 --> 00:06:29
+Press <b>Enter</b>
+
+82
+00:06:30 --> 00:06:34
+The value of the root is shown on the <b>console</b>
+
+83
+00:06:35 --> 00:06:37
+Let us summarize this tutorial.
+
+84
+00:06:38 --> 00:06:40
+In this tutorial we have learnt to:
+
+85
+00:06:41 --> 00:06:44
+Develop <b>Scilab</b> code for different solving methods
+
+86
+00:06:45 --> 00:06:47
+Find the roots of <b>nonlinear equation </b>
+
+87
+00:06:48 --> 00:06:54
+Solve this problem on your own using the two methods we learnt today.
+
+88
+00:06:55 --> 00:06:57
+Watch the video available at the link shown below
+
+89
+00:06:58 --> 00:07:00
+It summarises the Spoken Tutorial project
+
+90
+00:07:01 --> 00:07:04
+If you do not have good bandwidth, you can download and watch it
+
+91
+00:07:05 --> 00:07:06
+The spoken tutorial project Team
+
+92
+00:07:07 --> 00:07:09
+Conducts workshops using spoken tutorials
+
+93
+00:07:10 --> 00:07:13
+Gives certificates to those who pass an online test
+
+94
+00:07:14 --> 00:07:20
+For more details, please write to conatct@spoken-tutorial.org
+
+95
+00:07:21 --> 00:07:23
+Spoken Tutorial Project is a part of the Talk to a Teacher project
+
+96
+00:07:24 --> 00:07:31
+It is supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+97
+00:07:32 --> 00:07:38
+More information on this mission is available at  <a class="external free" href="http://spoken-tutorial.org/NMEICT-Intro" rel="nofollow">http://spoken-tutorial.org/NMEICT-Intro</a>
+
+98
+00:07:39 --> 00:07:40
+This is Ashwini Patil signing off.
+
+99
+00:07:41 --> 00:07:46
+Thank you for joining.
+

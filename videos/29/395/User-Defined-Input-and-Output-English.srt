@@ -1,0 +1,386 @@
+<b> Narration</b>
+
+1
+00:00:01 --> 00:00:05
+Welcome to the spoken tutorial on <b>File handling</b> using <b>Scilab</b>.
+
+2
+00:00:06 --> 00:00:07
+In this tutorial, we will learn:
+
+3
+00:00:08 --> 00:00:09
+<b>Input Function </b>
+
+4
+00:00:10 --> 00:00:11
+<b>Formatting the Output</b>
+
+5
+00:00:12 --> 00:00:13
+<b>save function </b>
+
+6
+00:00:14 --> 00:00:15
+<b>load function </b>.
+
+7
+00:00:16 --> 00:00:25
+For demonstration I am using <b>Ubuntu Linux 12.04</b> operating system with <b>Scilab version 5.3.3</b> installed.
+
+8
+00:00:26 --> 00:00:28
+You should have basic knowledge of <b>Scilab.</b>
+
+9
+00:00:29 --> 00:00:36
+If not, for relevant spoken tutorials on Scilab  please visit <b>spoken hyphen tutorial dot org</b>.
+
+10
+00:00:37 --> 00:00:41
+The <b>input()</b> function is used to take the input from the user.
+
+11
+00:00:42 --> 00:00:46
+It provides a prompt in the text string for user input.
+
+12
+00:00:47 --> 00:00:50
+It waits for input from the keyboard.
+
+13
+00:00:51 --> 00:00:58
+If nothing but a carriage return is entered at the prompt, <b>input()</b> function returns an empty matrix.
+
+14
+00:00:59 --> 00:01:02
+The <b>input</b> function can be written in two ways:
+
+15
+00:01:03 --> 00:01:08
+First, x= input into brackets "message to display"
+
+16
+00:01:09 --> 00:01:16
+second, x= input into brackets ("message to display", "strings").
+
+17
+00:01:17 --> 00:01:21
+In the second example, the second argument is “string”.
+
+18
+00:01:22 --> 00:01:28
+So the output is a character string which is the expression entered using the keyboard.
+
+19
+00:01:29 --> 00:01:32
+Switch to the <b>Scilab console</b> window and type,
+
+20
+00:01:33 --> 00:01:48
+<b>x is equal to input</b> open bracket inside double quotes <b>Enter your age</b> close the double quotes close the bracket and press <b>Enter</b>.
+
+21
+00:01:49 --> 00:01:52
+Type 25 and press Enter.
+
+22
+00:01:53 --> 00:02:13
+Now type --><b>y is equal to input </b> into bracket into double quotes <b>Enter your age</b> close the double quotes comma again inside double quotes write <b>string</b> close the bracket and press Enter.
+
+23
+00:02:14 --> 00:02:17
+type 25 and press Enter.
+
+24
+00:02:18 --> 00:02:24
+We see that in both the cases the input we entered through  keyboard, was a number 25.
+
+25
+00:02:25 --> 00:02:29
+Now, let us check the type of variable that x and y are.
+
+26
+00:02:30 --> 00:02:33
+Let us clear the console using <b>clc</b> command.
+
+27
+00:02:34 --> 00:02:41
+We are doing this to validate the use and importance of the argument “string”, given in the second example.
+
+28
+00:02:42 --> 00:02:44
+To check the type of variable, let us type
+
+29
+00:02:45 --> 00:02:50
+--><b>typeof</b> into brackets <b>x</b> and press Enter.
+
+30
+00:02:51 --> 00:02:56
+Similarly, <b>typeof(y)</b> and press Enter.
+
+31
+00:02:57 --> 00:03:03
+You can see it yourself that the first answer stored in x is of type <b>constant</b> and
+
+32
+00:03:04 --> 00:03:11
+second answer stored in y, with the argument <b>“string”</b> included in the command, is of <b>type string.</b>
+
+33
+00:03:12 --> 00:03:16
+Let us now see how to format the output that is displayed on the console.
+
+34
+00:03:17 --> 00:03:21
+This can be done using the <b>mprintf()</b> function.
+
+35
+00:03:22 --> 00:03:27
+<b>mprintf()</b> function converts, formats and writes data on to the <b>Scilab console.</b>
+
+36
+00:03:28 --> 00:03:33
+It is an interface for C-coded version of <b>printf()</b> function.
+
+37
+00:03:34 --> 00:03:37
+Let us see an example for this. Switch to the console.
+
+38
+00:03:38 --> 00:04:11
+Type--><b>mprintf</b> into bracket into quotes type <b>At iteration percent i comma Result is colon slash n alpha is equal to percentf comma 33 comma 0.535</b> close the bracket.
+
+39
+00:04:12 --> 00:04:25
+Here 33 will be displayed in place of <b>percent i</b> (%i) and point 535 (0.535) will be displayed in place of <b>percent f</b> (%f) as a flow. Press Enter.
+
+40
+00:04:26 --> 00:04:38
+This will give the output as  <b>At iteration 33, Result is alpha is equal to 0.535000.</b>
+
+41
+00:04:39 --> 00:04:43
+Clear the console. Now let us see another example.
+
+42
+00:04:44 --> 00:05:18
+<b>mprintf open bracket</b> into quotes <b>Value of x is equal to percentage d is taken as a CONSTANT comma while value of y is equal to percent s is taken as a STRING </b>close the quotes <b>comma x comma y</b> close the bracket.
+
+43
+00:05:19 --> 00:05:27
+In the above example percentage d (%d) is used to insert a constant data stored in variable x and
+
+44
+00:05:28 --> 00:05:37
+<b>percentage s</b> (%s) is used to insert a <b>string</b> data stored in variable y. press Enter, you see the output.
+
+45
+00:05:38 --> 00:05:42
+Now, let us discuss the use of <b>save</b> and <b>load</b> commands.
+
+46
+00:05:43 --> 00:05:46
+To quit <b>Scilab</b> midway through a calculation and to
+
+47
+00:05:47 --> 00:05:51
+continue at a later stage, type <b>save thissession</b>.
+
+48
+00:05:52 --> 00:05:57
+This will save the current values of all variables to a file called <b>thissession.</b>
+
+49
+00:05:58 --> 00:06:00
+This file cannot be edited.
+
+50
+00:06:01 --> 00:06:03
+It is in <b>binary</b> format.
+
+51
+00:06:04 --> 00:06:07
+When you next start Scilab, type <b>load thissession</b>
+
+52
+00:06:08 --> 00:06:12
+and the computation can be resumed where you left off.
+
+53
+00:06:13 --> 00:06:15
+The purpose of <b>save</b> and <b>load</b> functions are
+
+54
+00:06:16 --> 00:06:21
+The <b>save()</b> command saves all the <b>Scilab</b> current variables in a binary file.
+
+55
+00:06:22 --> 00:06:30
+If the variable is a graphic handle, the <b>save</b> function saves all the corresponding graphics_entities definition.
+
+56
+00:06:31 --> 00:06:36
+The file can be given either by its path or by its descriptor previously given.
+
+57
+00:06:37 --> 00:06:44
+<b>save(filename)</b> saves all the current variables in a file defined by filename.
+
+58
+00:06:45 --> 00:06:52
+<b>save into bracket fd</b> saves all the current variables in the file defined by the descriptor <b>fd</b>.
+
+59
+00:06:53 --> 00:07:01
+<b>save(filename,x,y)</b> or <b>save(fd,x,y)</b> saves only named variables <b>x</b> and <b>y</b>.
+
+60
+00:07:02 --> 00:07:06
+Let us see an example to illustrate the <b>save</b> and <b>load</b> commands usage.
+
+61
+00:07:07 --> 00:07:13
+Switch back to the console. Let us define two matrices, say a and b.
+
+62
+00:07:14 --> 00:07:21
+--><b>a = eye</b> of <b>(2,2)</b> and press Enter.
+
+63
+00:07:22 --> 00:07:27
+Type <b>b=ones(a)</b> and press Enter.
+
+64
+00:07:28 --> 00:07:33
+Clear the console using <b>clc</b> command. Now type
+
+65
+00:07:34 --> 00:07:41
+<b>save</b> space <b>matrix</b> dash <b>a</b> dash <b>b</b>
+
+66
+00:07:42 --> 00:07:45
+or it can also be written as:
+
+67
+00:07:46 --> 00:08:02
+<b>save into brackets into quotes matrix dash a dash b dot dat</b> close the quotes <b>comma a comma b</b> close the bracket  and press Enter.
+
+68
+00:08:03 --> 00:08:11
+This saves the values of variables in a binary file 'matrix dash a dash b dot dat' (matrix-a-b.dat) in the present working directory.
+
+69
+00:08:12 --> 00:08:16
+You can browse the present working directory to check the existence of this binary file.
+
+70
+00:08:17 --> 00:08:21
+You can see it here. I will close the file browser.
+
+71
+00:08:22 --> 00:08:25
+Now let us load the file back in to the variables.
+
+72
+00:08:26 --> 00:08:28
+Before this, let us clear the variables <b>a and b </b>.
+
+73
+00:08:29 --> 00:08:33
+Type  <b>clear a</b> space <b>b</b>, press Enter.
+
+74
+00:08:34 --> 00:08:38
+Let us cross check if these variables are really cleared.
+
+75
+00:08:39 --> 00:08:40
+-><b>a  </b> , <b>b</b>
+
+76
+00:08:41 --> 00:08:48
+Now let us load back the values from the binary files in these variables a and b using the <b>load command</b>.
+
+77
+00:08:49 --> 00:09:07
+Type: <b>load into bracket into quote matrix dash a dash b dot dat</b> close the quotes <b>comma into quotes a comma into quotes b</b> close the bracket and press Enter.
+
+78
+00:09:08 --> 00:09:13
+Let us check the values in variables a and b. Clear the console.
+
+79
+00:09:14 --> 00:09:17
+Type -->a and-->b
+
+80
+00:09:18 --> 00:09:22
+You can see the values are loaded back in the variables.
+
+81
+00:09:23 --> 00:09:27
+In this tutorial we learnt -  Input function using <b>input</b> command
+
+82
+00:09:28 --> 00:09:30
+Formatting the output using<b> mprintf</b> command
+
+83
+00:09:31 --> 00:09:32
+<b>save</b> function
+
+84
+00:09:33 --> 00:09:34
+<b>load</b> function
+
+85
+00:09:35 --> 00:09:37
+Watch the video available at the link shown below.
+
+86
+00:09:38 --> 00:09:40
+It summarizes the Spoken Tutorial project.
+
+87
+00:09:41 --> 00:09:45
+If you do not have good bandwidth, you can download and watch it.
+
+88
+00:09:46 --> 00:09:47
+The spoken tutorial Team:
+
+89
+00:09:48 --> 00:09:50
+Conducts workshops using spoken tutorials.
+
+90
+00:09:51 --> 00:09:53
+Gives certificates to those who pass an online test.
+
+91
+00:09:54 --> 00:10:00
+For more details, please write to conatct@spoken-tutorial.org.
+
+92
+00:10:01 --> 00:10:04
+Spoken Tutorial Project is a part of the Talk to a Teacher project.
+
+93
+00:10:05 --> 00:10:11
+It is supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+94
+00:10:12 --> 00:10:22
+More information on this mission is available at  <a class="external free" href="http://spoken-tutorial.org/NMEICT-Intro" rel="nofollow">http://spoken-tutorial.org/NMEICT-Intro</a>.
+
+95
+00:10:23 --> 00:10:25
+This is Anuradha Amrutkar from IIT Bombay, signing off.
+
+96
+00:10:26 --> 00:10:31
+Thank you for joining.
+

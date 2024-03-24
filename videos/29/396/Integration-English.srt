@@ -1,0 +1,422 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:06
+Dear Friends,  Welcome to the Spoken Tutorial on <b>Composite Numerical Integration</b>.
+
+2
+00:00:07 --> 00:00:10
+At the end of this tutorial, you will learn how to:
+
+3
+00:00:11 --> 00:00:16
+Develop <b>Scilab</b> code for different <b>Composite Numerical Integration algorithms</b>
+
+4
+00:00:17 --> 00:00:20
+Divide the <b>integral</b> into equal <b>intervals</b>
+
+5
+00:00:21 --> 00:00:23
+Apply the algorithm to each <b>interval</b> and
+
+6
+00:00:24 --> 00:00:27
+Calculate the <b>composite value of the integral</b>.
+
+7
+00:00:28 --> 00:00:29
+To record this tutorial, I am using
+
+8
+00:00:30 --> 00:00:33
+<b>Ubuntu 12.04</b> as the operating system
+
+9
+00:00:34 --> 00:00:37
+with <b>Scilab 5.3.3</b> version.
+
+10
+00:00:38 --> 00:00:41
+Before practicing this tutorial, a learner should have basic knowledge of
+
+11
+00:00:42 --> 00:00:43
+<b>Scilab</b> and
+
+12
+00:00:44 --> 00:00:46
+<b>Integration using Numerical Methods</b>.
+
+13
+00:00:47 --> 00:00:54
+For <b>Scilab</b>, please refer to the relevant tutorials available on the <b>Spoken Tutorial</b> website.
+
+14
+00:00:55 --> 00:00:57
+<b>Numerical Integration</b> is the
+
+15
+00:00:58 --> 00:01:02
+study of how the numerical value of an <b>integral</b> can be found.
+
+16
+00:01:03 --> 00:01:07
+It is used when exact mathematical integration is not available.
+
+17
+00:01:08 --> 00:01:14
+It approximates a <b>definite integral</b> from values of the <b>integrand</b>.
+
+18
+00:01:15 --> 00:01:17
+Let us study <b>Composite Trapezoidal Rule.</b>
+
+19
+00:01:18 --> 00:01:21
+This rule is the extension of <b>trapezoidal rule</b>.
+
+20
+00:01:22 --> 00:01:28
+We divide the interval <b>a comma b </b> into <b>n</b> equal intervals.
+
+21
+00:01:29 --> 00:01:35
+Then <b>h equals to b minus a divided by n</b> is the common length of the intervals.
+
+22
+00:01:36 --> 00:01:40
+Then <b>composite trapezoidal rule</b> is given by:
+
+23
+00:01:41 --> 00:01:56
+<b> The integral of the function F of x in the interval a to b is approximately equal to h multiplied by the sum of the values of the function at x zero to x n</b>
+
+24
+00:01:57 --> 00:02:01
+Let us solve an example using <b>composite trapezoidal rule.</b>
+
+25
+00:02:02 --> 00:02:08
+Assume the number of intervals n is equal to ten (n=10).
+
+26
+00:02:09 --> 00:02:15
+Let us look at the code for <b>Composite Trapezoidal Rule</b> on <b>Scilab editor</b>
+
+27
+00:02:16 --> 00:02:21
+We first define the function with parameters <b>f , a , b , n.</b>
+
+28
+00:02:22 --> 00:02:24
+<b>f </b>refers to the function we have to solve,
+
+29
+00:02:25 --> 00:02:27
+<b>a</b> is the lower limit of the integral,
+
+30
+00:02:28 --> 00:02:30
+<b> b</b> is the upper limit of the integral and
+
+31
+00:02:31 --> 00:02:33
+<b>n</b> is the number of intervals.
+
+32
+00:02:34 --> 00:02:41
+<b>linspace</b> function is used to create ten equal intervals between zero and one.
+
+33
+00:02:42 --> 00:02:48
+We find the value of the integral and store it in <b> I one</b>.
+
+34
+00:02:49 --> 00:03:01
+Click on <b>Execute</b> on <b>Scilab editor</b> and choose <b>Save and execute </b> the code.
+
+35
+00:03:02 --> 00:03:04
+Define the example function by typing:
+
+36
+00:03:05 --> 00:03:29
+<b>d e f f open parenthesis open single quote open square bracket y close square bracket is equal to f of x close quote comma open quote y is equal to one by open parenthesis two asterisk x plus one close parenthesis close quote close parenthesis</b>
+
+37
+00:03:30 --> 00:03:40
+Press <b>Enter </b>. Type <b>Trap underscore composite open parenthesis f comma zero comma one comma ten close parenthesis</b>
+
+38
+00:03:41 --> 00:03:42
+Press <b>Enter </b>.
+
+39
+00:03:43 --> 00:03:46
+The answer is displayed on the <b>console </b>.
+
+40
+00:03:47 --> 00:03:50
+Next we shall study <b>Composite Simpson's rule.</b>
+
+41
+00:03:51 --> 00:04:02
+In this rule, we decompose the interval <b> a comma b</b> into <b>n is greater than 1</b>  sub-intervals of equal length.
+
+42
+00:04:03 --> 00:04:05
+Apply <b>Simpson's rule</b> to each interval.
+
+43
+00:04:06 --> 00:04:09
+We get the value of the integral to be:
+
+44
+00:04:10 --> 00:04:18
+<b>h by three multiplied by the sum of f zero, four into f one , two into f two to f n</b>.
+
+45
+00:04:19 --> 00:04:23
+Let us solve an example using <b>Composite Simpson's rule. </b>
+
+46
+00:04:24 --> 00:04:31
+We are given a <b>function one by one plus x cube d x in the interval one to two</b>.
+
+47
+00:04:32 --> 00:04:36
+Let the number of intervals be <b>twenty </b>.
+
+48
+00:04:37 --> 00:04:41
+Let us look at the code for  <b>Composite Simpson's rule</b>.
+
+49
+00:04:42 --> 00:04:48
+We first define the function with parameters <b>f , a , b , n. </b>
+
+50
+00:04:49 --> 00:04:51
+<b>f</b> refers to the function we have to solve,
+
+51
+00:04:52 --> 00:04:55
+<b>a</b>  is the lower limit of the integral,
+
+52
+00:04:56 --> 00:04:57
+<b>b</b> is the upper limit of the integral and
+
+53
+00:04:58 --> 00:05:01
+<b>n</b> is the number of intervals.
+
+54
+00:05:02 --> 00:05:03
+We find two sets of points.
+
+55
+00:05:04 --> 00:05:09
+We find the value of the function with one set and multiply it with two.
+
+56
+00:05:10 --> 00:05:15
+With the other set, we find the value and multiply it with four.
+
+57
+00:05:16 --> 00:05:23
+We sum these values and multiply it with <b>h by three and store the final value in I </b>.
+
+58
+00:05:24 --> 00:05:27
+Let us execute the code.
+
+59
+00:05:28 --> 00:05:38
+Save and execute the file <b>Simp underscore composite dot s c i</b>.
+
+60
+00:05:39 --> 00:05:41
+Let me clear the screen first.
+
+61
+00:05:42 --> 00:05:44
+Define the function given in the example by typing:
+
+62
+00:05:45 --> 00:06:11
+<b>d e f f open parenthesis open single quote open square bracket y close square bracket is equal to f of x close quote comma open quote y is equal to one divided by open parenthesis one plus x cube close parenthesis close quote close parenthesis</b>
+
+63
+00:06:12 --> 00:06:13
+Press <b>Enter </b>.
+
+64
+00:06:14 --> 00:06:23
+Type <b>Simp underscore composite open parenthesis f comma one comma two comma twenty close parenthesis</b>
+
+65
+00:06:24 --> 00:06:25
+Press <b>Enter </b>.
+
+66
+00:06:26 --> 00:06:30
+The answer is displayed on the console.
+
+67
+00:06:31 --> 00:06:34
+Let us now look at <b>Composite Midpoint Rule.</b>
+
+68
+00:06:35 --> 00:06:39
+It integrates polynomials of degree one or less,
+
+69
+00:06:40 --> 00:06:48
+divides the interval <b>a comma b</b> into a <b> sub-intervals</b>of equal width.
+
+70
+00:06:49 --> 00:06:53
+Finds the midpoint of each interval indicated by <b>x i </b>.
+
+71
+00:06:54 --> 00:06:59
+We find the sum of the values of the integral at each midpoint.
+
+72
+00:07:00 --> 00:07:04
+Let us solve this problem using <b>Composite Midpoint Rule</b>.
+
+73
+00:07:05 --> 00:07:14
+<b>We are given a function one minus x square d x in the interval zero to one point five</b>.
+
+74
+00:07:15 --> 00:07:17
+We assume <b>n</b> is equal to <b>twenty </b>.
+
+75
+00:07:18 --> 00:07:23
+Let us look at the code for <b>Composite Midpoint rule</b>.
+
+76
+00:07:24 --> 00:07:29
+We first define the function with parameters <b>f , a , b , n. </b>
+
+77
+00:07:30 --> 00:07:32
+<b>f </b> refers to the function we have to solve,
+
+78
+00:07:33 --> 00:07:35
+<b>a</b>  is the lower limit of the integral,
+
+79
+00:07:36 --> 00:07:38
+<b>b </b> is the upper limit of the integral and
+
+80
+00:07:39 --> 00:07:40
+<b>n </b> is the number of intervals.
+
+81
+00:07:41 --> 00:07:44
+We find the midpoint of each interval.
+
+82
+00:07:45 --> 00:07:52
+Find the value of integral at each midpoint and then find the sum and store it in <b>I.</b>
+
+83
+00:07:53 --> 00:07:54
+Let us now solve the example.
+
+84
+00:07:55 --> 00:08:03
+Save and execute the file <b>mid underscore composite dot s c i</b>.
+
+85
+00:08:04 --> 00:08:07
+Let me clear the screen.
+
+86
+00:08:08 --> 00:08:12
+We define the function given in the example by typing:
+
+87
+00:08:13 --> 00:08:36
+<b>d e f f open parenthesis open single quote open square bracket y close square bracket is equal to f of x close quote comma open quote y is equal to one minus x square close quote close parenthesis</b>
+
+88
+00:08:37 --> 00:08:38
+Press <b>Enter</b>.
+
+89
+00:08:39 --> 00:08:52
+Then type <b>mid underscore composite open parenthesis f comma zero comma one point five comma twenty close parenthesis</b>
+
+90
+00:08:53 --> 00:08:58
+Press <b>Enter </b>. The answer is displayed on the <b>console</b>.
+
+91
+00:08:59 --> 00:09:01
+Let us summarize this tutorial.
+
+92
+00:09:02 --> 00:09:03
+In this tutorial we have learnt to:
+
+93
+00:09:04 --> 00:09:07
+Develop <b>Scilab</b> code for <b>numerical integration</b>
+
+94
+00:09:08 --> 00:09:10
+Find the value of an <b>integral</b>.
+
+95
+00:09:11 --> 00:09:14
+Watch the video available at the link shown below.
+
+96
+00:09:15 --> 00:09:17
+It summarizes the Spoken Tutorial project.
+
+97
+00:09:18 --> 00:09:22
+If you do not have good bandwidth, you can download and watch it.
+
+98
+00:09:23 --> 00:09:24
+The spoken tutorial Team:
+
+99
+00:09:25 --> 00:09:28
+Conducts workshops using spoken tutorials
+
+100
+00:09:29 --> 00:09:31
+Gives certificates to those who pass an online test.
+
+101
+00:09:32 --> 00:09:39
+For more details, please write to contact@spoken-tutorial.org.
+
+102
+00:09:40 --> 00:09:44
+Spoken Tutorial Project is a part of the Talk to a Teacher project.
+
+103
+00:09:45 --> 00:09:51
+It is supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+104
+00:09:52 --> 00:10:02
+More information on this mission is available at  <a class="external free" href="http://spoken-tutorial.org/NMEICT-Intro" rel="nofollow">http://spoken-tutorial.org/NMEICT-Intro</a>.
+
+105
+00:10:03 --> 00:10:08
+This is Ashwini Patil, signing off. Thank you for joining.
+
