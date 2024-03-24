@@ -1,0 +1,394 @@
+<b>Narration</b>
+
+1
+00:00:02 --> 00:00:05
+Welcome to the spoken tutorial on <b>Matrix Operations</b>.
+
+2
+00:00:06 --> 00:00:09
+At the end of this spoken tutorial, you will be able to:
+
+3
+00:00:10 --> 00:00:12
+* Access the elements of Matrix
+
+4
+00:00:13 --> 00:00:17
+* Determine the determinant, inverse and eigen values of a matrix.
+
+5
+00:00:18 --> 00:00:21
+* Define special matrices.
+
+6
+00:00:22 --> 00:00:24
+* Perform elementary row operations.
+
+7
+00:00:25 --> 00:00:27
+* Solve the system of <b>linear equations</b>.
+
+8
+00:00:28 --> 00:00:29
+The prerequisites are:
+
+9
+00:00:30 --> 00:00:33
+Scilab should be installed on your system.
+
+10
+00:00:34 --> 00:00:41
+You should have listened to the Spoken Tutorial: <b>Getting started with Scilab</b> and <b>Vector Operations</b>.
+
+11
+00:00:42 --> 00:00:49
+I am using <b>Windows 7</b> operating system and <b>Scilab 5.2.2</b> for demonstration.
+
+12
+00:00:50 --> 00:00:58
+Start Scilab by double-clicking on the Scilab icon present on your Desktop.
+
+13
+00:00:59 --> 00:01:07
+It is suggested that the user should practice this tutorial in Scilab simultaneously while pausing the video at regular intervals of time.
+
+14
+00:01:08 --> 00:01:11
+Recall that in the Spoken Tutorial: <b>Vector Operations</b>,
+
+15
+00:01:12 --> 00:01:36
+matrix E was defined as E is equal to open square bracket 5 space 19 space 15 semicolon 8 space 22 space 36 close the square bracket and press Enter.
+
+16
+00:01:37 --> 00:01:41
+Let us now see how to address individual elements of a matrix, separately.
+
+17
+00:01:42 --> 00:01:55
+To access the element in the first row and second column, type E into bracket 1,2 and press enter
+
+18
+00:01:56 --> 00:02:02
+It is easy to extract an entire row or an entire column of a matrix in Scilab .
+
+19
+00:02:03 --> 00:02:22
+For example, first row of E can be obtained using the following command: E1 = E into bracket 1 comma colon and press Enter.
+
+20
+00:02:23 --> 00:02:29
+The command returns all the elements of the first row, in the order of their appearance in the row.
+
+21
+00:02:30 --> 00:02:43
+<b>Colon</b>, when used alone, refers to all the elements of row or column, depending upon whether it appears as a first or a second entry respectively inside the bracket.
+
+22
+00:02:44 --> 00:02:48
+Also, any subset of a matrix can be extracted using a colon (“:”).
+
+23
+00:02:49 --> 00:02:59
+For example, the set of elements starting from second to third columns of E can be obtained using the following command:
+
+24
+00:03:00 --> 00:03:17
+E2 = E of colon comma 2 colon 3 close the bracket and press Enter.
+
+25
+00:03:18 --> 00:03:27
+In the above, the second entry in the bracket, that is, "2 colon 3" makes a reference to elements from column 2 to column 3.
+
+26
+00:03:28 --> 00:03:37
+If the size of the matrix is not known, <b>$ </b>(dollar ) symbol can be used to extract the last row or column of that matrix.
+
+27
+00:03:38 --> 00:03:45
+For example to extract all rows of the last column of the matrix E, we will type
+
+28
+00:03:46 --> 00:04:05
+Elast col= E into brackets colon comma dollar sign close the bracket and press Enter.
+
+29
+00:04:06 --> 00:04:12
+Now, let us learn how to calculate the <b>determinant</b> of a <b>square matrix</b> using the command <b>det</b>.
+
+30
+00:04:13 --> 00:04:18
+Recall that in the Spoken Tutorial, <b>Vector Operations</b>, we had defined A as
+
+31
+00:04:19 --> 00:04:49
+A = open square bracket 1 space 2 space minus 1 semicolon  -2 space  - 6 space 4 semicolon -1 space  -3 space 3 close the square bracket and press Enter.
+
+32
+00:04:50 --> 00:04:59
+Let us calculate the determinant of A by the command <b>det of A</b>  and press Enter.
+
+33
+00:05:00 --> 00:05:08
+To calculate the <b>inverse</b> and the <b>eigen values</b> of a matrix, the commands <b>inv</b> and <b>spec</b> can be used respectively.
+
+34
+00:05:09 --> 00:05:28
+For example: inv of A  gives the inverse of A and spec of A gives the <b>eigen values</b> of  matrix A.
+
+35
+00:05:29 --> 00:05:34
+See <b>help spec</b> to see how <b>eigen vectors</b> can also be obtained using this command.
+
+36
+00:05:35 --> 00:05:51
+<b>Square</b> or <b>cube</b> of a square matrix A can be calculated by simply typing <b>A square</b>  or <b>A cube </b>respectively.
+
+37
+00:05:52 --> 00:06:04
+A caret symbol is used to raise a matrix to power, like in ordinary arithmetic operations. In our keyboard, it is obtained by pressing shift+6.
+
+38
+00:06:05 --> 00:06:16
+Please pause the tutorial now and attempt the exercise number one given in the video.
+
+39
+00:06:17 --> 00:06:23
+Certain special matrices can also be created in Scilab.
+
+40
+00:06:24 --> 00:06:35
+For example, a matrix of zeros with 3 rows and 4 columns can be created using <b>zeros</b> command
+
+41
+00:06:36 --> 00:06:46
+zeros into bracket 3 comma 4  and press Enter.
+
+42
+00:06:47 --> 00:06:52
+A matrix of all ones can be created with <b>ones</b> command as follows:
+
+43
+00:06:53 --> 00:07:00
+ones into bracket 2 comma 4  gives a matrix of all ones.
+
+44
+00:07:01 --> 00:07:06
+It is easy to create an <b>identity matrix</b> using the  <b>eye</b> command:
+
+45
+00:07:07 --> 00:07:15
+' e y e' of 4 comma 4 gives a 4 by 4 identity matrix.
+
+46
+00:07:16 --> 00:07:24
+A user may need a matrix consisting of pseudo random numbers. It can be generated using the <b>rand</b> command as follows:
+
+47
+00:07:25 --> 00:07:38
+p=rand into bracket 2, 3  and press Enter
+
+48
+00:07:39 --> 00:07:54
+In linear systems, one of the important sets of operations a user carries out on matrices are the elementary row and column operations.
+
+49
+00:07:55 --> 00:08:06
+These operations involve executing row operations on a matrix to make entries below a nonzero number, zero. This can be done easily in Scilab.
+
+50
+00:08:07 --> 00:08:16
+Recall that in the Spoken Tutorial <b>Vector Operations</b>, we had defined the matrix P as follows.
+
+51
+00:08:17 --> 00:08:32
+P = open square bracket 1 space 2 space 3  semicolon 4 space 11 space 6  close the square bracket and press Enter.
+
+52
+00:08:33 --> 00:08:43
+Let us consider an example where the element in the second row, first column is to be transformed to zero using elementary row and column operation.
+
+53
+00:08:44 --> 00:08:55
+The operation can be executed by multiplying the first row by 4 and subtracting it from the second row as in the following command:
+
+54
+00:08:56 --> 00:09:27
+P into bracket 2 comma colon is equal to  P into bracket 2 comma colon  minus 4 multiplied by P into bracket 1 comma colon and press Enter.
+
+55
+00:09:28 --> 00:09:34
+The procedure can be extended to larger systems and to other forms of elementary column operations.
+
+56
+00:09:35 --> 00:09:38
+Rows and columns can be easily appended to matrices.
+
+57
+00:09:39 --> 00:09:47
+For example, to append a row containing the elements [5 5 -2] to P, the following command is used:
+
+58
+00:09:48 --> 00:10:13
+T =  open square bracket P semicolon, open another square bracket write down  the elements 5 5 -2 close both the square brackets and press Enter.
+
+59
+00:10:14 --> 00:10:19
+The semicolon after P states that anything after it should go to the next row.
+
+60
+00:10:20 --> 00:10:23
+This is expected in the way a matrix is defined.
+
+61
+00:10:24 --> 00:10:33
+As an exercise, please pause here and check if the brackets around the new row, in the command just executed, are really required.
+
+62
+00:10:34 --> 00:10:39
+Matrix notations are used while solving equations.
+
+63
+00:10:40 --> 00:10:43
+Let us solve the following set of linear equations:
+
+64
+00:10:44 --> 00:10:47
+x1 + 2 x2 − x3 = 1
+
+65
+00:10:48 --> 00:10:53
+−2 x1 − 6 x2 + 4 x3 = −2
+
+66
+00:10:54 --> 00:10:59
+and − x1 − 3 x2 + 3 x3 = 1
+
+67
+00:11:00 --> 00:11:04
+The above set of equations can be written in  Ax = b form.
+
+68
+00:11:05 --> 00:11:10
+The solution is then given as inverse of A times b.
+
+69
+00:11:11 --> 00:11:14
+Let us solve the set of equations.
+
+70
+00:11:15 --> 00:11:45
+A is defined as A =  open square bracket 1 space  2 space  -1 semicolon -2 space -6 space 4 semicolon -1 space  -3 space  3 close the square bracket and press Enter.
+
+71
+00:11:46 --> 00:12:03
+B can be defined as b  is equal to square bracket 1 semicolon -2 semicolon 1 close the square bracket and press Enter.
+
+72
+00:12:04 --> 00:12:18
+The solution, x, can be obtained by using x = inv  of A multiplied by b.
+
+73
+00:12:19 --> 00:12:25
+It is worth noting that it is a small letter 'i' in the command, <b>inv</b>.
+
+74
+00:12:26 --> 00:12:32
+Alternatively, the same result can be achieved using a <b>backslash operation</b> in Scilab.
+
+75
+00:12:33 --> 00:12:43
+Let's do this in Scilab: x  is equal to A backslash b and press Enter.
+
+76
+00:12:44 --> 00:12:54
+It gives the same result. Type <b>help backslash</b> and <b>help inv</b> in Scilab to know more about individual advantages and disadvantages.
+
+77
+00:12:55 --> 00:13:04
+The integrity of the solution can be verified by back substitution, that is, by calculating Ax-b:
+
+78
+00:13:05 --> 00:13:09
+A multiplied by x minus b.
+
+79
+00:13:10 --> 00:13:13
+The above exercise verifies the result achieved earlier.
+
+80
+00:13:14 --> 00:13:26
+It is possible that in some systems the above verification exercise may not yield a matrix with exact zeros as its elements due to intermediate floating point operations.
+
+81
+00:13:27 --> 00:13:33
+However, one will indeed get a very small number, typically of the order of 10 raised to -16.
+
+82
+00:13:34 --> 00:13:48
+Please pause the tutorial now and attempt exercise number two given in the video.
+
+83
+00:13:49 --> 00:13:52
+This brings us to the end of this spoken tutorial on <b>MatrixOperation</b>.
+
+84
+00:13:53 --> 00:13:58
+There are many other functions in Scilab which will be covered in other spoken tutorials.
+
+85
+00:13:59 --> 00:14:01
+Keep watching the Scilab links.
+
+86
+00:14:02 --> 00:14:03
+In this tutorial we have learnt:
+
+87
+00:14:04 --> 00:14:06
+* To access the element of the matrix using the colon operator.
+
+88
+00:14:07 --> 00:14:13
+* Calculate the inverse of a matrix using the <b>inv</b> command or by backslash.
+
+89
+00:14:14 --> 00:14:17
+* Calculate the determinant of matrix using <b>det</b> command.
+
+90
+00:14:18 --> 00:14:22
+* Calculate <b>eigen values</b> of a matrix using <b>spec</b> command.
+
+91
+00:14:23 --> 00:14:38
+Define a matrix having all the elements one, Null Matrix,  Identity matrix and a matrix with random elements by using functions <b>ones(), zeros(), eye(), rand()</b> respectively.
+
+92
+00:14:39 --> 00:14:41
+Solve the system of linear equations.
+
+93
+00:14:42 --> 00:14:50
+This spoken tutorial: has been created by the Free and Open Source Software in Science and Engineering Education(FOSSEE),
+
+94
+00:14:51 --> 00:14:57
+More information on the FOSSEE project could be obtained from <a class="external free" href="http://fossee.in" rel="nofollow">http://fossee.in</a>  or <a class="external free" href="http://scilab.in" rel="nofollow">http://scilab.in</a>
+
+95
+00:14:58 --> 00:15:04
+Supported by the National Mission on Eduction through ICT, MHRD, Government of India.
+
+96
+00:15:05 --> 00:15:13
+For more information, visit: <a class="external free" href="http://spoken-tutorial.org/NMEICT-Intro" rel="nofollow">http://spoken-tutorial.org/NMEICT-Intro</a>
+
+97
+00:15:14 --> 00:15:17
+This is Anuradha Amrutkar from IIT Bombay, signing off.
+
+98
+00:15:18 --> 00:15:23
+Thank you for joining. Goodbye.
+

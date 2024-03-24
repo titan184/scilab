@@ -1,0 +1,154 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:03
+Welcome to the spoken tutorial on <b>Conditional Branching</b> in <b>Scilab</b>.
+
+2
+00:00:04 --> 00:00:08
+To practice this tutorial, open the Scilab console window on your computer.
+
+3
+00:00:09 --> 00:00:18
+We will discuss two types of conditional constructs in Scilab that is the  <b>if-then-else</b> construct and the <b>select-case</b> conditional construct.
+
+4
+00:00:19 --> 00:00:23
+The <b>if statement</b> allows us to execute a group of statements if a given condition is satisfied.
+
+5
+00:00:24 --> 00:00:26
+Let me give you an example:
+
+6
+00:00:27 --> 00:00:36
+<b>n is equal 42 if n is equal to equal to 42 (n==42) then disp "the number is 42" end</b> of if construct.
+
+7
+00:00:37 --> 00:00:42
+Here, 'is equal to'(=) is the assignment operator, which assigns 42 to the variable n,
+
+8
+00:00:43 --> 00:00:50
+and 'is equal to is equal to' (==) is the equality operator which checks for the equality between the right hand and the left hand side operands.
+
+9
+00:00:51 --> 00:00:56
+In this case 'n' and 42 and gives the result in Boolean.
+
+10
+00:00:57 --> 00:01:00
+Here the comma after the first line is optional.
+
+11
+00:01:01 --> 00:01:03
+Also the <b>then</b> keyword is optional.
+
+12
+00:01:04 --> 00:01:07
+It can be replaced by a <b>comma</b> or a <b>carriage return</b>.
+
+13
+00:01:08 --> 00:01:10
+The <b>end</b> keyword ends the <b>if</b> construct.
+
+14
+00:01:11 --> 00:01:19
+On executing the script, we see the output as follows.
+
+15
+00:01:20 --> 00:01:25
+So far we have seen how to execute a set of statements, if a condition is true.
+
+16
+00:01:26 --> 00:01:35
+Now we will see how to execute another set of statements if that condition is false or we may wish to check if some other condition is satisfied.
+
+17
+00:01:36 --> 00:01:39
+We can do this by using <b>else</b> or <b>elseif</b> keyword respectively.
+
+18
+00:01:40 --> 00:01:40
+Here is how we do it.
+
+19
+00:01:41 --> 00:01:54
+In this example, 54 is assigned to a variable 'n' and checked for both <b>true</b> condition using 'if' and <b>false</b> condition using 'else' as described:
+
+20
+00:01:55 --> 00:02:02
+I will cut this, paste in the Scilab console, hit <b>Enter</b>.
+
+21
+00:02:03 --> 00:02:04
+You see the output.
+
+22
+00:02:05 --> 00:02:08
+If you notice, the examples shown above are on multiple lines.
+
+23
+00:02:09 --> 00:02:18
+They can also be written in a single line with proper semicolons and commas.
+
+24
+00:02:19 --> 00:02:26
+I will cut this and paste in the Scilab to execute. Hit <b>Enter</b>.
+
+25
+00:02:27 --> 00:02:30
+The <b>select</b> statement allows to combine several branches in a clear and simple way.
+
+26
+00:02:31 --> 00:02:37
+Depending on the value of a variable, it allows to perform the statement corresponding to the <b>case</b> keyword.
+
+27
+00:02:38 --> 00:02:40
+There can be as many branches as required.
+
+28
+00:02:41 --> 00:02:43
+Let us try with an example.
+
+29
+00:02:44 --> 00:02:58
+We will assign 100 to a variable 'n' and check the cases 42, 54 and a default case represented by <b>else</b>.
+
+30
+00:02:59 --> 00:03:05
+Cut,  paste, hit <b>Enter</b>.
+
+31
+00:03:06 --> 00:03:08
+Here we see the output .
+
+32
+00:03:09 --> 00:03:13
+This brings us to the end of this Spoken Tutorial on <b>Conditional Branching</b> using <b>Scilab</b>.
+
+33
+00:03:14 --> 00:03:19
+In this tutorial we have learnt the <b>if - elseif - else</b> statement and the <b>select</b> statement.
+
+34
+00:03:20 --> 00:03:24
+There are many other functions in Scilab which will be covered in other spoken tutorials.
+
+35
+00:03:25 --> 00:03:26
+Keep watching the Scilab links.
+
+36
+00:03:27 --> 00:03:34
+Spoken Tutorials are part of the Talk to a Teacher project, supported by the National Mission on Education through ICT.
+
+37
+00:03:35 --> 00:03:37
+More information on the same is available on the following link.
+
+38
+00:03:38 --> 00:03:43
+Thanks for joining good bye.
+
