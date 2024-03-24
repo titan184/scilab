@@ -1,0 +1,12 @@
+		Spoken Tutorial, IIT Bombay 
+	        https://spoken-tutorial.org 
+
+			Scilab
+		Super Blocks in xcos- Assignment
+
+1.Open the super-initial.xcos file
+2.Add an operation to multiply the output of the POWBLK_f block by 3
+3.Transfer the squaring and multiplications operations inside the SUPER_f block 
+4.Save and execute the super-initial.xcos file
+
+Hint: Use the GAIN_f block to multiply the output by three.
